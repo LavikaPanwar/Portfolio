@@ -1,202 +1,297 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <!-- ========================================================= -->
-    <!-- BASIC DOCUMENT CONFIGURATION                              -->
-    <!-- ========================================================= -->
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <!-- ========================================================= -->
-    <!-- PRIMARY META TAGS                                         -->
-    <!-- ========================================================= -->
     <title>Lavika Panwar | BCA Student & Software Developer</title>
 
-    <meta
-      name="title"
-      content="Lavika Panwar | BCA Student & Software Developer"
-    />
-    <meta
-      name="description"
-      content="Lavika Panwar is a Bachelor of Computer Applications (BCA) student with a growing interest in software development, web technologies, and building reliable applications."
-    />
-    <meta
-      name="keywords"
-      content="Lavika Panwar, BCA Student, Software Developer, Web Developer, Computer Applications, Portfolio Website"
-    />
+    <meta name="title" content="Lavika Panwar | BCA Student & Software Developer" />
+    <meta name="description" content="Lavika Panwar is a Bachelor of Computer Applications (BCA) student with a growing interest in software development, web technologies, and building reliable applications." />
+    <meta name="keywords" content="Lavika Panwar, BCA Student, Software Developer, Web Developer, Computer Applications, Portfolio Website" />
     <meta name="author" content="Lavika Panwar" />
 
-    <!-- ========================================================= -->
-    <!-- OPEN GRAPH (SOCIAL SHARING)                                -->
-    <!-- ========================================================= -->
     <meta property="og:type" content="website" />
     <meta property="og:title" content="Lavika Panwar | Developer Portfolio" />
-    <meta
-      property="og:description"
-      content="Professional portfolio of Lavika Panwar, a BCA student focused on software development and modern web technologies."
-    />
+    <meta property="og:description" content="Professional portfolio of Lavika Panwar, a BCA student focused on software development and modern web technologies." />
     <meta property="og:image" content="img/og-img.png" />
     <meta property="og:url" content="https://lavikapanwar.dev" />
 
-    <!-- ========================================================= -->
-    <!-- TWITTER META                                              -->
-    <!-- ========================================================= -->
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="Lavika Panwar | Software Developer" />
-    <meta
-      name="twitter:description"
-      content="BCA student portfolio showcasing projects, skills, and academic foundation."
-    />
+    <meta name="twitter:description" content="BCA student portfolio showcasing projects, skills, and academic foundation." />
     <meta name="twitter:image" content="img/og-img.png" />
 
-    <!-- ========================================================= -->
-    <!-- GOOGLE SITE VERIFICATION (OPTIONAL)                        -->
-    <!-- ========================================================= -->
     <meta name="google-site-verification" content="verification-code-here" />
 
-    <!-- ========================================================= -->
-    <!-- FAVICON CONFIGURATION                                     -->
-    <!-- ========================================================= -->
     <link rel="apple-touch-icon" sizes="180x180" href="img/favicon/apple-touch-icon.png" />
     <link rel="icon" type="image/png" sizes="32x32" href="img/favicon/favicon-32x32.png" />
     <link rel="icon" type="image/png" sizes="16x16" href="img/favicon/favicon-16x16.png" />
     <link rel="manifest" href="img/favicon/site.webmanifest" />
 
-    <!-- ========================================================= -->
-    <!-- STYLESHEETS                                               -->
-    <!-- ========================================================= -->
     <link rel="stylesheet" href="css/normalize.css" />
     <link rel="stylesheet" href="css/style.css" />
 
+    <!-- Particles.js for background animation -->
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    
     <style>
-      /* Enhanced Animations and Effects */
-      @keyframes fadeInUp {
-        from {
-          opacity: 0;
-          transform: translateY(30px);
-        }
-        to {
-          opacity: 1;
-          transform: translateY(0);
-        }
+      /* Particle Background */
+      #particles-js {
+        position: fixed;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        z-index: -1;
+        opacity: 0.6;
       }
 
-      @keyframes fadeIn {
-        from {
-          opacity: 0;
-        }
-        to {
-          opacity: 1;
-        }
-      }
-
-      @keyframes pulse {
-        0%, 100% {
-          transform: scale(1);
-        }
-        50% {
-          transform: scale(1.05);
-        }
-      }
-
-      .hero-section {
-        animation: fadeInUp 0.8s ease-out;
-      }
-
-      .about-content,
-      .project,
-      .side-project {
-        animation: fadeInUp 0.8s ease-out;
-        animation-fill-mode: both;
-      }
-
-      .project:nth-child(2) {
-        animation-delay: 0.2s;
-      }
-
-      .side-project:nth-child(1) {
-        animation-delay: 0.1s;
-      }
-
-      .side-project:nth-child(2) {
-        animation-delay: 0.2s;
-      }
-
-      .side-project:nth-child(3) {
-        animation-delay: 0.3s;
-      }
-
-      .side-project:nth-child(4) {
-        animation-delay: 0.4s;
-      }
-
-      /* Hover Effects */
-      .tool {
+      /* Theme Toggle Button */
+      .theme-toggle {
+        position: fixed;
+        top: 50%;
+        right: 2rem;
+        transform: translateY(-50%);
+        z-index: 1000;
+        background: rgba(38, 50, 67, 0.9);
+        border: 2px solid rgba(24, 185, 207, 0.5);
+        border-radius: 50%;
+        width: 5rem;
+        height: 5rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
         transition: all 0.3s ease;
-      }
-
-      .tool:hover {
-        transform: translateY(-5px);
-        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-      }
-
-      .cta {
-        transition: all 0.3s ease;
-      }
-
-      .cta:hover {
-        transform: translateY(-3px);
         box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
       }
 
-      .project-img-link img {
-        transition: transform 0.3s ease;
+      .theme-toggle:hover {
+        transform: translateY(-50%) scale(1.1);
+        border-color: rgba(24, 185, 207, 0.9);
+        box-shadow: 0 8px 20px rgba(24, 185, 207, 0.4);
       }
 
-      .project-img-link:hover img {
-        transform: scale(1.05);
+      .theme-toggle svg {
+        width: 2.5rem;
+        height: 2.5rem;
+        fill: rgba(24, 185, 207, 0.9);
+        transition: all 0.3s ease;
       }
 
-      /* Gradient Text Effect */
-      .name-highlight {
-        background: linear-gradient(45deg, #667eea 0%, #764ba2 100%);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        background-clip: text;
+      /* Light Theme Styles */
+      body.light-theme {
+        background-color: rgb(248, 250, 252);
+        color: rgb(30, 41, 59);
       }
 
-      /* Section Separators with Enhanced Design */
-      .separator h2::after {
-        content: '';
-        display: block;
-        width: 60px;
+      body.light-theme header {
+        background-color: rgba(255, 255, 255, 0.95);
+        border-bottom-color: rgb(226, 232, 240);
+      }
+
+      body.light-theme .nav-link a {
+        color: rgb(30, 41, 59);
+      }
+
+      body.light-theme .declaration,
+      body.light-theme .hero-description,
+      body.light-theme .about-text,
+      body.light-theme .project-main-info p,
+      body.light-theme .side-project p,
+      body.light-theme h4 + p {
+        color: rgb(71, 85, 105);
+      }
+
+      body.light-theme .cta2,
+      body.light-theme .nav-link:nth-child(5) {
+        background: rgb(248, 250, 252);
+      }
+
+      body.light-theme .project,
+      body.light-theme .side-project,
+      body.light-theme .tool,
+      body.light-theme .project-main-info {
+        background: rgb(255, 255, 255);
+        box-shadow: 0 1rem 2rem 0 rgba(0, 0, 0, 0.08);
+      }
+
+      body.light-theme footer {
+        border-top-color: rgb(226, 232, 240);
+        color: rgb(100, 116, 139);
+      }
+
+      body.light-theme .theme-toggle {
+        background: rgba(255, 255, 255, 0.9);
+        border-color: rgba(24, 185, 207, 0.5);
+      }
+
+      body.light-theme #particles-js {
+        opacity: 0.3;
+      }
+
+      /* Scroll Progress Bar */
+      .scroll-progress {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 0%;
         height: 4px;
-        background: linear-gradient(90deg, #667eea 0%, #764ba2 100%);
-        margin-top: 10px;
-        border-radius: 2px;
+        background: linear-gradient(90deg, rgba(24, 185, 207, 0.9) 0%, #6688ff 100%);
+        z-index: 1001;
+        transition: width 0.1s ease;
+      }
+
+      /* Scroll to Top Button */
+      .scroll-top {
+        position: fixed;
+        bottom: 3rem;
+        right: 3rem;
+        width: 5rem;
+        height: 5rem;
+        background: linear-gradient(135deg, rgba(24, 185, 207, 0.9) 0%, #6688ff 100%);
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        opacity: 0;
+        visibility: hidden;
+        transition: all 0.3s ease;
+        z-index: 999;
+        box-shadow: 0 5px 15px rgba(24, 185, 207, 0.3);
+      }
+
+      .scroll-top.visible {
+        opacity: 1;
+        visibility: visible;
+      }
+
+      .scroll-top:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 10px 25px rgba(24, 185, 207, 0.5);
+      }
+
+      .scroll-top svg {
+        width: 2.5rem;
+        height: 2.5rem;
+        fill: white;
+      }
+
+      /* Loading Screen */
+      .loading-screen {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgb(34, 40, 49);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        z-index: 9999;
+        transition: opacity 0.5s ease, visibility 0.5s ease;
+      }
+
+      .loading-screen.hidden {
+        opacity: 0;
+        visibility: hidden;
+      }
+
+      .loader {
+        width: 80px;
+        height: 80px;
+        border: 4px solid rgba(24, 185, 207, 0.2);
+        border-top-color: rgba(24, 185, 207, 0.9);
+        border-radius: 50%;
+        animation: spin 1s linear infinite;
+      }
+
+      @keyframes spin {
+        to { transform: rotate(360deg); }
+      }
+
+      /* Enhanced Typing Effect */
+      .typing-text {
+        display: inline-block;
+        overflow: hidden;
+        border-right: 3px solid rgba(24, 185, 207, 0.9);
+        white-space: nowrap;
+        animation: typing 3.5s steps(40, end), blink 0.75s step-end infinite;
+      }
+
+      @keyframes typing {
+        from { width: 0 }
+        to { width: 100% }
+      }
+
+      @keyframes blink {
+        from, to { border-color: transparent }
+        50% { border-color: rgba(24, 185, 207, 0.9) }
+      }
+
+      /* Section Reveal Animation */
+      .reveal {
+        opacity: 0;
+        transform: translateY(50px);
+        transition: all 0.8s ease;
+      }
+
+      .reveal.active {
+        opacity: 1;
+        transform: translateY(0);
+      }
+
+      /* Mobile responsiveness for theme toggle */
+      @media screen and (max-width: 768px) {
+        .theme-toggle {
+          width: 4.5rem;
+          height: 4.5rem;
+          right: 1.5rem;
+        }
+
+        .scroll-top {
+          width: 4.5rem;
+          height: 4.5rem;
+          bottom: 2rem;
+          right: 2rem;
+        }
       }
     </style>
-
-    <!-- ========================================================= -->
-    <!-- SCRIPTS                                                   -->
-    <!-- ========================================================= -->
-    <script defer src="js/main.js"></script>
-    <script defer src="js/email.js"></script>
   </head>
 
   <body>
-    <!-- ========================================================= -->
-    <!-- HEADER & NAVIGATION                                       -->
-    <!-- ========================================================= -->
+    <!-- Loading Screen -->
+    <div class="loading-screen">
+      <div class="loader"></div>
+    </div>
+
+    <!-- Scroll Progress Bar -->
+    <div class="scroll-progress"></div>
+
+    <!-- Particles Background -->
+    <div id="particles-js"></div>
+
+    <!-- Theme Toggle Button -->
+    <button class="theme-toggle" aria-label="Toggle Theme">
+      <svg class="sun-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+        <path d="M12 18C8.68629 18 6 15.3137 6 12C6 8.68629 8.68629 6 12 6C15.3137 6 18 8.68629 18 12C18 15.3137 15.3137 18 12 18ZM12 16C14.2091 16 16 14.2091 16 12C16 9.79086 14.2091 8 12 8C9.79086 8 8 9.79086 8 12C8 14.2091 9.79086 16 12 16ZM11 1H13V4H11V1ZM11 20H13V23H11V20ZM3.51472 4.92893L4.92893 3.51472L7.05025 5.63604L5.63604 7.05025L3.51472 4.92893ZM16.9497 18.364L18.364 16.9497L20.4853 19.0711L19.0711 20.4853L16.9497 18.364ZM19.0711 3.51472L20.4853 4.92893L18.364 7.05025L16.9497 5.63604L19.0711 3.51472ZM5.63604 16.9497L7.05025 18.364L4.92893 20.4853L3.51472 19.0711L5.63604 16.9497ZM23 11V13H20V11H23ZM4 11V13H1V11H4Z"/>
+      </svg>
+    </button>
+
+    <!-- Scroll to Top Button -->
+    <div class="scroll-top">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+        <path d="M12 2L4 10H9V22H15V10H20L12 2Z"/>
+      </svg>
+    </div>
+
     <header>
       <nav aria-label="Primary Navigation">
         <a href="/" class="brand-logo">
-          <img
-            src="img/gradient-devops-illustration.png"
-            alt="Lavika Panwar Logo"
-            class="logo"
-          />
+          <img src="img/gradient-devops-illustration.png" alt="Lavika Panwar Logo" class="logo" />
         </a>
 
         <ul class="nav-menu">
@@ -204,7 +299,6 @@
           <li class="nav-link"><a href="#skills">Skills</a></li>
           <li class="nav-link"><a href="#projects">Projects</a></li>
           <li class="nav-link"><a href="#contact">Contact</a></li>
-
           <li class="nav-link">
             <a href="https://drive.google.com/" target="_blank">Résumé</a>
           </li>
@@ -213,11 +307,9 @@
             <a href="https://github.com/" target="_blank" class="social github">
               <img src="img/github.svg" alt="GitHub Profile" />
             </a>
-
             <a href="https://www.linkedin.com/" target="_blank" class="social linkedin">
               <img src="img/in.svg" alt="LinkedIn Profile" />
             </a>
-
             <a href="https://twitter.com/" target="_blank" class="social twitter">
               <img src="img/twitter.svg" alt="Twitter Profile" />
             </a>
@@ -230,21 +322,11 @@
       </nav>
     </header>
 
-    <!-- ========================================================= -->
-    <!-- HERO SECTION                                              -->
-    <!-- ========================================================= -->
     <main>
-      <section class="hero-section">
+      <section class="hero-section reveal">
         <span class="salutation">Hi there!</span>
-
-        <h1>
-          I am <span class="name-highlight">Lavika Panwar</span>.
-        </h1>
-
-        <p class="declaration">
-          Building reliable applications with clean code.
-        </p>
-
+        <h1>I am <span class="name-highlight">Lavika Panwar</span>.</h1>
+        <p class="declaration typing-text">Building reliable applications with clean code.</p>
         <p class="hero-description">
           I am a Bachelor of Computer Applications (BCA) student with a strong 
           academic foundation in computer science and a growing passion for 
@@ -256,36 +338,27 @@
 
         <div class="cta-box">
           <a href="#contact" class="cta cta1">Reach out</a>
-          <a href="https://drive.google.com/" target="_blank" class="cta cta2">
-            Résumé
-          </a>
+          <a href="https://drive.google.com/" target="_blank" class="cta cta2">Résumé</a>
         </div>
       </section>
 
-      <!-- SOCIAL LINKS (FIXED ASIDE) -->
       <aside class="main-social-links social-links">
         <a href="https://github.com/" target="_blank" class="social github">
           <img src="img/github.svg" alt="GitHub Icon" />
         </a>
-
         <a href="https://www.linkedin.com/" target="_blank" class="social linkedin">
           <img src="img/in.svg" alt="LinkedIn Icon" />
         </a>
-
         <a href="https://twitter.com/" target="_blank" class="social twitter">
           <img src="img/twitter.svg" alt="Twitter Icon" />
         </a>
-
         <a href="https://leetcode.com/" target="_blank" class="social leetcode">
           <img src="img/leetcode.svg" alt="LeetCode Icon" />
         </a>
       </aside>
     </main>
 
-    <!-- ========================================================= -->
-    <!-- ABOUT SECTION                                             -->
-    <!-- ========================================================= -->
-    <section id="about">
+    <section id="about" class="reveal">
       <div class="separator">
         <h2>About</h2>
       </div>
@@ -346,18 +419,11 @@
       </div>
 
       <div class="img-box">
-        <img
-          src="img/profile.jpg"
-          class="profile-img"
-          alt="Lavika Panwar Profile Image"
-        />
+        <img src="img/profile.jpg" class="profile-img" alt="Lavika Panwar Profile Image" />
       </div>
     </section>
 
-    <!-- ========================================================= -->
-    <!-- SKILLS SECTION                                            -->
-    <!-- ========================================================= -->
-    <section id="skills">
+    <section id="skills" class="reveal">
       <div class="separator">
         <h2>Technical Skills</h2>
       </div>
@@ -409,10 +475,7 @@
       </div>
     </section>
 
-    <!-- ========================================================= -->
-    <!-- PROJECTS SECTION                                          -->
-    <!-- ========================================================= -->
-    <section id="projects">
+    <section id="projects" class="reveal">
       <div class="featured-projects-box">
         <div class="separator">
           <h2>Featured Projects</h2>
@@ -423,7 +486,6 @@
             <div class="project-main-info">
               <span>Project #1</span>
               <h3>Student Management System</h3>
-
               <p>
                 A comprehensive student management system built to efficiently 
                 manage student records, grades, and attendance. Features include 
@@ -459,7 +521,6 @@
             <div class="project-main-info">
               <span>Project #2</span>
               <h3>E-Commerce Web Application</h3>
-
               <p>
                 A fully functional e-commerce platform with product catalog, 
                 shopping cart, and checkout functionality. Implemented user 
@@ -495,7 +556,6 @@
             <div class="project-main-info">
               <span>Project #3</span>
               <h3>Task Management Dashboard</h3>
-
               <p>
                 An intuitive task management application with drag-and-drop 
                 functionality, priority levels, and deadline tracking. Features 
@@ -527,9 +587,6 @@
         </div>
       </div>
 
-      <!-- ========================================================= -->
-      <!-- OTHER NOTABLE PROJECTS SECTION                            -->
-      <!-- ========================================================= -->
       <div class="other-projects-box">
         <div class="separator">
           <h2>Other Notable Projects</h2>
@@ -547,14 +604,12 @@
             </div>
 
             <h3>Weather Forecast App</h3>
-
             <p>
               A responsive weather application that provides real-time weather 
               information for any location using OpenWeather API. Features 
               include 5-day forecast, temperature conversion, and location 
               search with autocomplete functionality.
             </p>
-
             <span>HTML5, CSS3, JavaScript, Weather API</span>
           </div>
 
@@ -569,14 +624,12 @@
             </div>
 
             <h3>Portfolio Website</h3>
-
             <p>
               A modern, responsive portfolio website showcasing projects, 
               skills, and professional experience. Built with performance 
               optimization in mind, featuring smooth animations, dark mode 
               toggle, and contact form integration.
             </p>
-
             <span>HTML5, CSS3, JavaScript, EmailJS</span>
           </div>
 
@@ -591,14 +644,12 @@
             </div>
 
             <h3>Recipe Finder Application</h3>
-
             <p>
               An interactive recipe finder app that allows users to search for 
               recipes by ingredients, cuisine type, or dietary preferences. 
               Integrated with Spoonacular API to fetch detailed recipes with 
               nutritional information and cooking instructions.
             </p>
-
             <span>React, CSS3, Recipe API</span>
           </div>
 
@@ -613,13 +664,11 @@
             </div>
 
             <h3>Calculator Application</h3>
-
             <p>
               A scientific calculator with standard and advanced mathematical 
               operations. Features include history tracking, keyboard support, 
               responsive design, and error handling for invalid operations.
             </p>
-
             <span>HTML5, CSS3, JavaScript</span>
           </div>
 
@@ -634,15 +683,13 @@
             </div>
 
             <h3>Quiz Game Application</h3>
-
             <p>
               An interactive quiz game with multiple categories, timed 
               questions, and score tracking. Features include difficulty 
               levels, leaderboard functionality, and the ability to create 
               custom quizzes.
             </p>
-
-            <span>JavaScript, HTML5, CSS3, Local Storage</span>
+            <span>JavaScript, HTML5, CSS3</span>
           </div>
 
           <div class="side-project">
@@ -656,27 +703,21 @@
             </div>
 
             <h3>Expense Tracker</h3>
-
             <p>
               A personal finance management tool to track income and expenses. 
               Features include category-based organization, data visualization 
               with charts, budget setting, and monthly reports generation.
             </p>
-
             <span>React, Chart.js, CSS3</span>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- ========================================================= -->
-    <!-- CONTACT SECTION                                           -->
-    <!-- ========================================================= -->
-    <section id="contact">
+    <section id="contact" class="reveal">
       <div>
         <span>Next steps?</span>
         <h4>Don't be a Stranger!</h4>
-
         <p>
           Shoot me an email if you think we're a great fit and would like to 
           work together on exciting projects. Whether it's about internships, 
@@ -684,33 +725,111 @@
           to hear from you!
         </p>
 
-        <a href="mailto:lavikapanwar@email.com" class="cta cta2">
-          Get in Touch
-        </a>
+        <a href="mailto:lavikapanwar@email.com" class="cta cta2">Get in Touch</a>
       </div>
 
       <aside class="contact-social-links social-links">
         <a href="https://github.com/" target="_blank" class="social github">
           <img src="img/github.svg" alt="GitHub Icon" />
         </a>
-
         <a href="https://www.linkedin.com/" target="_blank" class="social linkedin">
           <img src="img/in.svg" alt="LinkedIn Icon" />
         </a>
-
         <a href="https://twitter.com/" target="_blank" class="social twitter">
           <img src="img/twitter.svg" alt="Twitter Icon" />
         </a>
       </aside>
     </section>
 
-    <!-- ========================================================= -->
-    <!-- FOOTER                                                    -->
-    <!-- ========================================================= -->
     <footer>
-      <p>
-        Designed and developed with 💜 by <span>Lavika Panwar</span>
-      </p>
+      <p>Designed and developed with 💜 by <span>Lavika Panwar</span></p>
     </footer>
+
+    <script src="js/main.js"></script>
+    <script>
+      // Particles.js Configuration
+      particlesJS('particles-js', {
+        particles: {
+          number: { value: 80, density: { enable: true, value_area: 800 } },
+          color: { value: '#18b9cf' },
+          shape: { type: 'circle' },
+          opacity: { value: 0.5, random: false },
+          size: { value: 3, random: true },
+          line_linked: {
+            enable: true,
+            distance: 150,
+            color: '#18b9cf',
+            opacity: 0.4,
+            width: 1
+          },
+          move: { enable: true, speed: 2, direction: 'none', random: false, straight: false, out_mode: 'out', bounce: false }
+        },
+        interactivity: {
+          detect_on: 'canvas',
+          events: { onhover: { enable: true, mode: 'grab' }, onclick: { enable: true, mode: 'push' }, resize: true },
+          modes: { grab: { distance: 140, line_linked: { opacity: 1 } }, push: { particles_nb: 4 } }
+        },
+        retina_detect: true
+      });
+
+      // Theme Toggle
+      const themeToggle = document.querySelector('.theme-toggle');
+      const body = document.body;
+      const savedTheme = localStorage.getItem('theme');
+
+      if (savedTheme === 'light') {
+        body.classList.add('light-theme');
+      }
+
+      themeToggle.addEventListener('click', () => {
+        body.classList.toggle('light-theme');
+        const theme = body.classList.contains('light-theme') ? 'light' : 'dark';
+        localStorage.setItem('theme', theme);
+      });
+
+      // Scroll Progress Bar
+      window.addEventListener('scroll', () => {
+        const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+        const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+        const scrolled = (winScroll / height) * 100;
+        document.querySelector('.scroll-progress').style.width = scrolled + '%';
+      });
+
+      // Scroll to Top Button
+      const scrollTopBtn = document.querySelector('.scroll-top');
+      window.addEventListener('scroll', () => {
+        if (window.pageYOffset > 300) {
+          scrollTopBtn.classList.add('visible');
+        } else {
+          scrollTopBtn.classList.remove('visible');
+        }
+      });
+
+      scrollTopBtn.addEventListener('click', () => {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      });
+
+      // Reveal Sections on Scroll
+      const revealSections = document.querySelectorAll('.reveal');
+      const revealOnScroll = () => {
+        revealSections.forEach(section => {
+          const sectionTop = section.getBoundingClientRect().top;
+          const windowHeight = window.innerHeight;
+          if (sectionTop < windowHeight * 0.75) {
+            section.classList.add('active');
+          }
+        });
+      };
+
+      window.addEventListener('scroll', revealOnScroll);
+      revealOnScroll();
+
+      // Loading Screen
+      window.addEventListener('load', () => {
+        setTimeout(() => {
+          document.querySelector('.loading-screen').classList.add('hidden');
+        }, 1000);
+      });
+    </script>
   </body>
 </html>
