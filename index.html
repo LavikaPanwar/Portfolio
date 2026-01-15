@@ -3,95 +3,65 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-
+    
     <!-- Primary Meta Tags -->
     <title>Lavika Panwar | BCA Student & Software Developer</title>
     <meta name="title" content="Lavika Panwar | BCA Student & Software Developer" />
-    <meta
-      name="keywords"
-      content="Lavika Panwar, BCA Student, Software Developer, Web Developer, Full Stack Developer"
-    />
-    <meta
-      name="description"
-      content="Lavika Panwar is a BCA student passionate about building beautiful, functional applications with modern web technologies."
-    />
-    <meta name="image" content="img/og-img.png" />
+    <meta name="keywords" content="Lavika Panwar, BCA Student, Software Developer, Web Developer, Full Stack Developer, Portfolio" />
+    <meta name="description" content="Lavika Panwar is a passionate BCA student specializing in full-stack web development and software engineering. Building beautiful, functional applications with modern technologies." />
+    <meta name="author" content="Lavika Panwar" />
+    <meta name="image" content="img/og-image.png" />
 
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://lavikapanwar.dev/" />
     <meta property="og:title" content="Lavika Panwar | Software Developer" />
-    <meta
-      property="og:description"
-      content="BCA student specializing in full-stack web development and software engineering."
-    />
-    <meta property="og:image" content="img/og-img.png" />
+    <meta property="og:description" content="BCA student passionate about building modern web applications with clean code and beautiful design." />
+    <meta property="og:image" content="img/og-image.png" />
 
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image" />
     <meta property="twitter:url" content="https://lavikapanwar.dev/" />
     <meta name="twitter:creator" content="@lavikapanwar" />
     <meta property="twitter:title" content="Lavika Panwar | Software Developer" />
-    <meta
-      property="twitter:description"
-      content="Passionate BCA student building modern web applications."
-    />
-    <meta property="twitter:image" content="img/og-img.png" />
+    <meta property="twitter:description" content="Passionate BCA student building modern web applications." />
+    <meta property="twitter:image" content="img/og-image.png" />
 
     <!-- Favicon -->
-    <link
-      rel="apple-touch-icon"
-      sizes="180x180"
-      href="img/favicon/apple-touch-icon.png"
-    />
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="32x32"
-      href="img/favicon/favicon-32x32.png"
-    />
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="16x16"
-      href="img/favicon/favicon-16x16.png"
-    />
-    <link rel="manifest" href="img/favicon/site.webmanifest" />
+    <link rel="apple-touch-icon" sizes="180x180" href="img/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="img/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="img/favicon/favicon-16x16.png">
+    <link rel="manifest" href="img/favicon/site.webmanifest">
 
-    <!-- Google Fonts -->
+    <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
-
+    
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
-    <!-- External CSS -->
-    <link rel="stylesheet" href="css/normalize.css" />
-    <link rel="stylesheet" href="css/style.css" />
+    <!-- CSS Files -->
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/style.css">
 
     <style>
-      /* ===== CSS Variables ===== */
+      /* INLINE STYLES FOR CRITICAL CSS */
       :root {
         --primary: #6366f1;
         --primary-light: #818cf8;
         --primary-dark: #4f46e5;
         --secondary: #ec4899;
         --dark: #0f172a;
-        --dark-light: #1e293b;
         --light: #f8fafc;
         --gray: #64748b;
         --gray-light: #e2e8f0;
-        --success: #10b981;
+        --gradient: linear-gradient(135deg, #6366f1 0%, #ec4899 100%);
         --border-radius: 12px;
-        --border-radius-sm: 8px;
         --transition: all 0.3s ease;
         --shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
-        --shadow-lg: 0 20px 40px rgba(0, 0, 0, 0.15);
-        --gradient: linear-gradient(135deg, #6366f1 0%, #ec4899 100%);
       }
 
-      /* ===== Base Styles ===== */
       * {
         margin: 0;
         padding: 0;
@@ -110,1061 +80,324 @@
         overflow-x: hidden;
       }
 
-      h1, h2, h3, h4 {
-        font-family: 'Poppins', sans-serif;
-        font-weight: 700;
-        line-height: 1.2;
-      }
-
-      a {
-        text-decoration: none;
-        color: inherit;
-        transition: var(--transition);
-      }
-
-      ul {
-        list-style: none;
-      }
-
-      img {
-        max-width: 100%;
-        height: auto;
-      }
-
-      .container {
-        width: 100%;
-        max-width: 1200px;
-        margin: 0 auto;
-        padding: 0 20px;
-      }
-
-      section {
-        padding: 100px 0;
-      }
-
-      /* ===== Header & Navigation ===== */
-      header {
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        z-index: 1000;
-        background: rgba(255, 255, 255, 0.95);
-        backdrop-filter: blur(10px);
-        box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
-        padding: 20px 0;
-        transition: var(--transition);
-      }
-
-      header.scrolled {
-        padding: 15px 0;
-        box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
-      }
-
-      nav {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-      }
-
-      .logo {
-        font-size: 28px;
-        font-weight: 700;
-        background: var(--gradient);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        background-clip: text;
-        display: flex;
-        align-items: center;
-        gap: 10px;
-      }
-
-      .logo-icon {
-        width: 36px;
-        height: 36px;
-        background: var(--gradient);
+      /* Critical loading styles */
+      .skeleton {
+        background: linear-gradient(90deg, #e2e8f0 25%, #cbd5e1 50%, #e2e8f0 75%);
+        background-size: 200% 100%;
+        animation: loading 1.5s infinite;
         border-radius: 8px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        color: white;
-        font-size: 20px;
       }
 
-      .nav-menu {
-        display: flex;
-        gap: 40px;
-        align-items: center;
-      }
-
-      .nav-link a {
-        font-weight: 500;
-        position: relative;
-        padding: 5px 0;
-      }
-
-      .nav-link a::after {
-        content: '';
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        width: 0;
-        height: 2px;
-        background: var(--gradient);
-        transition: var(--transition);
-      }
-
-      .nav-link a:hover::after,
-      .nav-link a.active::after {
-        width: 100%;
-      }
-
-      .nav-social-links {
-        display: flex;
-        gap: 15px;
-        margin-left: 30px;
-      }
-
-      .social {
-        width: 40px;
-        height: 40px;
-        border-radius: 50%;
-        background: var(--light);
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        color: var(--dark);
-        font-size: 18px;
-        transition: var(--transition);
-        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
-      }
-
-      .social:hover {
-        transform: translateY(-3px);
-        background: var(--gradient);
-        color: white;
-        box-shadow: 0 10px 20px rgba(99, 102, 241, 0.3);
-      }
-
-      .hamburger {
-        display: none;
-        background: none;
-        border: none;
-        cursor: pointer;
-        width: 30px;
-        height: 24px;
-        position: relative;
-      }
-
-      .menu-bar {
-        width: 100%;
-        height: 3px;
-        background: var(--dark);
-        border-radius: 2px;
-        transition: var(--transition);
-      }
-
-      .menu-bar::before,
-      .menu-bar::after {
-        content: '';
-        position: absolute;
-        width: 100%;
-        height: 3px;
-        background: var(--dark);
-        border-radius: 2px;
-        left: 0;
-        transition: var(--transition);
-      }
-
-      .menu-bar::before {
-        top: 0;
-      }
-
-      .menu-bar::after {
-        bottom: 0;
-      }
-
-      /* ===== Hero Section ===== */
-      .hero {
-        padding-top: 180px;
-        min-height: 100vh;
-        display: flex;
-        align-items: center;
-        position: relative;
-        overflow: hidden;
-      }
-
-      .hero::before {
-        content: '';
-        position: absolute;
-        top: -50%;
-        right: -20%;
-        width: 600px;
-        height: 600px;
-        background: var(--gradient);
-        border-radius: 50%;
-        opacity: 0.1;
-        filter: blur(80px);
-        z-index: -1;
-      }
-
-      .hero-content {
-        max-width: 700px;
-      }
-
-      .salutation {
-        display: inline-block;
-        padding: 8px 20px;
-        background: rgba(99, 102, 241, 0.1);
-        color: var(--primary);
-        border-radius: 50px;
-        font-weight: 500;
-        margin-bottom: 20px;
-        font-size: 14px;
-        letter-spacing: 1px;
-      }
-
-      h1 {
-        font-size: 56px;
-        margin-bottom: 20px;
-        line-height: 1.1;
-      }
-
-      .name-highlight {
-        background: var(--gradient);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        background-clip: text;
-      }
-
-      .declaration {
-        font-size: 24px;
-        color: var(--gray);
-        margin-bottom: 30px;
-        font-weight: 500;
-      }
-
-      .hero-description {
-        font-size: 18px;
-        color: var(--gray);
-        margin-bottom: 40px;
-        max-width: 600px;
-      }
-
-      .cta-box {
-        display: flex;
-        gap: 20px;
-        margin-top: 40px;
-      }
-
-      .cta {
-        padding: 16px 32px;
-        border-radius: var(--border-radius);
-        font-weight: 600;
-        display: inline-flex;
-        align-items: center;
-        gap: 10px;
-        transition: var(--transition);
-      }
-
-      .cta1 {
-        background: var(--gradient);
-        color: white;
-        box-shadow: 0 10px 25px rgba(99, 102, 241, 0.3);
-      }
-
-      .cta1:hover {
-        transform: translateY(-3px);
-        box-shadow: 0 15px 30px rgba(99, 102, 241, 0.4);
-      }
-
-      .cta2 {
-        background: white;
-        color: var(--dark);
-        border: 2px solid var(--gray-light);
-      }
-
-      .cta2:hover {
-        border-color: var(--primary);
-        color: var(--primary);
-        transform: translateY(-3px);
-        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
-      }
-
-      .hero-image {
-        position: absolute;
-        right: 0;
-        top: 50%;
-        transform: translateY(-50%);
-        width: 500px;
-        height: 500px;
-        border-radius: 30px;
-        overflow: hidden;
-        box-shadow: var(--shadow-lg);
-      }
-
-      .hero-image img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-      }
-
-      /* ===== Main Social Links ===== */
-      .main-social-links {
-        position: fixed;
-        left: 40px;
-        top: 50%;
-        transform: translateY(-50%);
-        display: flex;
-        flex-direction: column;
-        gap: 15px;
-        z-index: 100;
-        background: white;
-        padding: 20px 15px;
-        border-radius: 50px;
-        box-shadow: var(--shadow);
-      }
-
-      /* ===== About Section ===== */
-      .separator {
-        display: flex;
-        align-items: center;
-        margin-bottom: 60px;
-      }
-
-      .separator h2 {
-        font-size: 36px;
-        margin-right: 20px;
-        white-space: nowrap;
-      }
-
-      .separator::after {
-        content: '';
-        flex-grow: 1;
-        height: 2px;
-        background: linear-gradient(90deg, var(--primary) 0%, var(--secondary) 100%);
-        margin-left: 20px;
-      }
-
-      .about-content {
-        display: grid;
-        grid-template-columns: 2fr 1fr;
-        gap: 80px;
-        align-items: start;
-      }
-
-      .about-text {
-        font-size: 18px;
-        color: var(--gray);
-        line-height: 1.8;
-      }
-
-      .about-text span {
-        color: var(--primary);
-        font-weight: 600;
-        background: rgba(99, 102, 241, 0.1);
-        padding: 2px 6px;
-        border-radius: 4px;
-      }
-
-      .tools-grid {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        gap: 15px;
-        margin-top: 40px;
-      }
-
-      .tool {
-        background: white;
-        padding: 15px;
-        border-radius: var(--border-radius-sm);
-        text-align: center;
-        font-weight: 500;
-        box-shadow: var(--shadow);
-        transition: var(--transition);
-        border: 2px solid transparent;
-      }
-
-      .tool:hover {
-        transform: translateY(-5px);
-        border-color: var(--primary);
-        box-shadow: 0 15px 30px rgba(99, 102, 241, 0.15);
-      }
-
-      .profile-card {
-        background: white;
-        border-radius: var(--border-radius);
-        overflow: hidden;
-        box-shadow: var(--shadow-lg);
-        position: sticky;
-        top: 120px;
-      }
-
-      .profile-img {
-        width: 100%;
-        height: 300px;
-        object-fit: cover;
-      }
-
-      .profile-info {
-        padding: 30px;
-        text-align: center;
-      }
-
-      .profile-info h3 {
-        font-size: 24px;
-        margin-bottom: 10px;
-      }
-
-      .profile-info p {
-        color: var(--gray);
-        margin-bottom: 20px;
-      }
-
-      .profile-stats {
-        display: flex;
-        justify-content: space-around;
-        padding-top: 20px;
-        border-top: 1px solid var(--gray-light);
-      }
-
-      .stat {
-        text-align: center;
-      }
-
-      .stat-number {
-        display: block;
-        font-size: 24px;
-        font-weight: 700;
-        background: var(--gradient);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        background-clip: text;
-      }
-
-      .stat-label {
-        font-size: 14px;
-        color: var(--gray);
-        margin-top: 5px;
-      }
-
-      /* ===== Skills Section ===== */
-      .skills-container {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        gap: 40px;
-      }
-
-      .skill-category {
-        background: white;
-        padding: 30px;
-        border-radius: var(--border-radius);
-        box-shadow: var(--shadow);
-      }
-
-      .skill-category h3 {
-        font-size: 20px;
-        margin-bottom: 25px;
-        padding-bottom: 15px;
-        border-bottom: 2px solid var(--gray-light);
-        position: relative;
-      }
-
-      .skill-category h3::after {
-        content: '';
-        position: absolute;
-        bottom: -2px;
-        left: 0;
-        width: 60px;
-        height: 2px;
-        background: var(--gradient);
-      }
-
-      .skills-list {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 12px;
-      }
-
-      .skill-item {
-        background: rgba(99, 102, 241, 0.1);
-        color: var(--primary);
-        padding: 10px 20px;
-        border-radius: 50px;
-        font-weight: 500;
-        font-size: 14px;
-        transition: var(--transition);
-      }
-
-      .skill-item:hover {
-        background: var(--primary);
-        color: white;
-        transform: translateY(-2px);
-      }
-
-      /* ===== Projects Section ===== */
-      .project {
-        background: white;
-        border-radius: var(--border-radius);
-        overflow: hidden;
-        box-shadow: var(--shadow);
-        margin-bottom: 60px;
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        min-height: 400px;
-      }
-
-      .project-content {
-        padding: 40px;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-      }
-
-      .project-number {
-        display: inline-block;
-        padding: 6px 15px;
-        background: rgba(99, 102, 241, 0.1);
-        color: var(--primary);
-        border-radius: 50px;
-        font-size: 14px;
-        font-weight: 600;
-        margin-bottom: 15px;
-      }
-
-      .project-content h3 {
-        font-size: 28px;
-        margin-bottom: 20px;
-        color: var(--dark);
-      }
-
-      .project-content p {
-        color: var(--gray);
-        margin-bottom: 30px;
-        font-size: 16px;
-        line-height: 1.7;
-      }
-
-      .project-tech {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 10px;
-        margin-bottom: 30px;
-      }
-
-      .tech-tag {
-        background: rgba(99, 102, 241, 0.1);
-        color: var(--primary);
-        padding: 6px 15px;
-        border-radius: 50px;
-        font-size: 13px;
-        font-weight: 500;
-      }
-
-      .project-links {
-        display: flex;
-        gap: 15px;
-      }
-
-      .project-link {
-        width: 50px;
-        height: 50px;
-        border-radius: 50%;
-        background: var(--light);
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        color: var(--dark);
-        font-size: 20px;
-        transition: var(--transition);
-        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
-      }
-
-      .project-link:hover {
-        background: var(--gradient);
-        color: white;
-        transform: translateY(-3px);
-        box-shadow: 0 10px 20px rgba(99, 102, 241, 0.3);
-      }
-
-      .project-image {
-        height: 100%;
-        overflow: hidden;
-        position: relative;
-      }
-
-      .project-image img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        transition: var(--transition);
-      }
-
-      .project-image:hover img {
-        transform: scale(1.05);
-      }
-
-      .project-image::after {
-        content: '';
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background: linear-gradient(45deg, rgba(99, 102, 241, 0.2), rgba(236, 72, 153, 0.2));
-        opacity: 0;
-        transition: var(--transition);
-      }
-
-      .project-image:hover::after {
-        opacity: 1;
-      }
-
-      /* Other Projects */
-      .other-projects {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        gap: 30px;
-        margin-top: 40px;
-      }
-
-      .side-project {
-        background: white;
-        border-radius: var(--border-radius);
-        padding: 30px;
-        box-shadow: var(--shadow);
-        transition: var(--transition);
-        height: 100%;
-        display: flex;
-        flex-direction: column;
-      }
-
-      .side-project:hover {
-        transform: translateY(-10px);
-        box-shadow: var(--shadow-lg);
-      }
-
-      .side-project-header {
-        display: flex;
-        justify-content: space-between;
-        align-items: flex-start;
-        margin-bottom: 20px;
-      }
-
-      .side-project-links {
-        display: flex;
-        gap: 10px;
-      }
-
-      .side-project h4 {
-        font-size: 20px;
-        margin-bottom: 15px;
-        color: var(--dark);
-      }
-
-      .side-project p {
-        color: var(--gray);
-        font-size: 15px;
-        line-height: 1.6;
-        margin-bottom: 20px;
-        flex-grow: 1;
-      }
-
-      .side-project-tech {
-        font-size: 13px;
-        color: var(--primary);
-        font-weight: 500;
-        padding-top: 20px;
-        border-top: 1px solid var(--gray-light);
-      }
-
-      /* ===== Contact Section ===== */
-      .contact-section {
-        text-align: center;
-        background: linear-gradient(135deg, rgba(99, 102, 241, 0.05) 0%, rgba(236, 72, 153, 0.05) 100%);
-        border-radius: var(--border-radius);
-        padding: 80px 40px;
-        position: relative;
-        overflow: hidden;
-      }
-
-      .contact-section::before {
-        content: '';
-        position: absolute;
-        top: -50%;
-        right: -50%;
-        width: 400px;
-        height: 400px;
-        background: var(--gradient);
-        border-radius: 50%;
-        opacity: 0.1;
-        filter: blur(80px);
-        z-index: -1;
-      }
-
-      .contact-section span {
-        display: inline-block;
-        padding: 8px 20px;
-        background: rgba(99, 102, 241, 0.1);
-        color: var(--primary);
-        border-radius: 50px;
-        font-weight: 500;
-        margin-bottom: 20px;
-        font-size: 14px;
-      }
-
-      .contact-section h4 {
-        font-size: 42px;
-        margin-bottom: 20px;
-      }
-
-      .contact-section p {
-        max-width: 600px;
-        margin: 0 auto 40px;
-        color: var(--gray);
-        font-size: 18px;
-      }
-
-      .contact-social-links {
-        display: flex;
-        justify-content: center;
-        gap: 20px;
-        margin-top: 50px;
-      }
-
-      /* ===== Footer ===== */
-      footer {
-        text-align: center;
-        padding: 40px 0;
-        border-top: 1px solid var(--gray-light);
-        color: var(--gray);
-      }
-
-      footer span {
-        color: var(--primary);
-        font-weight: 600;
-      }
-
-      /* ===== Animations ===== */
-      @keyframes fadeInUp {
-        from {
-          opacity: 0;
-          transform: translateY(30px);
-        }
-        to {
-          opacity: 1;
-          transform: translateY(0);
-        }
-      }
-
-      .fade-in {
-        animation: fadeInUp 0.8s ease forwards;
-      }
-
-      /* ===== Responsive Design ===== */
-      @media (max-width: 1200px) {
-        .hero-image {
-          width: 400px;
-          height: 400px;
-        }
-        
-        .other-projects {
-          grid-template-columns: repeat(2, 1fr);
-        }
-      }
-
-      @media (max-width: 992px) {
-        h1 {
-          font-size: 46px;
-        }
-        
-        .hero-image {
-          position: relative;
-          width: 100%;
-          height: 400px;
-          margin-top: 60px;
-          transform: none;
-          order: -1;
-        }
-        
-        .hero {
-          padding-top: 140px;
-          flex-direction: column;
-          text-align: center;
-        }
-        
-        .hero-content {
-          text-align: center;
-        }
-        
-        .main-social-links {
-          position: static;
-          flex-direction: row;
-          justify-content: center;
-          margin: 40px auto;
-          padding: 20px 30px;
-          width: fit-content;
-        }
-        
-        .about-content {
-          grid-template-columns: 1fr;
-          gap: 60px;
-        }
-        
-        .profile-card {
-          position: static;
-          max-width: 400px;
-          margin: 0 auto;
-        }
-        
-        .project {
-          grid-template-columns: 1fr;
-        }
-        
-        .project-image {
-          height: 300px;
-          order: -1;
-        }
-      }
-
-      @media (max-width: 768px) {
-        .hamburger {
-          display: block;
-        }
-        
-        .nav-menu {
-          position: fixed;
-          top: 80px;
-          left: -100%;
-          width: 100%;
-          height: calc(100vh - 80px);
-          background: white;
-          flex-direction: column;
-          justify-content: flex-start;
-          padding: 60px 20px;
-          gap: 30px;
-          transition: var(--transition);
-          box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-        }
-        
-        .nav-menu.active {
-          left: 0;
-        }
-        
-        .nav-social-links {
-          margin-left: 0;
-          margin-top: 20px;
-        }
-        
-        .hamburger.active .menu-bar {
-          background: transparent;
-        }
-        
-        .hamburger.active .menu-bar::before {
-          transform: rotate(45deg) translate(8px, 8px);
-        }
-        
-        .hamburger.active .menu-bar::after {
-          transform: rotate(-45deg) translate(7px, -7px);
-        }
-        
-        h1 {
-          font-size: 38px;
-        }
-        
-        .declaration {
-          font-size: 20px;
-        }
-        
-        .cta-box {
-          flex-direction: column;
-          align-items: center;
-        }
-        
-        .skills-container {
-          grid-template-columns: 1fr;
-        }
-        
-        .tools-grid {
-          grid-template-columns: repeat(2, 1fr);
-        }
-        
-        .other-projects {
-          grid-template-columns: 1fr;
-        }
-        
-        .separator h2 {
-          font-size: 30px;
-        }
-      }
-
-      @media (max-width: 576px) {
-        h1 {
-          font-size: 32px;
-        }
-        
-        .hero {
-          padding-top: 120px;
-        }
-        
-        section {
-          padding: 70px 0;
-        }
-        
-        .separator h2 {
-          font-size: 26px;
-        }
-        
-        .contact-section h4 {
-          font-size: 32px;
-        }
-        
-        .project-content {
-          padding: 25px;
-        }
-        
-        .skill-category {
-          padding: 25px;
-        }
+      @keyframes loading {
+        0% { background-position: 200% 0; }
+        100% { background-position: -200% 0; }
       }
     </style>
   </head>
 
   <body>
-    <!-- Header & Navigation -->
-    <header id="header">
-      <nav class="container">
-        <a href="/" class="logo">
-          <span class="logo-icon">L</span>
-          Lavika Panwar
-        </a>
+    <!-- Floating Background Shapes -->
+    <div class="floating-shapes">
+      <div class="shape"></div>
+      <div class="shape"></div>
+      <div class="shape"></div>
+      <div class="shape"></div>
+    </div>
 
-        <ul class="nav-menu">
-          <li class="nav-link"><a href="#about">About</a></li>
-          <li class="nav-link"><a href="#skills">Skills</a></li>
-          <li class="nav-link"><a href="#projects">Projects</a></li>
-          <li class="nav-link"><a href="#contact">Contact</a></li>
-          <li class="nav-link">
-            <a href="https://drive.google.com/" target="_blank">Résumé</a>
-          </li>
+    <!-- Scroll Progress Bar -->
+    <div class="scroll-progress" id="scrollProgress"></div>
 
-          <li class="nav-social-links">
-            <a href="https://github.com/" target="_blank" class="social">
-              <i class="fab fa-github"></i>
-            </a>
-            <a href="https://linkedin.com/" target="_blank" class="social">
-              <i class="fab fa-linkedin-in"></i>
-            </a>
-            <a href="https://twitter.com/" target="_blank" class="social">
-              <i class="fab fa-twitter"></i>
-            </a>
-          </li>
-        </ul>
+    <!-- Header -->
+    <header id="header" class="glass">
+      <div class="container">
+        <nav>
+          <a href="/" class="logo">
+            <div class="logo-icon">LP</div>
+            <span>Lavika Panwar</span>
+          </a>
 
-        <button class="hamburger" type="button" aria-label="Menu">
-          <div class="menu-bar"></div>
-        </button>
-      </nav>
+          <ul class="nav-menu" id="navMenu">
+            <li class="nav-link"><a href="#home" class="active">Home</a></li>
+            <li class="nav-link"><a href="#about">About</a></li>
+            <li class="nav-link"><a href="#skills">Skills</a></li>
+            <li class="nav-link"><a href="#projects">Projects</a></li>
+            <li class="nav-link"><a href="#contact">Contact</a></li>
+            <li class="nav-link">
+              <a href="https://drive.google.com/" target="_blank" class="btn btn-secondary btn-sm">
+                <i class="fas fa-file-pdf"></i> Résumé
+              </a>
+            </li>
+
+            <li class="nav-social">
+              <a href="https://github.com/" target="_blank" class="social-icon" data-tooltip="GitHub">
+                <i class="fab fa-github"></i>
+              </a>
+              <a href="https://linkedin.com/" target="_blank" class="social-icon" data-tooltip="LinkedIn">
+                <i class="fab fa-linkedin-in"></i>
+              </a>
+              <a href="https://twitter.com/" target="_blank" class="social-icon" data-tooltip="Twitter">
+                <i class="fab fa-twitter"></i>
+              </a>
+            </li>
+          </ul>
+
+          <div class="header-actions">
+            <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+              <i class="fas fa-moon"></i>
+            </button>
+            <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+              <span></span>
+              <span></span>
+              <span></span>
+            </button>
+          </div>
+        </nav>
+      </div>
     </header>
 
     <!-- Hero Section -->
-    <section class="hero container">
-      <div class="hero-content fade-in">
-        <span class="salutation">Hi there! 👋</span>
-        <h1>I'm <span class="name-highlight">Lavika Panwar</span></h1>
-        <p class="declaration">BCA Student & Software Developer</p>
-        <p class="hero-description">
-          Passionate about building beautiful, functional applications with modern web technologies. 
-          Currently pursuing my Bachelor's in Computer Applications while developing skills in 
-          full-stack development, UI/UX design, and software engineering.
-        </p>
-        <div class="cta-box">
-          <a href="#contact" class="cta cta1">
-            <i class="fas fa-paper-plane"></i> Get in Touch
-          </a>
-          <a href="#projects" class="cta cta2">
-            <i class="fas fa-code"></i> View Projects
-          </a>
+    <section id="home" class="hero">
+      <div class="container">
+        <div class="hero-grid">
+          <div class="hero-content">
+            <div class="hero-badge">
+              <span class="badge badge-primary">
+                <i class="fas fa-code"></i> Software Developer
+              </span>
+            </div>
+            
+            <h1 class="hero-title">
+              Hi, I'm <span class="text-gradient typing-container">
+                Lavika Panwar
+                <span class="typing-cursor"></span>
+              </span>
+            </h1>
+            
+            <p class="hero-subtitle">
+              <span class="text-gradient">BCA Student</span> passionate about building beautiful, 
+              functional applications with modern web technologies.
+            </p>
+            
+            <p class="hero-description">
+              I specialize in full-stack web development using technologies like React, Node.js, 
+              and modern JavaScript. Currently expanding my skills in software engineering 
+              while building real-world applications.
+            </p>
+            
+            <div class="hero-cta">
+              <a href="#contact" class="btn btn-primary">
+                <i class="fas fa-paper-plane"></i> Get in Touch
+              </a>
+              <a href="#projects" class="btn btn-secondary">
+                <i class="fas fa-code"></i> View Projects
+              </a>
+            </div>
+            
+            <div class="hero-stats">
+              <div class="stat">
+                <div class="stat-number" data-count="15">0</div>
+                <div class="stat-label">Projects</div>
+              </div>
+              <div class="stat">
+                <div class="stat-number" data-count="8">0</div>
+                <div class="stat-label">Technologies</div>
+              </div>
+              <div class="stat">
+                <div class="stat-number" data-count="100">0</div>
+                <div class="stat-label">Passion %</div>
+              </div>
+            </div>
+          </div>
+          
+          <div class="hero-image">
+            <div class="image-wrapper gradient-border">
+              <div class="gradient-border-inner">
+                <img src="img/profile.jpg" alt="Lavika Panwar" class="profile-img" loading="lazy">
+                <div class="image-overlay">
+                  <div class="overlay-content">
+                    <h3>Always Learning</h3>
+                    <p>Continuously improving my skills</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <div class="floating-tech">
+              <div class="tech-badge" style="--delay: 0s">React</div>
+              <div class="tech-badge" style="--delay: 1s">Node.js</div>
+              <div class="tech-badge" style="--delay: 2s">JavaScript</div>
+              <div class="tech-badge" style="--delay: 3s">Python</div>
+            </div>
+          </div>
         </div>
-      </div>
-
-      <div class="hero-image fade-in">
-        <img src="img/profile.jpg" alt="Lavika Panwar" />
       </div>
     </section>
 
-    <!-- Side Social Links -->
-    <aside class="main-social-links">
-      <a href="https://github.com/" target="_blank" class="social">
-        <i class="fab fa-github"></i>
-      </a>
-      <a href="https://linkedin.com/" target="_blank" class="social">
-        <i class="fab fa-linkedin-in"></i>
-      </a>
-      <a href="https://twitter.com/" target="_blank" class="social">
-        <i class="fab fa-twitter"></i>
-      </a>
-      <a href="https://leetcode.com/" target="_blank" class="social">
-        <i class="fas fa-code"></i>
-      </a>
-    </aside>
-
     <!-- About Section -->
-    <section id="about" class="container">
-      <div class="separator">
-        <h2>About Me</h2>
-      </div>
-
-      <div class="about-content">
-        <div>
-          <p class="about-text">
-            As a <span>Bachelor of Computer Applications (BCA) student</span>, I'm building a solid foundation in 
-            computer science fundamentals while developing practical skills in software development. 
-            My journey combines <span>theoretical knowledge</span> with hands-on experience in building real-world applications.
-            <br><br>
-            I specialize in <span>full-stack web development</span> using modern technologies and frameworks. 
-            My programming experience includes <span>C, C++, Java, Python, and JavaScript</span>, allowing me to 
-            approach problems from multiple perspectives and select the most effective solutions.
-            <br><br>
-            Beyond coding, I'm an <span>eager learner, creative problem solver, and collaborative team player</span> 
-            who values clean code, attention to detail, and continuous improvement. I actively work on 
-            personal projects to bridge classroom concepts with real-world applications.
+    <section id="about" class="section about">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-badge">
+            <span class="badge badge-primary">
+              <i class="fas fa-user"></i> About Me
+            </span>
+          </div>
+          <h2 class="section-title">
+            Get to <span class="text-gradient">Know Me</span>
+          </h2>
+          <p class="section-subtitle">
+            Passionate developer with a strong foundation in computer science
           </p>
-
-          <div class="tools-grid">
-            <div class="tool">C</div>
-            <div class="tool">C++</div>
-            <div class="tool">Java</div>
-            <div class="tool">Python</div>
-            <div class="tool">HTML5</div>
-            <div class="tool">CSS3</div>
-            <div class="tool">JavaScript</div>
-            <div class="tool">React</div>
-            <div class="tool">Node.js</div>
-            <div class="tool">Git & GitHub</div>
-            <div class="tool">MySQL</div>
-            <div class="tool">MongoDB</div>
+        </div>
+        
+        <div class="about-grid">
+          <div class="about-content">
+            <div class="about-text">
+              <p>
+                As a <span class="highlight">Bachelor of Computer Applications (BCA) student</span>, 
+                I'm building a solid foundation in computer science fundamentals while developing 
+                practical skills in software development. My journey combines theoretical knowledge 
+                with hands-on experience in building real-world applications.
+              </p>
+              
+              <p>
+                I specialize in <span class="highlight">full-stack web development</span> using modern 
+                technologies and frameworks. My programming experience includes 
+                <span class="highlight">C, C++, Java, Python, and JavaScript</span>, allowing me to 
+                approach problems from multiple perspectives and select the most effective solutions.
+              </p>
+              
+              <p>
+                Beyond coding, I'm an <span class="highlight">eager learner, creative problem solver, 
+                and collaborative team player</span> who values clean code, attention to detail, and 
+                continuous improvement. I actively work on personal projects to bridge classroom 
+                concepts with real-world applications.
+              </p>
+            </div>
+            
+            <div class="about-info">
+              <div class="info-item">
+                <div class="info-label">
+                  <i class="fas fa-graduation-cap"></i> Education
+                </div>
+                <div class="info-value">
+                  Bachelor of Computer Applications (BCA)
+                  <span class="info-meta">Graphic Era University</span>
+                </div>
+              </div>
+              
+              <div class="info-item">
+                <div class="info-label">
+                  <i class="fas fa-map-marker-alt"></i> Location
+                </div>
+                <div class="info-value">
+                  Dehradun, India
+                  <span class="info-meta">Available for remote work</span>
+                </div>
+              </div>
+              
+              <div class="info-item">
+                <div class="info-label">
+                  <i class="fas fa-briefcase"></i> Focus
+                </div>
+                <div class="info-value">
+                  Full-Stack Development
+                  <span class="info-meta">Web & Software Engineering</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <div class="about-skills">
+            <h3 class="skills-title">My Expertise</h3>
+            
+            <div class="skill-bars">
+              <div class="skill-bar">
+                <div class="skill-info">
+                  <span class="skill-name">Frontend Development</span>
+                  <span class="skill-percentage">90%</span>
+                </div>
+                <div class="skill-progress">
+                  <div class="skill-progress-fill" style="width: 90%"></div>
+                </div>
+              </div>
+              
+              <div class="skill-bar">
+                <div class="skill-info">
+                  <span class="skill-name">Backend Development</span>
+                  <span class="skill-percentage">85%</span>
+                </div>
+                <div class="skill-progress">
+                  <div class="skill-progress-fill" style="width: 85%"></div>
+                </div>
+              </div>
+              
+              <div class="skill-bar">
+                <div class="skill-info">
+                  <span class="skill-name">Problem Solving</span>
+                  <span class="skill-percentage">95%</span>
+                </div>
+                <div class="skill-progress">
+                  <div class="skill-progress-fill" style="width: 95%"></div>
+                </div>
+              </div>
+              
+              <div class="skill-bar">
+                <div class="skill-info">
+                  <span class="skill-name">UI/UX Design</span>
+                  <span class="skill-percentage">80%</span>
+                </div>
+                <div class="skill-progress">
+                  <div class="skill-progress-fill" style="width: 80%"></div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
-
-        <div class="profile-card">
-          <img src="img/profile.jpg" alt="Lavika Panwar" class="profile-img">
-          <div class="profile-info">
-            <h3>Lavika Panwar</h3>
-            <p>BCA Student & Software Developer</p>
-            <div class="profile-stats">
-              <div class="stat">
-                <span class="stat-number">10+</span>
-                <span class="stat-label">Projects</span>
-              </div>
-              <div class="stat">
-                <span class="stat-number">5+</span>
-                <span class="stat-label">Technologies</span>
-              </div>
-              <div class="stat">
-                <span class="stat-number">100%</span>
-                <span class="stat-label">Passion</span>
-              </div>
+        
+        <!-- Tech Stack -->
+        <div class="tech-stack">
+          <h3 class="tech-stack-title">Technologies I Work With</h3>
+          <div class="tech-grid">
+            <div class="tech-item" data-tooltip="HTML5">
+              <i class="fab fa-html5"></i>
+              <span>HTML5</span>
+            </div>
+            <div class="tech-item" data-tooltip="CSS3">
+              <i class="fab fa-css3-alt"></i>
+              <span>CSS3</span>
+            </div>
+            <div class="tech-item" data-tooltip="JavaScript">
+              <i class="fab fa-js"></i>
+              <span>JavaScript</span>
+            </div>
+            <div class="tech-item" data-tooltip="React">
+              <i class="fab fa-react"></i>
+              <span>React</span>
+            </div>
+            <div class="tech-item" data-tooltip="Node.js">
+              <i class="fab fa-node-js"></i>
+              <span>Node.js</span>
+            </div>
+            <div class="tech-item" data-tooltip="Python">
+              <i class="fab fa-python"></i>
+              <span>Python</span>
+            </div>
+            <div class="tech-item" data-tooltip="Java">
+              <i class="fab fa-java"></i>
+              <span>Java</span>
+            </div>
+            <div class="tech-item" data-tooltip="Git">
+              <i class="fab fa-git-alt"></i>
+              <span>Git</span>
+            </div>
+            <div class="tech-item" data-tooltip="Database">
+              <i class="fas fa-database"></i>
+              <span>MySQL</span>
+            </div>
+            <div class="tech-item" data-tooltip="MongoDB">
+              <i class="fas fa-leaf"></i>
+              <span>MongoDB</span>
             </div>
           </div>
         </div>
@@ -1172,349 +405,620 @@
     </section>
 
     <!-- Skills Section -->
-    <section id="skills" class="container">
-      <div class="separator">
-        <h2>Technical Skills</h2>
-      </div>
-
-      <div class="skills-container">
-        <div class="skill-category">
-          <h3>Programming Languages</h3>
-          <div class="skills-list">
-            <span class="skill-item">C</span>
-            <span class="skill-item">C++</span>
-            <span class="skill-item">Java</span>
-            <span class="skill-item">Python</span>
-            <span class="skill-item">JavaScript</span>
+    <section id="skills" class="section skills">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-badge">
+            <span class="badge badge-primary">
+              <i class="fas fa-cogs"></i> Skills
+            </span>
+          </div>
+          <h2 class="section-title">
+            My <span class="text-gradient">Technical Skills</span>
+          </h2>
+          <p class="section-subtitle">
+            A comprehensive overview of my technical expertise
+          </p>
+        </div>
+        
+        <div class="skills-grid">
+          <div class="skill-category card">
+            <div class="skill-category-header">
+              <div class="skill-icon">
+                <i class="fas fa-code"></i>
+              </div>
+              <h3>Programming Languages</h3>
+            </div>
+            <div class="skill-list">
+              <div class="skill-tag">C</div>
+              <div class="skill-tag">C++</div>
+              <div class="skill-tag">Java</div>
+              <div class="skill-tag">Python</div>
+              <div class="skill-tag">JavaScript</div>
+              <div class="skill-tag">TypeScript</div>
+            </div>
+            <p class="skill-description">
+              Proficient in multiple programming languages with strong foundation in algorithms and data structures.
+            </p>
+          </div>
+          
+          <div class="skill-category card">
+            <div class="skill-category-header">
+              <div class="skill-icon">
+                <i class="fas fa-globe"></i>
+              </div>
+              <h3>Web Development</h3>
+            </div>
+            <div class="skill-list">
+              <div class="skill-tag">HTML5</div>
+              <div class="skill-tag">CSS3</div>
+              <div class="skill-tag">React</div>
+              <div class="skill-tag">Next.js</div>
+              <div class="skill-tag">Node.js</div>
+              <div class="skill-tag">Express.js</div>
+              <div class="skill-tag">REST APIs</div>
+              <div class="skill-tag">Responsive Design</div>
+            </div>
+            <p class="skill-description">
+              Full-stack web development with modern frameworks and responsive design principles.
+            </p>
+          </div>
+          
+          <div class="skill-category card">
+            <div class="skill-category-header">
+              <div class="skill-icon">
+                <i class="fas fa-database"></i>
+              </div>
+              <h3>Databases & Tools</h3>
+            </div>
+            <div class="skill-list">
+              <div class="skill-tag">MySQL</div>
+              <div class="skill-tag">MongoDB</div>
+              <div class="skill-tag">Git & GitHub</div>
+              <div class="skill-tag">VS Code</div>
+              <div class="skill-tag">Figma</div>
+              <div class="skill-tag">Postman</div>
+              <div class="skill-tag">Docker</div>
+            </div>
+            <p class="skill-description">
+              Database management, version control, and development tools for efficient workflow.
+            </p>
+          </div>
+          
+          <div class="skill-category card">
+            <div class="skill-category-header">
+              <div class="skill-icon">
+                <i class="fas fa-brain"></i>
+              </div>
+              <h3>Core Concepts</h3>
+            </div>
+            <div class="skill-list">
+              <div class="skill-tag">Data Structures</div>
+              <div class="skill-tag">Algorithms</div>
+              <div class="skill-tag">OOP</div>
+              <div class="skill-tag">DBMS</div>
+              <div class="skill-tag">OS Concepts</div>
+              <div class="skill-tag">Computer Networks</div>
+              <div class="skill-tag">Software Engineering</div>
+            </div>
+            <p class="skill-description">
+              Strong understanding of computer science fundamentals and software development principles.
+            </p>
           </div>
         </div>
-
-        <div class="skill-category">
-          <h3>Web Development</h3>
-          <div class="skills-list">
-            <span class="skill-item">HTML5</span>
-            <span class="skill-item">CSS3</span>
-            <span class="skill-item">React</span>
-            <span class="skill-item">Node.js</span>
-            <span class="skill-item">Express.js</span>
-            <span class="skill-item">REST APIs</span>
-          </div>
-        </div>
-
-        <div class="skill-category">
-          <h3>Tools & Databases</h3>
-          <div class="skills-list">
-            <span class="skill-item">Git & GitHub</span>
-            <span class="skill-item">MySQL</span>
-            <span class="skill-item">MongoDB</span>
-            <span class="skill-item">VS Code</span>
-            <span class="skill-item">Figma</span>
-          </div>
-        </div>
-
-        <div class="skill-category">
-          <h3>Core Concepts</h3>
-          <div class="skills-list">
-            <span class="skill-item">Data Structures</span>
-            <span class="skill-item">Algorithms</span>
-            <span class="skill-item">OOP</span>
-            <span class="skill-item">DBMS</span>
-            <span class="skill-item">OS Concepts</span>
+        
+        <div class="skills-timeline">
+          <h3 class="timeline-title">Learning Journey</h3>
+          <div class="timeline">
+            <div class="timeline-item">
+              <div class="timeline-dot"></div>
+              <div class="timeline-content card">
+                <div class="timeline-date">2022 - Present</div>
+                <h4>BCA Degree</h4>
+                <p>Bachelor of Computer Applications at Graphic Era University, focusing on core CS concepts and practical development skills.</p>
+              </div>
+            </div>
+            
+            <div class="timeline-item">
+              <div class="timeline-dot"></div>
+              <div class="timeline-content card">
+                <div class="timeline-date">2023</div>
+                <h4>Web Development Mastery</h4>
+                <p>Advanced full-stack development with React, Node.js, and modern JavaScript frameworks.</p>
+              </div>
+            </div>
+            
+            <div class="timeline-item">
+              <div class="timeline-dot"></div>
+              <div class="timeline-content card">
+                <div class="timeline-date">2024</div>
+                <h4>Software Engineering</h4>
+                <p>Deep dive into software architecture, design patterns, and scalable application development.</p>
+              </div>
+            </div>
           </div>
         </div>
       </div>
     </section>
 
     <!-- Projects Section -->
-    <section id="projects" class="container">
-      <div class="featured-projects">
-        <div class="separator">
-          <h2>Featured Projects</h2>
+    <section id="projects" class="section projects">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-badge">
+            <span class="badge badge-primary">
+              <i class="fas fa-project-diagram"></i> Projects
+            </span>
+          </div>
+          <h2 class="section-title">
+            Featured <span class="text-gradient">Projects</span>
+          </h2>
+          <p class="section-subtitle">
+            A showcase of my recent work and personal projects
+          </p>
         </div>
-
-        <!-- Project 1 -->
-        <div class="project">
-          <div class="project-content">
-            <span class="project-number">Project #1</span>
-            <h3>Student Management System</h3>
-            <p>
-              A comprehensive system built with Java and MySQL to manage student records, grades, 
-              and attendance. Features user authentication, CRUD operations, and detailed reporting.
-              Strengthened my understanding of backend development and database design.
-            </p>
-            <div class="project-tech">
-              <span class="tech-tag">Java</span>
-              <span class="tech-tag">MySQL</span>
-              <span class="tech-tag">JDBC</span>
-              <span class="tech-tag">Swing</span>
+        
+        <!-- Featured Projects -->
+        <div class="featured-projects">
+          <div class="project-showcase">
+            <div class="project-card card-glow">
+              <div class="project-number">
+                <span>01</span>
+              </div>
+              <div class="project-content">
+                <div class="project-header">
+                  <h3 class="project-title">Student Management System</h3>
+                  <div class="project-links">
+                    <a href="https://github.com/" target="_blank" class="project-link" data-tooltip="View Code">
+                      <i class="fab fa-github"></i>
+                    </a>
+                    <a href="#" target="_blank" class="project-link" data-tooltip="Live Demo">
+                      <i class="fas fa-external-link-alt"></i>
+                    </a>
+                  </div>
+                </div>
+                <p class="project-description">
+                  A comprehensive system built with Java and MySQL to manage student records, grades, 
+                  and attendance. Features user authentication, CRUD operations, and detailed reporting.
+                </p>
+                <div class="project-tech">
+                  <span class="project-tag">Java</span>
+                  <span class="project-tag">MySQL</span>
+                  <span class="project-tag">JDBC</span>
+                  <span class="project-tag">Swing</span>
+                </div>
+              </div>
+              <div class="project-image">
+                <div class="image-placeholder">
+                  <i class="fas fa-graduation-cap"></i>
+                </div>
+              </div>
             </div>
-            <div class="project-links">
-              <a href="https://github.com/" target="_blank" class="project-link">
-                <i class="fab fa-github"></i>
-              </a>
-              <a href="#" target="_blank" class="project-link">
-                <i class="fas fa-external-link-alt"></i>
-              </a>
+            
+            <div class="project-card card-glow">
+              <div class="project-number">
+                <span>02</span>
+              </div>
+              <div class="project-content">
+                <div class="project-header">
+                  <h3 class="project-title">E-Commerce Platform</h3>
+                  <div class="project-links">
+                    <a href="https://github.com/" target="_blank" class="project-link" data-tooltip="View Code">
+                      <i class="fab fa-github"></i>
+                    </a>
+                    <a href="#" target="_blank" class="project-link" data-tooltip="Live Demo">
+                      <i class="fas fa-external-link-alt"></i>
+                    </a>
+                  </div>
+                </div>
+                <p class="project-description">
+                  Full-featured e-commerce application with product catalog, shopping cart, and 
+                  checkout functionality. Implemented user authentication, product search, and 
+                  payment integration.
+                </p>
+                <div class="project-tech">
+                  <span class="project-tag">React</span>
+                  <span class="project-tag">Node.js</span>
+                  <span class="project-tag">MongoDB</span>
+                  <span class="project-tag">Express</span>
+                </div>
+              </div>
+              <div class="project-image">
+                <div class="image-placeholder">
+                  <i class="fas fa-shopping-cart"></i>
+                </div>
+              </div>
             </div>
-          </div>
-          <div class="project-image">
-            <img src="img/project1.jpg" alt="Student Management System">
+            
+            <div class="project-card card-glow">
+              <div class="project-number">
+                <span>03</span>
+              </div>
+              <div class="project-content">
+                <div class="project-header">
+                  <h3 class="project-title">Task Management Dashboard</h3>
+                  <div class="project-links">
+                    <a href="https://github.com/" target="_blank" class="project-link" data-tooltip="View Code">
+                      <i class="fab fa-github"></i>
+                    </a>
+                    <a href="#" target="_blank" class="project-link" data-tooltip="Live Demo">
+                      <i class="fas fa-external-link-alt"></i>
+                    </a>
+                  </div>
+                </div>
+                <p class="project-description">
+                  Interactive task management application with drag-and-drop functionality, 
+                  priority levels, and deadline tracking. Features include user authentication, 
+                  task categorization, and progress visualization.
+                </p>
+                <div class="project-tech">
+                  <span class="project-tag">React</span>
+                  <span class="project-tag">TailwindCSS</span>
+                  <span class="project-tag">Firebase</span>
+                  <span class="project-tag">DND Kit</span>
+                </div>
+              </div>
+              <div class="project-image">
+                <div class="image-placeholder">
+                  <i class="fas fa-tasks"></i>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
-
-        <!-- Project 2 -->
-        <div class="project">
-          <div class="project-image">
-            <img src="img/project2.jpg" alt="E-Commerce Platform">
-          </div>
-          <div class="project-content">
-            <span class="project-number">Project #2</span>
-            <h3>E-Commerce Platform</h3>
-            <p>
-              Full-featured e-commerce application with product catalog, shopping cart, and 
-              checkout functionality. Implemented user authentication, product search, and 
-              payment integration. Enhanced my full-stack development skills.
-            </p>
-            <div class="project-tech">
-              <span class="tech-tag">React</span>
-              <span class="tech-tag">Node.js</span>
-              <span class="tech-tag">MongoDB</span>
-              <span class="tech-tag">Express</span>
-            </div>
-            <div class="project-links">
-              <a href="https://github.com/" target="_blank" class="project-link">
-                <i class="fab fa-github"></i>
-              </a>
-              <a href="#" target="_blank" class="project-link">
-                <i class="fas fa-external-link-alt"></i>
-              </a>
-            </div>
-          </div>
-        </div>
-
-        <!-- Project 3 -->
-        <div class="project">
-          <div class="project-content">
-            <span class="project-number">Project #3</span>
-            <h3>Task Management Dashboard</h3>
-            <p>
-              Interactive task management application with drag-and-drop functionality, 
-              priority levels, and deadline tracking. Features include user authentication, 
-              task categorization, and progress visualization with responsive design.
-            </p>
-            <div class="project-tech">
-              <span class="tech-tag">React</span>
-              <span class="tech-tag">TailwindCSS</span>
-              <span class="tech-tag">Firebase</span>
-              <span class="tech-tag">DND Kit</span>
-            </div>
-            <div class="project-links">
-              <a href="https://github.com/" target="_blank" class="project-link">
-                <i class="fab fa-github"></i>
-              </a>
-              <a href="#" target="_blank" class="project-link">
-                <i class="fas fa-external-link-alt"></i>
-              </a>
-            </div>
-          </div>
-          <div class="project-image">
-            <img src="img/project3.jpg" alt="Task Management Dashboard">
-          </div>
-        </div>
-      </div>
-
-      <!-- Other Projects -->
-      <div class="other-projects-box">
-        <div class="separator">
-          <h2>Other Notable Projects</h2>
-        </div>
-
+        
+        <!-- Other Projects -->
         <div class="other-projects">
-          <!-- Project 4 -->
-          <div class="side-project">
-            <div class="side-project-header">
-              <h4>Weather Forecast App</h4>
-              <div class="side-project-links">
-                <a href="https://github.com/" target="_blank" class="project-link">
-                  <i class="fab fa-github"></i>
-                </a>
-                <a href="#" target="_blank" class="project-link">
-                  <i class="fas fa-external-link-alt"></i>
-                </a>
+          <h3 class="projects-subtitle">Other Notable Projects</h3>
+          <div class="projects-grid grid-auto-fit">
+            <div class="mini-project card">
+              <div class="mini-project-header">
+                <h4>Weather Forecast App</h4>
+                <div class="mini-project-links">
+                  <a href="https://github.com/" target="_blank" class="project-link" data-tooltip="View Code">
+                    <i class="fab fa-github"></i>
+                  </a>
+                  <a href="#" target="_blank" class="project-link" data-tooltip="Live Demo">
+                    <i class="fas fa-external-link-alt"></i>
+                  </a>
+                </div>
+              </div>
+              <p class="mini-project-description">
+                Responsive weather application providing real-time forecasts with location search.
+              </p>
+              <div class="mini-project-tech">
+                <span class="mini-tag">HTML5</span>
+                <span class="mini-tag">CSS3</span>
+                <span class="mini-tag">JavaScript</span>
+                <span class="mini-tag">API</span>
               </div>
             </div>
-            <p>
-              Responsive weather application providing real-time forecasts with 5-day predictions, 
-              temperature conversion, and location search using OpenWeather API.
-            </p>
-            <span class="side-project-tech">HTML5, CSS3, JavaScript, API</span>
-          </div>
-
-          <!-- Project 5 -->
-          <div class="side-project">
-            <div class="side-project-header">
-              <h4>Portfolio Website</h4>
-              <div class="side-project-links">
-                <a href="https://github.com/" target="_blank" class="project-link">
-                  <i class="fab fa-github"></i>
-                </a>
-                <a href="#" target="_blank" class="project-link">
-                  <i class="fas fa-external-link-alt"></i>
-                </a>
+            
+            <div class="mini-project card">
+              <div class="mini-project-header">
+                <h4>Recipe Finder App</h4>
+                <div class="mini-project-links">
+                  <a href="https://github.com/" target="_blank" class="project-link" data-tooltip="View Code">
+                    <i class="fab fa-github"></i>
+                  </a>
+                  <a href="#" target="_blank" class="project-link" data-tooltip="Live Demo">
+                    <i class="fas fa-external-link-alt"></i>
+                  </a>
+                </div>
+              </div>
+              <p class="mini-project-description">
+                Interactive recipe finder allowing search by ingredients, cuisine, or dietary preferences.
+              </p>
+              <div class="mini-project-tech">
+                <span class="mini-tag">React</span>
+                <span class="mini-tag">CSS3</span>
+                <span class="mini-tag">Recipe API</span>
               </div>
             </div>
-            <p>
-              Modern, responsive portfolio website showcasing projects and skills with 
-              performance optimization, smooth animations, and contact form integration.
-            </p>
-            <span class="side-project-tech">HTML5, CSS3, JavaScript, EmailJS</span>
-          </div>
-
-          <!-- Project 6 -->
-          <div class="side-project">
-            <div class="side-project-header">
-              <h4>Recipe Finder App</h4>
-              <div class="side-project-links">
-                <a href="https://github.com/" target="_blank" class="project-link">
-                  <i class="fab fa-github"></i>
-                </a>
-                <a href="#" target="_blank" class="project-link">
-                  <i class="fas fa-external-link-alt"></i>
-                </a>
+            
+            <div class="mini-project card">
+              <div class="mini-project-header">
+                <h4>Portfolio Website</h4>
+                <div class="mini-project-links">
+                  <a href="https://github.com/" target="_blank" class="project-link" data-tooltip="View Code">
+                    <i class="fab fa-github"></i>
+                  </a>
+                  <a href="#" target="_blank" class="project-link" data-tooltip="Live Demo">
+                    <i class="fas fa-external-link-alt"></i>
+                  </a>
+                </div>
+              </div>
+              <p class="mini-project-description">
+                Modern, responsive portfolio website with performance optimization and smooth animations.
+              </p>
+              <div class="mini-project-tech">
+                <span class="mini-tag">HTML5</span>
+                <span class="mini-tag">CSS3</span>
+                <span class="mini-tag">JavaScript</span>
+                <span class="mini-tag">EmailJS</span>
               </div>
             </div>
-            <p>
-              Interactive recipe finder allowing search by ingredients, cuisine, or dietary 
-              preferences with detailed recipes and nutritional information from Spoonacular API.
-            </p>
-            <span class="side-project-tech">React, CSS3, Recipe API</span>
+            
+            <div class="mini-project card">
+              <div class="mini-project-header">
+                <h4>Expense Tracker</h4>
+                <div class="mini-project-links">
+                  <a href="https://github.com/" target="_blank" class="project-link" data-tooltip="View Code">
+                    <i class="fab fa-github"></i>
+                  </a>
+                  <a href="#" target="_blank" class="project-link" data-tooltip="Live Demo">
+                    <i class="fas fa-external-link-alt"></i>
+                  </a>
+                </div>
+              </div>
+              <p class="mini-project-description">
+                Personal finance management tool with data visualization and budget tracking.
+              </p>
+              <div class="mini-project-tech">
+                <span class="mini-tag">React</span>
+                <span class="mini-tag">Chart.js</span>
+                <span class="mini-tag">LocalStorage</span>
+              </div>
+            </div>
           </div>
+        </div>
+        
+        <div class="projects-cta">
+          <a href="https://github.com/" target="_blank" class="btn btn-outline-glow">
+            <i class="fab fa-github"></i> View More on GitHub
+          </a>
         </div>
       </div>
     </section>
 
     <!-- Contact Section -->
-    <section id="contact" class="container">
-      <div class="contact-section">
-        <span>Let's Connect!</span>
-        <h4>Don't Be a Stranger</h4>
-        <p>
-          Interested in collaborating or just want to chat about technology and development? 
-          I'm always open to discussing new projects, creative ideas, or opportunities to 
-          be part of your vision.
-        </p>
-        <a href="mailto:lavikapanwar@email.com" class="cta cta1">
-          <i class="fas fa-envelope"></i> Send an Email
-        </a>
-
-        <div class="contact-social-links">
-          <a href="https://github.com/" target="_blank" class="social">
-            <i class="fab fa-github"></i>
-          </a>
-          <a href="https://linkedin.com/" target="_blank" class="social">
-            <i class="fab fa-linkedin-in"></i>
-          </a>
-          <a href="https://twitter.com/" target="_blank" class="social">
-            <i class="fab fa-twitter"></i>
-          </a>
-          <a href="https://leetcode.com/" target="_blank" class="social">
-            <i class="fas fa-code"></i>
-          </a>
+    <section id="contact" class="section contact">
+      <div class="container">
+        <div class="contact-grid">
+          <div class="contact-content">
+            <div class="section-header">
+              <div class="section-badge">
+                <span class="badge badge-primary">
+                  <i class="fas fa-envelope"></i> Contact
+                </span>
+              </div>
+              <h2 class="section-title">
+                Let's <span class="text-gradient">Connect</span>
+              </h2>
+              <p class="section-subtitle">
+                Have a project in mind or just want to chat? I'd love to hear from you!
+              </p>
+            </div>
+            
+            <div class="contact-info">
+              <div class="contact-item">
+                <div class="contact-icon">
+                  <i class="fas fa-envelope"></i>
+                </div>
+                <div class="contact-details">
+                  <h4>Email</h4>
+                  <a href="mailto:lavikapanwar@email.com" class="contact-link">
+                    lavikapanwar@email.com
+                  </a>
+                </div>
+              </div>
+              
+              <div class="contact-item">
+                <div class="contact-icon">
+                  <i class="fas fa-map-marker-alt"></i>
+                </div>
+                <div class="contact-details">
+                  <h4>Location</h4>
+                  <p>Dehradun, India</p>
+                  <p class="contact-meta">Available for remote opportunities</p>
+                </div>
+              </div>
+              
+              <div class="contact-item">
+                <div class="contact-icon">
+                  <i class="fas fa-clock"></i>
+                </div>
+                <div class="contact-details">
+                  <h4>Availability</h4>
+                  <p>Open to Internships & Collaborations</p>
+                  <p class="contact-meta">Currently accepting new projects</p>
+                </div>
+              </div>
+            </div>
+            
+            <div class="contact-social">
+              <h3>Follow My Journey</h3>
+              <div class="social-links">
+                <a href="https://github.com/" target="_blank" class="social-btn" data-tooltip="GitHub">
+                  <i class="fab fa-github"></i>
+                  <span>GitHub</span>
+                </a>
+                <a href="https://linkedin.com/" target="_blank" class="social-btn" data-tooltip="LinkedIn">
+                  <i class="fab fa-linkedin-in"></i>
+                  <span>LinkedIn</span>
+                </a>
+                <a href="https://twitter.com/" target="_blank" class="social-btn" data-tooltip="Twitter">
+                  <i class="fab fa-twitter"></i>
+                  <span>Twitter</span>
+                </a>
+                <a href="https://leetcode.com/" target="_blank" class="social-btn" data-tooltip="LeetCode">
+                  <i class="fas fa-code"></i>
+                  <span>LeetCode</span>
+                </a>
+              </div>
+            </div>
+          </div>
+          
+          <div class="contact-form-container card">
+            <form id="contactForm" class="contact-form">
+              <div class="form-group floating-label">
+                <input type="text" id="name" name="name" placeholder=" " required>
+                <label for="name">Your Name</label>
+                <div class="form-error"></div>
+              </div>
+              
+              <div class="form-group floating-label">
+                <input type="email" id="email" name="email" placeholder=" " required>
+                <label for="email">Your Email</label>
+                <div class="form-error"></div>
+              </div>
+              
+              <div class="form-group floating-label">
+                <input type="text" id="subject" name="subject" placeholder=" " required>
+                <label for="subject">Subject</label>
+                <div class="form-error"></div>
+              </div>
+              
+              <div class="form-group floating-label">
+                <textarea id="message" name="message" placeholder=" " rows="5" required></textarea>
+                <label for="message">Your Message</label>
+                <div class="form-error"></div>
+              </div>
+              
+              <button type="submit" class="btn btn-primary btn-block">
+                <span class="btn-text">Send Message</span>
+                <span class="btn-loader" style="display: none;">
+                  <div class="loading-dots">
+                    <div class="loading-dot"></div>
+                    <div class="loading-dot"></div>
+                    <div class="loading-dot"></div>
+                  </div>
+                </span>
+              </button>
+              
+              <div class="form-success" style="display: none;">
+                <i class="fas fa-check-circle"></i>
+                <p>Thank you! Your message has been sent successfully.</p>
+              </div>
+            </form>
+          </div>
         </div>
       </div>
     </section>
 
     <!-- Footer -->
-    <footer class="container">
-      <p>Designed & Developed with ❤️ by <span>Lavika Panwar</span></p>
-      <p style="margin-top: 10px; font-size: 14px;">© 2024 All rights reserved.</p>
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-content">
+          <div class="footer-brand">
+            <a href="/" class="logo">
+              <div class="logo-icon">LP</div>
+              <span>Lavika Panwar</span>
+            </a>
+            <p class="footer-tagline">
+              Building the future, one line of code at a time.
+            </p>
+          </div>
+          
+          <div class="footer-links">
+            <div class="footer-column">
+              <h4>Quick Links</h4>
+              <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+              </ul>
+            </div>
+            
+            <div class="footer-column">
+              <h4>Resources</h4>
+              <ul>
+                <li><a href="https://drive.google.com/" target="_blank">Résumé</a></li>
+                <li><a href="https://github.com/" target="_blank">GitHub</a></li>
+                <li><a href="https://linkedin.com/" target="_blank">LinkedIn</a></li>
+                <li><a href="https://leetcode.com/" target="_blank">LeetCode</a></li>
+              </ul>
+            </div>
+            
+            <div class="footer-column">
+              <h4>Connect</h4>
+              <div class="footer-social">
+                <a href="https://github.com/" target="_blank" aria-label="GitHub">
+                  <i class="fab fa-github"></i>
+                </a>
+                <a href="https://linkedin.com/" target="_blank" aria-label="LinkedIn">
+                  <i class="fab fa-linkedin-in"></i>
+                </a>
+                <a href="https://twitter.com/" target="_blank" aria-label="Twitter">
+                  <i class="fab fa-twitter"></i>
+                </a>
+                <a href="mailto:lavikapanwar@email.com" aria-label="Email">
+                  <i class="fas fa-envelope"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="footer-bottom">
+          <p>&copy; <span id="currentYear"></span> Lavika Panwar. All rights reserved.</p>
+          <p class="footer-credits">
+            Designed & Developed with <i class="fas fa-heart" style="color: #ec4899;"></i> by Lavika Panwar
+          </p>
+        </div>
+      </div>
     </footer>
 
+    <!-- Back to Top Button -->
+    <button class="back-to-top" id="backToTop" aria-label="Back to top">
+      <i class="fas fa-chevron-up"></i>
+    </button>
+
+    <!-- Loading Overlay -->
+    <div class="loading-overlay" id="loadingOverlay">
+      <div class="loading-content">
+        <div class="loading-spinner"></div>
+        <p>Loading Portfolio...</p>
+      </div>
+    </div>
+
     <!-- JavaScript -->
+    <script src="js/main.js"></script>
     <script>
-      // Mobile Navigation Toggle
-      const hamburger = document.querySelector('.hamburger');
-      const navMenu = document.querySelector('.nav-menu');
-
-      hamburger.addEventListener('click', () => {
-        hamburger.classList.toggle('active');
-        navMenu.classList.toggle('active');
-      });
-
-      // Close mobile menu when clicking a link
-      document.querySelectorAll('.nav-link a').forEach(link => {
-        link.addEventListener('click', () => {
-          hamburger.classList.remove('active');
-          navMenu.classList.remove('active');
-        });
-      });
-
-      // Header scroll effect
-      window.addEventListener('scroll', () => {
-        const header = document.getElementById('header');
-        if (window.scrollY > 50) {
-          header.classList.add('scrolled');
-        } else {
-          header.classList.remove('scrolled');
+      // Critical JavaScript (inlined for better performance)
+      document.addEventListener('DOMContentLoaded', () => {
+        // Remove loading overlay
+        const loadingOverlay = document.getElementById('loadingOverlay');
+        if (loadingOverlay) {
+          setTimeout(() => {
+            loadingOverlay.style.opacity = '0';
+            loadingOverlay.style.visibility = 'hidden';
+          }, 500);
         }
-      });
 
-      // Smooth scroll for anchor links
-      document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener('click', function(e) {
-          e.preventDefault();
-          const targetId = this.getAttribute('href');
-          if (targetId === '#') return;
+        // Set current year
+        document.getElementById('currentYear').textContent = new Date().getFullYear();
+
+        // Initialize counters
+        const counters = document.querySelectorAll('.stat-number');
+        counters.forEach(counter => {
+          const target = parseInt(counter.getAttribute('data-count'));
+          const increment = target / 100;
+          let current = 0;
           
-          const targetElement = document.querySelector(targetId);
-          if (targetElement) {
-            window.scrollTo({
-              top: targetElement.offsetTop - 80,
-              behavior: 'smooth'
+          const updateCounter = () => {
+            if (current < target) {
+              current += increment;
+              counter.textContent = Math.round(current);
+              setTimeout(updateCounter, 20);
+            } else {
+              counter.textContent = target;
+            }
+          };
+          
+          // Start counter when in viewport
+          const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+              if (entry.isIntersecting) {
+                updateCounter();
+                observer.unobserve(entry.target);
+              }
             });
-          }
-        });
-      });
-
-      // Add fade-in animation on scroll
-      const fadeElements = document.querySelectorAll('.fade-in');
-      
-      const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-          if (entry.isIntersecting) {
-            entry.target.style.opacity = '1';
-            entry.target.style.transform = 'translateY(0)';
-          }
-        });
-      }, { threshold: 0.1 });
-
-      fadeElements.forEach(el => {
-        el.style.opacity = '0';
-        el.style.transform = 'translateY(20px)';
-        el.style.transition = 'opacity 0.8s ease, transform 0.8s ease';
-        observer.observe(el);
-      });
-
-      // Add active class to current section in navigation
-      const sections = document.querySelectorAll('section[id]');
-      
-      window.addEventListener('scroll', () => {
-        let current = '';
-        
-        sections.forEach(section => {
-          const sectionTop = section.offsetTop - 100;
-          const sectionHeight = section.clientHeight;
+          });
           
-          if (scrollY >= sectionTop && scrollY < sectionTop + sectionHeight) {
-            current = section.getAttribute('id');
-          }
-        });
-        
-        document.querySelectorAll('.nav-link a').forEach(link => {
-          link.classList.remove('active');
-          if (link.getAttribute('href') === `#${current}`) {
-            link.classList.add('active');
-          }
+          observer.observe(counter);
         });
       });
     </script>
