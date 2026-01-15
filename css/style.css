@@ -74,6 +74,21 @@ h3 {
   margin-bottom: 1rem;
 }
 
+.separator h2 {
+  position: relative;
+  display: inline-block;
+}
+
+.separator h2::after {
+  content: '';
+  display: block;
+  width: 60px;
+  height: 4px;
+  background: linear-gradient(90deg, #667eea 0%, #764ba2 100%);
+  margin-top: 10px;
+  border-radius: 2px;
+}
+
 .featured-projects-box h3 {
   background: -webkit-linear-gradient(
     90.98deg,
@@ -103,14 +118,120 @@ a > img:hover {
 }
 
 /******************************************
+/* ANIMATIONS
+/*******************************************/
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes pulse {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+}
+
+@keyframes slideInRight {
+  from {
+    opacity: 0;
+    transform: translateX(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.hero-section {
+  animation: fadeInUp 0.8s ease-out;
+}
+
+.about-content {
+  animation: fadeInUp 0.8s ease-out;
+  animation-fill-mode: both;
+}
+
+.project {
+  animation: fadeInUp 0.8s ease-out;
+  animation-fill-mode: both;
+}
+
+.project:nth-child(2) {
+  animation-delay: 0.1s;
+}
+
+.project:nth-child(3) {
+  animation-delay: 0.2s;
+}
+
+.project:nth-child(4) {
+  animation-delay: 0.3s;
+}
+
+.side-project {
+  animation: fadeInUp 0.8s ease-out;
+  animation-fill-mode: both;
+}
+
+.side-project:nth-child(1) {
+  animation-delay: 0.1s;
+}
+
+.side-project:nth-child(2) {
+  animation-delay: 0.2s;
+}
+
+.side-project:nth-child(3) {
+  animation-delay: 0.3s;
+}
+
+.side-project:nth-child(4) {
+  animation-delay: 0.4s;
+}
+
+.side-project:nth-child(5) {
+  animation-delay: 0.5s;
+}
+
+.side-project:nth-child(6) {
+  animation-delay: 0.6s;
+}
+
+.skills-content {
+  animation: fadeInUp 0.8s ease-out;
+  animation-fill-mode: both;
+}
+
+/******************************************
 /* LAYOUT
-font-family: 'Fira Mono', monospace;
-font-family: 'Fira Sans', sans-serif;
 /*******************************************/
 /* HEADER AND NAV STYLING */
 header {
   padding: 1rem 2rem;
   border-bottom: 1px solid rgb(38, 50, 67);
+  position: sticky;
+  top: 0;
+  background-color: rgba(34, 40, 49, 0.95);
+  backdrop-filter: blur(10px);
+  z-index: 100;
 }
 
 nav {
@@ -122,6 +243,11 @@ nav {
 nav img {
   width: 55px;
   z-index: 2;
+  transition: transform 0.3s ease;
+}
+
+nav img:hover {
+  transform: scale(1.1) rotate(5deg);
 }
 
 .nav-menu {
@@ -167,6 +293,11 @@ nav img {
   background: none;
   cursor: pointer;
   z-index: 2;
+  transition: all 0.3s ease;
+}
+
+.hamburger:hover {
+  transform: scale(1.1);
 }
 
 .hamburger.is-active {
@@ -227,26 +358,43 @@ nav img {
 *************************/
 .nav-link a {
   color: rgb(204, 213, 243);
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.nav-link a::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: -5px;
+  left: 0;
+  background: linear-gradient(90deg, rgba(24, 185, 207, 0.9) 0%, #6688ff 100%);
+  transition: width 0.3s ease;
+}
+
+.nav-link a:hover::after {
+  width: 100%;
 }
 
 .nav-link a:hover {
   color: rgba(24, 185, 207, 0.9);
 }
 
-.nav-link:nth-child(4):hover {
+.nav-link:nth-child(5):hover {
   transform: scale(1.08);
   background: transparent;
   transition: transform 0.4s ease-in-out;
 }
 
-.nav-link:nth-child(4) a {
+.nav-link:nth-child(5) a {
   display: block;
   padding: 0.8rem 2.5rem;
   cursor: pointer;
 }
 
-.nav-link:nth-child(4) a {
-  color: rgb(204, 213, 243);
+.nav-link:nth-child(5) a::after {
+  display: none;
 }
 
 .nav-social-links {
@@ -259,11 +407,11 @@ nav img {
 .social-links img {
   width: 3.5rem;
   height: 3.5rem;
+  transition: all 0.3s ease;
 }
 
 .social-links img:hover {
-  transform: scale(1.03);
-  transition: transform 0.4s ease-in-out;
+  transform: translateY(-5px) scale(1.1);
 }
 
 /************************
@@ -276,22 +424,32 @@ main {
   align-items: center;
 }
 
+.salutation {
+  display: block;
+  margin-bottom: 1rem;
+  font-family: "Satoshi 500";
+  color: rgba(24, 185, 207, 0.9);
+  font-size: 1.6rem;
+}
+
 .name-highlight {
-  background: -webkit-linear-gradient(
-    top right,
-    rgba(18, 55, 246, 1),
-    rgba(9, 244, 244, 1)
-  );
+  background: linear-gradient(45deg, #667eea 0%, #764ba2 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
+  animation: pulse 3s ease-in-out infinite;
 }
 
 .declaration {
-  margin: 0;
-
+  margin: 1rem 0;
   font-size: 2.5rem;
   line-height: 1.4;
+  color: rgb(178, 185, 207);
+}
+
+.hero-description {
+  margin-top: 1.5rem;
+  line-height: 1.7;
   color: rgb(178, 185, 207);
 }
 
@@ -320,6 +478,7 @@ main {
   text-align: center;
   text-decoration: none;
   color: rgb(204, 213, 243);
+  transition: all 0.3s ease;
 }
 
 .cta1 {
@@ -328,12 +487,12 @@ main {
 }
 
 .cta:hover {
-  transform: scale(1.05);
-  transition: transform 0.4s ease-in-out;
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(24, 185, 207, 0.4);
 }
 
 .cta2,
-.nav-link:nth-child(4) {
+.nav-link:nth-child(5) {
   position: relative;
   border-radius: 1rem;
   border-image-slice: 1;
@@ -346,7 +505,7 @@ main {
 }
 
 .cta2::after,
-.nav-link:nth-child(4)::after {
+.nav-link:nth-child(5)::after {
   position: absolute;
   content: "";
   top: -1.8px;
@@ -375,27 +534,19 @@ main {
 .separator {
   position: relative;
   align-self: flex-start;
-}
-
-.separator::after {
-  content: "";
-  position: absolute;
-  bottom: -1rem;
-  left: 0;
-  width: 5rem;
-  height: 0.5rem;
-  border-radius: 3.5rem;
-  background-color: rgb(126, 146, 217);
+  margin-bottom: 3rem;
 }
 
 .about-text {
   padding-top: 1.2rem;
-  line-height: 1.6;
+  line-height: 1.7;
 }
 
 .about-text span {
   font-family: "Satoshi 700";
   color: rgb(29, 228, 255);
+  position: relative;
+  padding: 0 2px;
 }
 
 .about-text + ul {
@@ -403,12 +554,28 @@ main {
   flex-flow: row wrap;
   justify-content: space-between;
   gap: 0.7rem;
-  padding: 1.55rem;
+  padding: 1.55rem 0;
+  margin-top: 2rem;
 }
 
 .tool {
   width: 45%;
   margin-right: 1rem;
+  padding: 1rem 1.5rem;
+  background: rgba(38, 50, 67, 0.8);
+  border-radius: 0.8rem;
+  text-align: center;
+  font-family: "Satoshi 500";
+  color: rgb(126, 146, 217);
+  transition: all 0.3s ease;
+  border: 1px solid transparent;
+}
+
+.tool:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 5px 15px rgba(24, 185, 207, 0.2);
+  border-color: rgba(24, 185, 207, 0.5);
+  background: rgba(38, 50, 67, 1);
 }
 
 .img-box {
@@ -424,6 +591,12 @@ main {
     #002cc7 -39.51%,
     rgba(24, 185, 207, 0.9) 116.85%
   );
+  transition: all 0.3s ease;
+}
+
+.img-box:hover {
+  transform: scale(1.02);
+  box-shadow: 0 10px 30px rgba(24, 185, 207, 0.3);
 }
 
 .img-box::before {
@@ -434,12 +607,54 @@ main {
   width: 100%;
   height: 100%;
   background: rgba(34, 40, 49, 0.35);
+  border-radius: 1.5rem;
+  transition: all 0.3s ease;
+}
+
+.img-box:hover::before {
+  background: rgba(34, 40, 49, 0.15);
 }
 
 .profile-img {
   width: 25rem;
   border-radius: 1.5rem;
   object-fit: fill;
+}
+
+/* SKILLS SECTION STYLING */
+#skills {
+  padding-bottom: 10rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.skills-content {
+  width: 100%;
+  margin-top: 2rem;
+}
+
+.skill-category {
+  margin-bottom: 3rem;
+}
+
+.skill-category h3 {
+  margin-bottom: 1.5rem;
+  color: rgba(24, 185, 207, 0.9);
+  font-size: 1.8rem;
+}
+
+.skills-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  padding: 0;
+  list-style: none;
+}
+
+.skills-list .tool {
+  width: calc(50% - 0.5rem);
+  margin: 0;
 }
 
 /* PROJECTS SECTION STYLING */
@@ -458,22 +673,41 @@ main {
   flex-direction: column-reverse;
 
   max-width: 35rem;
-  max-height: 58rem;
   background: rgb(38, 50, 67);
   box-shadow: 0 1rem 2rem 0 rgba(27, 27, 27, 0.1);
 
   border-radius: 1.2rem;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.project:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 30px rgba(24, 185, 207, 0.2);
 }
 
 .project-details-box {
   padding: 2.5rem;
-  padding-bottom: 0;
+  padding-bottom: 2rem;
 }
 
-.project-main-info span,
-h3 {
+.project-main-info span {
   margin: 0;
   text-transform: uppercase;
+  font-family: "Satoshi 500";
+  color: rgba(126, 146, 217, 1);
+  font-size: 1.3rem;
+  letter-spacing: 1px;
+}
+
+.project-main-info h3 {
+  margin: 1rem 0;
+}
+
+.project-main-info p {
+  margin: 1.5rem 0;
+  line-height: 1.7;
+  color: rgb(178, 185, 207);
 }
 
 .project-main-info p > a {
@@ -489,6 +723,15 @@ h3 {
   display: flex;
   align-items: center;
   gap: 2rem;
+  margin-top: 1.5rem;
+}
+
+.project-links a {
+  transition: all 0.3s ease;
+}
+
+.project-links a:hover {
+  transform: translateY(-3px);
 }
 
 .project-tools p {
@@ -501,13 +744,16 @@ h3 {
   -webkit-text-fill-color: transparent;
   background-clip: text;
 
-  padding-bottom: 0.3rem;
+  padding-top: 1.5rem;
+  margin: 0;
 
   font-family: "Satoshi 700";
+  font-size: 1.4rem;
 }
 
 .project-image-box {
   position: relative;
+  overflow: hidden;
 }
 
 .project-img-link {
@@ -520,11 +766,11 @@ h3 {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  border-radius: 1.2rem 1.2rem 0 0;
+  transition: transform 0.3s ease;
 }
 
-.project-img-link > img:hover {
-  transform: none;
+.project:hover .project-img-link > img {
+  transform: scale(1.05);
 }
 
 .notable-projects-box {
@@ -534,14 +780,23 @@ h3 {
 }
 
 .side-project {
-  padding: 4.5rem 2.75rem;
+  padding: 3rem 2.5rem;
   max-width: 35rem;
   background: rgba(38, 50, 67, 1);
   box-shadow: 0 1rem 2rem 0 rgba(27, 27, 27, 0.1);
+  border-radius: 1.2rem;
 
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  transition: all 0.3s ease;
+  border: 1px solid transparent;
+}
+
+.side-project:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 30px rgba(24, 185, 207, 0.2);
+  border-color: rgba(24, 185, 207, 0.3);
 }
 
 .side-project > div {
@@ -553,16 +808,31 @@ h3 {
 
 .side-project img {
   width: 3.5rem;
+  transition: all 0.3s ease;
 }
 
-.side-project h3,
+.side-project img:hover {
+  transform: scale(1.1) rotate(5deg);
+}
+
+.side-project h3 {
+  margin: 2rem 0 1rem;
+  color: rgba(24, 185, 207, 0.9);
+  font-size: 1.8rem;
+}
+
+.side-project p {
+  margin: 1rem 0;
+  line-height: 1.7;
+  color: rgb(178, 185, 207);
+}
+
 .side-project span {
-  margin: 2.2rem 0 0;
+  margin-top: 1.5rem;
+  display: inline-block;
   color: #7e92d9;
-}
-
-.side-project span {
   font-family: "Satoshi 500";
+  font-size: 1.3rem;
 }
 
 /* CONTACT SECTION STYLING */
@@ -584,81 +854,41 @@ h3 {
   font-family: "Satoshi 500";
   font-size: 1.6rem;
   color: rgba(126, 146, 217, 1);
+  letter-spacing: 1px;
 }
 
 h4 {
-  margin: 1rem;
+  margin: 1.5rem 0;
 
   font-family: "Satoshi 900";
   font-size: 3rem;
+  background: -webkit-linear-gradient(
+    90.98deg,
+    rgba(24, 185, 207, 0.9) -2.14%,
+    #6688ff 103.54%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
 }
 
 h4 + p {
-  padding: 1rem 0 2rem;
-}
-
-form {
-  display: flex;
-  flex-direction: column;
-  gap: 2rem;
-}
-
-.form-control {
-  display: grid;
-  gap: 0.8rem;
-  text-align: left;
-}
-
-#contact label > span {
-  font-size: 2rem;
-  line-height: 1;
-}
-
-.form-control input {
-  padding: 1.2rem;
-  border: 0.1rem solid;
-  background-color: transparent;
-  color: aliceblue;
-  border-radius: 1rem;
-}
-
-.form-control textarea {
-  padding: 1.2rem;
-  border: 0.1rem solid;
-  min-height: 35rem;
-  max-height: 48rem;
-  background-color: transparent;
-  color: aliceblue;
-  border-radius: 1rem;
-}
-
-form button {
-  display: block;
-  margin: auto;
-  padding: 1.8rem;
-  border-radius: 2rem;
-  width: fit-content;
-  background: aliceblue;
-  text-transform: uppercase;
-
-  border-image-slice: 0;
-  border-image-source: none;
-}
-
-button:hover {
-  transform: scale(1.05);
+  padding: 1.5rem 0 2.5rem;
+  line-height: 1.7;
+  color: rgb(178, 185, 207);
 }
 
 #contact > aside {
   display: flex;
   justify-content: center;
-  gap: 1.2rem;
+  gap: 2rem;
+  padding-top: 2rem;
 }
 
 /* FOOTER STYLING */
 footer {
   width: 100%;
-  padding: 1.2rem;
+  padding: 2rem;
   border-top: 0.1rem solid rgb(38, 50, 67);
 
   font-size: 1.3rem;
@@ -675,10 +905,10 @@ footer span {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
+  font-family: "Satoshi 700";
 }
 
 /******************************************
-/* ADDITIONAL STYLES
 /* MEDIA QUERIES
 /*******************************************/
 @media screen and (min-width: 720px) {
@@ -712,7 +942,11 @@ footer span {
 
   h1,
   .declaration {
-    font-size: 3.5rem;
+    font-size: 4rem;
+  }
+
+  .hero-description {
+    font-size: 1.6rem;
   }
 
   .cta,
@@ -726,7 +960,11 @@ footer span {
   .contact-social-links {
     display: flex;
     flex-direction: column;
-    gap: 1.1rem;
+    gap: 1.5rem;
+  }
+
+  .main-social-links {
+    animation: slideInRight 0.8s ease-out 0.5s both;
   }
 
   #about {
@@ -742,6 +980,24 @@ footer span {
     width: 55vw;
   }
 
+  .tool {
+    width: calc(33.333% - 0.7rem);
+  }
+
+  #skills {
+    width: 100%;
+  }
+
+  .skills-content {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 3rem;
+  }
+
+  .skills-list .tool {
+    width: 100%;
+  }
+
   .featured-projects-box {
     flex-flow: row wrap;
     justify-content: start;
@@ -749,16 +1005,29 @@ footer span {
   }
 
   .project {
-    max-width: 34rem;
+    max-width: 40rem;
   }
 
-  .other-projects-box .separator::after {
-    width: 0;
+  .other-projects-box .separator h2::after {
+    display: none;
   }
 
   .other-projects-box h2 {
     text-align: center;
-    text-decoration: underline;
+    position: relative;
+    padding-bottom: 1rem;
+  }
+
+  .other-projects-box h2::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px;
+    height: 4px;
+    background: linear-gradient(90deg, #667eea 0%, #764ba2 100%);
+    border-radius: 2px;
   }
 
   .notable-projects-box {
@@ -767,7 +1036,7 @@ footer span {
   }
 
   .side-project {
-    width: 35rem;
+    width: 40rem;
   }
 
   #contact {
@@ -775,12 +1044,14 @@ footer span {
 
     flex-direction: row;
     justify-content: center;
-    gap: 2.5rem;
+    align-items: center;
+    gap: 4rem;
   }
 
   #contact > div {
     width: 55vw;
     padding: 2.5rem;
+    text-align: left;
   }
 }
 
@@ -818,12 +1089,17 @@ footer span {
     width: 48vw;
   }
 
+  .skills-content {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
   .separator ~ .project {
     position: relative;
     min-width: 100%;
     gap: 2.5rem;
     margin-top: 4.5rem;
     background: none;
+    max-height: none;
   }
 
   .separator ~ .project:nth-child(even) {
@@ -832,7 +1108,6 @@ footer span {
 
   .separator ~ .project:nth-child(odd) {
     flex-direction: row-reverse;
-
     text-align: right;
   }
 
@@ -849,7 +1124,7 @@ footer span {
 
   .project-main-info {
     position: relative;
-    padding: 2rem;
+    padding: 2.5rem;
     border-radius: 0.8rem;
     background: rgb(38, 50, 67);
     box-shadow: 0 1rem 3rem 0 rgba(27, 27, 27, 0.2);
@@ -924,20 +1199,19 @@ footer span {
 
   .project-img-link > img {
     border-radius: 1.2rem;
-  }
-
-  .project-img-link > img:hover {
-    transform: scale(1.05);
+    height: 100%;
   }
 
   .notable-projects-box {
     width: 100%;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
+    gap: 2.5rem;
   }
 
   .side-project {
     width: unset;
+    min-height: 30rem;
   }
 
   .img-box {
@@ -972,7 +1246,7 @@ footer span {
 
   .nav-menu {
     position: static;
-    width: 30%;
+    width: auto;
     height: auto;
     justify-self: flex-end;
     flex-direction: row;
@@ -1024,13 +1298,16 @@ footer span {
     width: 65rem;
   }
 
-  h1,
+  h1 {
+    font-size: 6rem;
+  }
+
   .declaration {
-    font-size: 4rem;
+    font-size: 3.5rem;
   }
 
   .project {
-    height: 35rem;
+    min-height: 35rem;
   }
 
   .project-image-box {
@@ -1043,5 +1320,40 @@ footer span {
 
   .cta2 {
     width: fit-content;
+  }
+
+  .side-project {
+    min-height: 32rem;
+  }
+}
+
+@media screen and (min-width: 1920px) {
+  body > * {
+    width: 120rem;
+  }
+
+  main > section {
+    width: 70rem;
+  }
+
+  h1 {
+    font-size: 7rem;
+  }
+
+  .declaration {
+    font-size: 4rem;
+  }
+
+  h2 {
+    font-size: 3.5rem;
+  }
+
+  .project-main-info {
+    padding: 3rem;
+  }
+
+  .notable-projects-box {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 3rem;
   }
 }
