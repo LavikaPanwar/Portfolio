@@ -2,1245 +2,365 @@
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Lavika Panwar | BCA Student & Software Developer</title>
-
-    <!-- Meta tags for SEO -->
-    <meta name="title" content="Lavika Panwar | BCA Student & Software Developer" />
-    <meta name="description" content="Lavika Panwar is a Bachelor of Computer Applications (BCA) student with a growing interest in software development, web technologies, and building reliable applications." />
-    <meta name="keywords" content="Lavika Panwar, BCA Student, Software Developer, Web Developer, Computer Applications, Portfolio Website" />
-    <meta name="author" content="Lavika Panwar" />
+    <!-- Primary Meta Tags -->
+    <title>Aryan Singh - DevOps Enthusiast</title>
+    <meta name="title" content="Daniel Ezekiel - Software Engineer" />
+    <meta
+      name="keywords"
+      content="Daniel Ezekiel, Daniel Boluwatife Ezekiel, Daniel Ezekiel Software Engineer, Daniel, Ezekiel, db-ezekiel, db_ezekiel"
+    />
+    <meta
+      name="description"
+      content="Daniel Ezekiel is a software engineer who specializes in passionately delivering characteristic web solutions and experiences."
+    />
+    <meta name="image" content="https://danielezekiel.me/img/og-img.png" />
 
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website" />
-    <meta property="og:title" content="Lavika Panwar | Developer Portfolio" />
-    <meta property="og:description" content="Professional portfolio of Lavika Panwar, a BCA student focused on software development and modern web technologies." />
-    <meta property="og:image" content="img/og-img.png" />
-    <meta property="og:url" content="https://lavikapanwar.dev" />
+    <meta property="og:url" content="https://danielezekiel.me/" />
+    <meta property="og:title" content="Daniel Ezekiel - Software Engineer" />
+    <meta
+      property="og:description"
+      content="Daniel Ezekiel is a software engineer who specializes in passionately delivering characteristic web solutions and experiences."
+    />
+    <meta
+      property="og:image"
+      content="https://danielezekiel.me/img/og-img.png"
+    />
 
     <!-- Twitter -->
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="Lavika Panwar | Software Developer" />
-    <meta name="twitter:description" content="BCA student portfolio showcasing projects, skills, and academic foundation." />
-    <meta name="twitter:image" content="img/og-img.png" />
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content="https://danielezekiel.me/" />
+    <meta name="twitter:creator" content="@db_ezekiel" />
+    <meta
+      property="twitter:title"
+      content="Daniel Ezekiel - Software Engineer"
+    />
+    <meta
+      property="twitter:description"
+      content="Daniel Ezekiel is a software engineer who specializes in passionately delivering characteristic web solutions and experiences."
+    />
+    <meta
+      property="twitter:image"
+      content="https://danielezekiel.me/img/og-img.png"
+    />
 
-    <!-- Favicon -->
-    <link rel="apple-touch-icon" sizes="180x180" href="img/favicon/apple-touch-icon.png" />
-    <link rel="icon" type="image/png" sizes="32x32" href="img/favicon/favicon-32x32.png" />
-    <link rel="icon" type="image/png" sizes="16x16" href="img/favicon/favicon-16x16.png" />
+    <!-- Google Site Verification -->
+    <meta
+      name="google-site-verification"
+      content="E3BIWUOc96P_KBsDuKlAoED7-iZZXuicZ4nhcSskbYY"
+    />
+
+    <!-- site favicon link -->
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="img/favicon/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="img/favicon/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="img/favicon/favicon-16x16.png"
+    />
     <link rel="manifest" href="img/favicon/site.webmanifest" />
 
-    <!-- CSS -->
+    <link rel="“canonical”" href="https://danielezekiel.me/index.html" />
+    <!-- external CSS link -->
     <link rel="stylesheet" href="css/normalize.css" />
     <link rel="stylesheet" href="css/style.css" />
 
-    <!-- Particles.js -->
-    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
-
-    <style>
-      /* ===== BASE STYLES ===== */
-      :root {
-        --primary-color: rgba(24, 185, 207, 0.9);
-        --secondary-color: #6688ff;
-        --dark-bg: rgb(34, 40, 49);
-        --dark-header: rgba(38, 50, 67, 0.95);
-        --light-bg: rgb(248, 250, 252);
-        --light-text: rgb(30, 41, 59);
-        --light-card: rgb(255, 255, 255);
-        --gray-text: rgb(71, 85, 105);
-        --border-light: rgb(226, 232, 240);
-        --shadow-light: 0 1rem 2rem 0 rgba(0, 0, 0, 0.08);
-        --shadow-dark: 0 5px 15px rgba(0, 0, 0, 0.3);
-        --transition: all 0.3s ease;
-        --border-radius: 12px;
-        --container-padding: 2rem;
-      }
-
-      * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-      }
-
-      html {
-        scroll-behavior: smooth;
-      }
-
-      body {
-        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
-        line-height: 1.6;
-        transition: var(--transition);
-        overflow-x: hidden;
-        min-height: 100vh;
-      }
-
-      /* ===== PARTICLE BACKGROUND ===== */
-      #particles-js {
-        position: fixed;
-        width: 100%;
-        height: 100%;
-        top: 0;
-        left: 0;
-        z-index: -1;
-        opacity: 0.6;
-        pointer-events: none;
-      }
-
-      /* ===== LOADING SCREEN ===== */
-      .loading-screen {
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background: var(--dark-bg);
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        z-index: 9999;
-        transition: opacity 0.5s ease, visibility 0.5s ease;
-      }
-
-      .loading-screen.hidden {
-        opacity: 0;
-        visibility: hidden;
-      }
-
-      .loader {
-        width: 80px;
-        height: 80px;
-        border: 4px solid rgba(24, 185, 207, 0.2);
-        border-top-color: rgba(24, 185, 207, 0.9);
-        border-radius: 50%;
-        animation: spin 1s linear infinite;
-      }
-
-      @keyframes spin {
-        to { transform: rotate(360deg); }
-      }
-
-      /* ===== SCROLL PROGRESS ===== */
-      .scroll-progress {
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 0%;
-        height: 4px;
-        background: linear-gradient(90deg, var(--primary-color) 0%, var(--secondary-color) 100%);
-        z-index: 1001;
-        transition: width 0.1s ease;
-      }
-
-      /* ===== SCROLL TO TOP ===== */
-      .scroll-top {
-        position: fixed;
-        bottom: 3rem;
-        right: 3rem;
-        width: 5rem;
-        height: 5rem;
-        background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
-        border-radius: 50%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        cursor: pointer;
-        opacity: 0;
-        visibility: hidden;
-        transition: var(--transition);
-        z-index: 999;
-        box-shadow: 0 5px 15px rgba(24, 185, 207, 0.3);
-        border: none;
-      }
-
-      .scroll-top.visible {
-        opacity: 1;
-        visibility: visible;
-      }
-
-      .scroll-top:hover {
-        transform: translateY(-5px);
-        box-shadow: 0 10px 25px rgba(24, 185, 207, 0.5);
-      }
-
-      .scroll-top svg {
-        width: 2.5rem;
-        height: 2.5rem;
-        fill: white;
-      }
-
-      /* ===== THEME TOGGLE ===== */
-      .theme-toggle {
-        position: fixed;
-        top: 50%;
-        right: 2rem;
-        transform: translateY(-50%);
-        z-index: 1000;
-        background: rgba(38, 50, 67, 0.9);
-        border: 2px solid rgba(24, 185, 207, 0.5);
-        border-radius: 50%;
-        width: 5rem;
-        height: 5rem;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        cursor: pointer;
-        transition: var(--transition);
-        box-shadow: var(--shadow-dark);
-        border: none;
-      }
-
-      .theme-toggle:hover {
-        transform: translateY(-50%) scale(1.1);
-        border-color: rgba(24, 185, 207, 0.9);
-        box-shadow: 0 8px 20px rgba(24, 185, 207, 0.4);
-      }
-
-      .theme-toggle svg {
-        width: 2.5rem;
-        height: 2.5rem;
-        fill: rgba(24, 185, 207, 0.9);
-        transition: var(--transition);
-      }
-
-      /* ===== HEADER & NAVIGATION ===== */
-      header {
-        background: var(--dark-header);
-        backdrop-filter: blur(10px);
-        position: sticky;
-        top: 0;
-        z-index: 100;
-        padding: 1rem var(--container-padding);
-        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-      }
-
-      nav {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        max-width: 1400px;
-        margin: 0 auto;
-      }
-
-      .brand-logo {
-        display: flex;
-        align-items: center;
-      }
-
-      .logo {
-        height: 50px;
-        width: auto;
-        transition: var(--transition);
-      }
-
-      .logo:hover {
-        transform: scale(1.05);
-      }
-
-      .nav-menu {
-        display: flex;
-        align-items: center;
-        gap: 2rem;
-        list-style: none;
-      }
-
-      .nav-link a {
-        color: white;
-        text-decoration: none;
-        font-weight: 500;
-        padding: 0.5rem 1rem;
-        border-radius: var(--border-radius);
-        transition: var(--transition);
-      }
-
-      .nav-link a:hover {
-        background: rgba(255, 255, 255, 0.1);
-      }
-
-      .nav-social-links {
-        display: flex;
-        gap: 1rem;
-        margin-left: 1rem;
-      }
-
-      .social-links {
-        display: flex;
-        gap: 1rem;
-      }
-
-      .social {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        width: 40px;
-        height: 40px;
-        border-radius: 50%;
-        background: rgba(255, 255, 255, 0.1);
-        transition: var(--transition);
-      }
-
-      .social:hover {
-        background: var(--primary-color);
-        transform: translateY(-2px);
-      }
-
-      .social img {
-        width: 20px;
-        height: 20px;
-        filter: brightness(0) invert(1);
-      }
-
-      .hamburger {
-        display: none;
-        background: none;
-        border: none;
-        cursor: pointer;
-        width: 30px;
-        height: 20px;
-        position: relative;
-      }
-
-      .menu-bar {
-        width: 100%;
-        height: 3px;
-        background: white;
-        border-radius: 2px;
-        transition: var(--transition);
-      }
-
-      .menu-bar::before,
-      .menu-bar::after {
-        content: '';
-        position: absolute;
-        width: 100%;
-        height: 3px;
-        background: white;
-        border-radius: 2px;
-        left: 0;
-        transition: var(--transition);
-      }
-
-      .menu-bar::before {
-        top: 0;
-      }
-
-      .menu-bar::after {
-        bottom: 0;
-      }
-
-      /* ===== MAIN CONTENT ===== */
-      main, section {
-        max-width: 1400px;
-        margin: 0 auto;
-        padding: 4rem var(--container-padding);
-        position: relative;
-      }
-
-      /* Hero Section */
-      .hero-section {
-        min-height: 80vh;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        color: white;
-      }
-
-      .salutation {
-        font-size: 1.2rem;
-        color: var(--primary-color);
-        margin-bottom: 1rem;
-      }
-
-      h1 {
-        font-size: 3.5rem;
-        margin-bottom: 1rem;
-        line-height: 1.2;
-      }
-
-      .name-highlight {
-        color: var(--primary-color);
-      }
-
-      .declaration {
-        font-size: 1.8rem;
-        margin: 1rem 0;
-        color: var(--primary-color);
-      }
-
-      .typing-text {
-        display: inline-block;
-        overflow: hidden;
-        border-right: 3px solid var(--primary-color);
-        white-space: nowrap;
-        animation: typing 3.5s steps(40, end), blink 0.75s step-end infinite;
-      }
-
-      @keyframes typing {
-        from { width: 0 }
-        to { width: 100% }
-      }
-
-      @keyframes blink {
-        from, to { border-color: transparent }
-        50% { border-color: var(--primary-color) }
-      }
-
-      .hero-description {
-        max-width: 600px;
-        margin: 2rem 0;
-        font-size: 1.1rem;
-        opacity: 0.9;
-      }
-
-      .cta-box {
-        display: flex;
-        gap: 1rem;
-        margin-top: 2rem;
-      }
-
-      .cta {
-        padding: 1rem 2rem;
-        border-radius: var(--border-radius);
-        text-decoration: none;
-        font-weight: 600;
-        transition: var(--transition);
-        display: inline-block;
-      }
-
-      .cta1 {
-        background: var(--primary-color);
-        color: white;
-      }
-
-      .cta2 {
-        background: rgba(255, 255, 255, 0.1);
-        color: white;
-        border: 2px solid var(--primary-color);
-      }
-
-      .cta:hover {
-        transform: translateY(-3px);
-        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-      }
-
-      /* Main Social Links */
-      .main-social-links {
-        position: fixed;
-        left: 2rem;
-        top: 50%;
-        transform: translateY(-50%);
-        flex-direction: column;
-        gap: 1rem;
-        z-index: 100;
-      }
-
-      /* Sections */
-      .separator {
-        margin-bottom: 3rem;
-        padding-bottom: 1rem;
-        border-bottom: 2px solid var(--primary-color);
-      }
-
-      h2 {
-        font-size: 2.5rem;
-        color: white;
-        margin-bottom: 1rem;
-      }
-
-      /* About Section */
-      #about {
-        display: grid;
-        grid-template-columns: 2fr 1fr;
-        gap: 4rem;
-        align-items: start;
-      }
-
-      .about-content {
-        color: white;
-      }
-
-      .about-text {
-        margin-bottom: 2rem;
-        font-size: 1.1rem;
-        line-height: 1.8;
-      }
-
-      .about-text span {
-        color: var(--primary-color);
-        font-weight: 600;
-      }
-
-      .about-content ul {
-        display: grid;
-        grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
-        gap: 1rem;
-        list-style: none;
-        margin-top: 2rem;
-      }
-
-      .tool {
-        background: rgba(255, 255, 255, 0.1);
-        padding: 0.8rem 1.5rem;
-        border-radius: 25px;
-        text-align: center;
-        font-size: 0.9rem;
-        transition: var(--transition);
-        cursor: default;
-        color: white;
-      }
-
-      .tool:hover {
-        background: var(--primary-color);
-        transform: translateY(-2px);
-      }
-
-      .img-box {
-        position: relative;
-      }
-
-      .profile-img {
-        width: 100%;
-        height: auto;
-        border-radius: var(--border-radius);
-        box-shadow: var(--shadow-dark);
-        transition: var(--transition);
-      }
-
-      .profile-img:hover {
-        transform: scale(1.02);
-      }
-
-      /* Skills Section */
-      .skills-content {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-        gap: 2rem;
-        margin-top: 2rem;
-      }
-
-      .skill-category h3 {
-        color: var(--primary-color);
-        margin-bottom: 1rem;
-        font-size: 1.3rem;
-      }
-
-      .skills-list {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 0.8rem;
-        list-style: none;
-      }
-
-      /* Projects Section */
-      .project {
-        background: rgba(255, 255, 255, 0.05);
-        border-radius: var(--border-radius);
-        padding: 2rem;
-        margin-bottom: 3rem;
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        gap: 2rem;
-        align-items: center;
-        transition: var(--transition);
-      }
-
-      .project:hover {
-        transform: translateY(-5px);
-        box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
-      }
-
-      .project-main-info {
-        color: white;
-      }
-
-      .project-main-info h3 {
-        font-size: 1.8rem;
-        margin: 0.5rem 0 1rem;
-        color: var(--primary-color);
-      }
-
-      .project-links {
-        display: flex;
-        gap: 1rem;
-        margin-top: 1.5rem;
-      }
-
-      .project-links a {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        width: 45px;
-        height: 45px;
-        background: rgba(255, 255, 255, 0.1);
-        border-radius: 50%;
-        transition: var(--transition);
-      }
-
-      .project-links a:hover {
-        background: var(--primary-color);
-        transform: translateY(-2px);
-      }
-
-      .project-tools p {
-        color: var(--primary-color);
-        font-size: 0.9rem;
-        margin-top: 1rem;
-        opacity: 0.8;
-      }
-
-      .project-image-box {
-        position: relative;
-        overflow: hidden;
-        border-radius: var(--border-radius);
-      }
-
-      .project-image-box img {
-        width: 100%;
-        height: auto;
-        transition: var(--transition);
-      }
-
-      .project-image-box:hover img {
-        transform: scale(1.05);
-      }
-
-      /* Other Projects */
-      .notable-projects-box {
-        display: grid;
-        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-        gap: 2rem;
-        margin-top: 2rem;
-      }
-
-      .side-project {
-        background: rgba(255, 255, 255, 0.05);
-        border-radius: var(--border-radius);
-        padding: 1.5rem;
-        transition: var(--transition);
-      }
-
-      .side-project:hover {
-        transform: translateY(-5px);
-        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-      }
-
-      .side-project h3 {
-        color: var(--primary-color);
-        margin: 1rem 0;
-        font-size: 1.3rem;
-      }
-
-      .side-project p {
-        color: white;
-        margin-bottom: 1rem;
-        opacity: 0.9;
-      }
-
-      .side-project span {
-        color: var(--primary-color);
-        font-size: 0.9rem;
-        opacity: 0.8;
-      }
-
-      /* Contact Section */
-      #contact {
-        text-align: center;
-        color: white;
-        padding: 6rem var(--container-padding);
-      }
-
-      #contact span {
-        color: var(--primary-color);
-        font-size: 1.2rem;
-      }
-
-      #contact h4 {
-        font-size: 2.5rem;
-        margin: 1rem 0 2rem;
-      }
-
-      #contact p {
-        max-width: 600px;
-        margin: 0 auto 3rem;
-        opacity: 0.9;
-      }
-
-      .contact-social-links {
-        justify-content: center;
-        margin-top: 3rem;
-      }
-
-      /* Footer */
-      footer {
-        text-align: center;
-        padding: 2rem;
-        border-top: 1px solid rgba(255, 255, 255, 0.1);
-        color: white;
-        opacity: 0.8;
-      }
-
-      footer span {
-        color: var(--primary-color);
-        font-weight: 600;
-      }
-
-      /* ===== LIGHT THEME ===== */
-      body.light-theme {
-        background-color: var(--light-bg);
-        color: var(--light-text);
-      }
-
-      body.light-theme #particles-js {
-        opacity: 0.3;
-      }
-
-      body.light-theme header {
-        background-color: rgba(255, 255, 255, 0.95);
-        border-bottom-color: var(--border-light);
-      }
-
-      body.light-theme .nav-link a {
-        color: var(--light-text);
-      }
-
-      body.light-theme .nav-link a:hover {
-        background: rgba(0, 0, 0, 0.05);
-      }
-
-      body.light-theme .social {
-        background: rgba(0, 0, 0, 0.05);
-      }
-
-      body.light-theme .social img {
-        filter: none;
-      }
-
-      body.light-theme .hero-description,
-      body.light-theme .about-text,
-      body.light-theme .project-main-info p,
-      body.light-theme .side-project p,
-      body.light-theme #contact p,
-      body.light-theme footer {
-        color: var(--light-text);
-      }
-
-      body.light-theme .tool {
-        background: var(--light-card);
-        color: var(--light-text);
-        box-shadow: var(--shadow-light);
-      }
-
-      body.light-theme .project,
-      body.light-theme .side-project {
-        background: var(--light-card);
-        box-shadow: var(--shadow-light);
-      }
-
-      body.light-theme .theme-toggle {
-        background: rgba(255, 255, 255, 0.9);
-      }
-
-      /* ===== REVEAL ANIMATION ===== */
-      .reveal {
-        opacity: 0;
-        transform: translateY(50px);
-        transition: all 0.8s ease;
-      }
-
-      .reveal.active {
-        opacity: 1;
-        transform: translateY(0);
-      }
-
-      /* ===== MOBILE RESPONSIVENESS ===== */
-      @media screen and (max-width: 1024px) {
-        h1 {
-          font-size: 2.8rem;
-        }
-        
-        h2 {
-          font-size: 2.2rem;
-        }
-        
-        #about {
-          grid-template-columns: 1fr;
-          gap: 3rem;
-        }
-        
-        .project {
-          grid-template-columns: 1fr;
-        }
-        
-        .project-image-box {
-          order: -1;
-        }
-      }
-
-      @media screen and (max-width: 768px) {
-        :root {
-          --container-padding: 1.5rem;
-        }
-        
-        /* Navigation */
-        .nav-menu {
-          position: fixed;
-          top: 0;
-          right: -100%;
-          width: 80%;
-          max-width: 400px;
-          height: 100vh;
-          background: var(--dark-header);
-          flex-direction: column;
-          justify-content: center;
-          align-items: center;
-          gap: 2rem;
-          transition: var(--transition);
-          z-index: 99;
-          padding: 2rem;
-        }
-        
-        .nav-menu.active {
-          right: 0;
-        }
-        
-        .hamburger {
-          display: block;
-          z-index: 100;
-        }
-        
-        .hamburger.active .menu-bar {
-          background: transparent;
-        }
-        
-        .hamburger.active .menu-bar::before {
-          transform: rotate(45deg);
-          top: 50%;
-        }
-        
-        .hamburger.active .menu-bar::after {
-          transform: rotate(-45deg);
-          bottom: 50%;
-        }
-        
-        .nav-social-links {
-          margin-left: 0;
-          margin-top: 1rem;
-        }
-        
-        /* Theme toggle positioning */
-        .theme-toggle {
-          right: 1.5rem;
-          bottom: 1.5rem;
-          top: auto;
-          transform: none;
-          width: 4.5rem;
-          height: 4.5rem;
-        }
-        
-        /* Main content */
-        .main-social-links {
-          position: static;
-          flex-direction: row;
-          justify-content: center;
-          margin: 2rem 0;
-          transform: none;
-        }
-        
-        .scroll-top {
-          right: 2rem;
-          bottom: 7rem;
-          width: 4.5rem;
-          height: 4.5rem;
-        }
-        
-        h1 {
-          font-size: 2.2rem;
-        }
-        
-        h2 {
-          font-size: 1.8rem;
-        }
-        
-        .declaration {
-          font-size: 1.4rem;
-        }
-        
-        .cta-box {
-          flex-direction: column;
-          align-items: flex-start;
-        }
-        
-        .skills-content {
-          grid-template-columns: 1fr;
-        }
-        
-        .notable-projects-box {
-          grid-template-columns: 1fr;
-        }
-        
-        .project {
-          padding: 1.5rem;
-        }
-      }
-
-      @media screen and (max-width: 480px) {
-        :root {
-          --container-padding: 1rem;
-        }
-        
-        .logo {
-          height: 40px;
-        }
-        
-        .theme-toggle {
-          width: 4rem;
-          height: 4rem;
-          right: 1rem;
-          bottom: 1rem;
-        }
-        
-        .scroll-top {
-          width: 4rem;
-          height: 4rem;
-          right: 1rem;
-          bottom: 6rem;
-        }
-        
-        h1 {
-          font-size: 1.8rem;
-        }
-        
-        h2 {
-          font-size: 1.5rem;
-        }
-        
-        .declaration {
-          font-size: 1.2rem;
-        }
-        
-        .hero-description,
-        .about-text {
-          font-size: 1rem;
-        }
-        
-        .tool {
-          padding: 0.6rem 1rem;
-          font-size: 0.8rem;
-        }
-      }
-    </style>
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"
+    ></script>
+    <script defer type="text/javascript" src="js/main.js"></script>
+    <script defer type="text/javascript" src="js/email.js"></script>
   </head>
 
   <body>
-    <!-- Loading Screen -->
-    <div class="loading-screen">
-      <div class="loader"></div>
-    </div>
-
-    <!-- Scroll Progress Bar -->
-    <div class="scroll-progress"></div>
-
-    <!-- Particles Background -->
-    <div id="particles-js"></div>
-
-    <!-- Theme Toggle Button -->
-    <button class="theme-toggle" aria-label="Toggle Theme">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-        <path d="M12 18C8.68629 18 6 15.3137 6 12C6 8.68629 8.68629 6 12 6C15.3137 6 18 8.68629 18 12C18 15.3137 15.3137 18 12 18ZM12 16C14.2091 16 16 14.2091 16 12C16 9.79086 14.2091 8 12 8C9.79086 8 8 9.79086 8 12C8 14.2091 9.79086 16 12 16ZM11 1H13V4H11V1ZM11 20H13V23H11V20ZM3.51472 4.92893L4.92893 3.51472L7.05025 5.63604L5.63604 7.05025L3.51472 4.92893ZM16.9497 18.364L18.364 16.9497L20.4853 19.0711L19.0711 20.4853L16.9497 18.364ZM19.0711 3.51472L20.4853 4.92893L18.364 7.05025L16.9497 5.63604L19.0711 3.51472ZM5.63604 16.9497L7.05025 18.364L4.92893 20.4853L3.51472 19.0711L5.63604 16.9497ZM23 11V13H20V11H23ZM4 11V13H1V11H4Z"/>
-      </svg>
-    </button>
-
-    <!-- Scroll to Top Button -->
-    <button class="scroll-top" aria-label="Scroll to top">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-        <path d="M12 2L4 10H9V22H15V10H20L12 2Z"/>
-      </svg>
-    </button>
-
     <header>
-      <nav aria-label="Primary Navigation">
-        <a href="/" class="brand-logo">
-          <img src="img/gradient-devops-illustration.png" alt="Lavika Panwar Logo" class="logo" />
+      <nav>
+        <a href="/">
+          <img src="img/gradient-devops-illustration.png" alt="Logo" class="logo" />
         </a>
 
         <ul class="nav-menu">
-          <li class="nav-link"><a href="#about">About</a></li>
-          <li class="nav-link"><a href="#skills">Skills</a></li>
-          <li class="nav-link"><a href="#projects">Projects</a></li>
-          <li class="nav-link"><a href="#contact">Contact</a></li>
           <li class="nav-link">
-            <a href="https://drive.google.com/" target="_blank">Résumé</a>
+            <a href="#about">About</a>
+          </li>
+          <li class="nav-link">
+            <a href="#projects">Projects</a>
+          </li>
+          <li class="nav-link">
+            <a href="#contact">Contact</a>
+          </li>
+          <li class="nav-link">
+            <a
+              href="https://drive.google.com/file/d/1pufgF2GQ1HZXWDPbM5fdRIWt9MW2aUsA/view?usp=drive_link"
+              target="_blank"
+              >Résumé</a
+            >
           </li>
 
           <li class="nav-social-links social-links">
-            <a href="https://github.com/" target="_blank" class="social github">
-              <img src="img/github.svg" alt="GitHub Profile" />
+            <a
+              href="https://github.com/daniel-ezekiel"
+              target="_blank"
+              class="social github"
+            >
+              <img src="img/github.svg" alt="GitHub Icon" />
             </a>
-            <a href="https://www.linkedin.com/" target="_blank" class="social linkedin">
-              <img src="img/in.svg" alt="LinkedIn Profile" />
+
+            <a
+              href="https://www.linkedin.com/in/db-ezekiel/"
+              target="_blank"
+              class="social linkedin"
+            >
+              <img src="img/in.svg" alt="LinkedIn Icon" />
             </a>
-            <a href="https://twitter.com/" target="_blank" class="social twitter">
-              <img src="img/twitter.svg" alt="Twitter Profile" />
+
+            <a
+              href="https://twitter.com/db_ezekiel"
+              target="_blank"
+              class="social twitter"
+            >
+              <img src="img/twitter.svg" alt="Twitter icon" />
             </a>
           </li>
         </ul>
 
-        <button class="hamburger" type="button" aria-label="Open Menu">
+        <button class="hamburger" type="button" name="menu button">
           <div class="menu-bar"></div>
         </button>
       </nav>
     </header>
 
     <main>
-      <section class="hero-section reveal">
+      <section>
         <span class="salutation">Hi there!</span>
-        <h1>I am <span class="name-highlight">Lavika Panwar</span>.</h1>
-        <p class="declaration typing-text">Building reliable applications with clean code.</p>
-        <p class="hero-description">
-          I am a Bachelor of Computer Applications (BCA) student with a strong 
-          academic foundation in computer science and a growing passion for 
-          software development. With expertise in modern web technologies and 
-          programming languages, I focus on creating functional, user-friendly 
-          applications while continuously expanding my technical knowledge and 
-          problem-solving abilities.
+        <h1>I am <span class="name-highlight">Aryan Singh</span>.</h1>
+
+        <p class="declaration">
+          Proficient in cloud and DevOps practices.        </p>
+
+        <p>
+          I am a DevOps enthusiast specializing in automation, cloud technologies, 
+          and CI/CD processes. With a strong foundation in Python and AWS, I excel 
+          at building and managing scalable, high-performance systems. My passion 
+          lies in leveraging DevOps practices to optimize workflows and drive innovation 
+          in fast-paced environments.
         </p>
 
         <div class="cta-box">
           <a href="#contact" class="cta cta1">Reach out</a>
-          <a href="https://drive.google.com/" target="_blank" class="cta cta2">Résumé</a>
+          <a
+            href="https://drive.google.com/file/d/1THpNJsCXtJKWxpG_PfYCPAfeK4f-zb8b/view?usp=share_link"
+            target="_blank"
+            class="cta cta2"
+            >Résumé</a
+          >
         </div>
       </section>
 
       <aside class="main-social-links social-links">
-        <a href="https://github.com/" target="_blank" class="social github">
+        <a
+          href="https://github.com/Aryansin1234"
+          target="_blank"
+          class="social github"
+        >
           <img src="img/github.svg" alt="GitHub Icon" />
         </a>
-        <a href="https://www.linkedin.com/" target="_blank" class="social linkedin">
+
+        <a
+          href="https://www.linkedin.com/in/aryansingh1312/"
+          target="_blank"
+          class="social linkedin"
+        >
           <img src="img/in.svg" alt="LinkedIn Icon" />
         </a>
-        <a href="https://twitter.com/" target="_blank" class="social twitter">
-          <img src="img/twitter.svg" alt="Twitter Icon" />
+
+        <a
+          href=""
+          target="_blank"
+          class="social twitter"
+        >
+          <img src="img/twitter.svg" alt="Twitter icon" />
         </a>
-        <a href="https://leetcode.com/" target="_blank" class="social leetcode">
-          <img src="img/leetcode.svg" alt="LeetCode Icon" />
+
+        <a
+          href="https://leetcode.com/u/aryansin2468/"
+          target="_blank"
+          class="Leetcode"
+        >
+          <img src="img/leetcode.svg" alt="Leetcode icon" />
         </a>
       </aside>
     </main>
 
-    <section id="about" class="reveal">
+    <section id="about">
       <div class="separator">
         <h2>About</h2>
       </div>
 
-      <div class="about-content">
+      <div>
         <p class="about-text">
-          As a Bachelor of Computer Applications (BCA) student, I am building 
-          a solid foundation in computer science fundamentals including 
-          <span>Data Structures & Algorithms, Operating Systems, Database 
-          Management Systems, and Computer Networks</span>. My academic journey 
-          has equipped me with both theoretical knowledge and practical skills 
-          in software development.
-          <br /><br />
-          I specialize in full-stack web development using technologies like 
-          <span>HTML5, CSS3, JavaScript, and modern frameworks</span>. My 
-          programming experience spans multiple languages including 
-          <span>C, C++, Java, and Python</span>, allowing me to approach 
-          problems from different perspectives and choose the best tool for 
-          each task.
-          <br /><br />
-          My technical toolkit includes proficiency with <span>Git and GitHub 
-          for version control, MySQL for database management</span>, and various 
-          development tools that enable me to create efficient, scalable 
-          solutions. I am particularly interested in <span>web development, 
-          software engineering best practices, and creating intuitive user 
-          experiences</span>.
-          <br /><br />
-          Beyond coding, I am an <span>eager learner, problem solver, and team 
-          player</span> who values clean code, attention to detail, and 
-          continuous improvement. I actively work on personal projects to apply 
-          classroom concepts to real-world scenarios, strengthening my 
-          understanding of software development lifecycles.
-          <br /><br />
-          These are the tools and technologies I work with regularly and 
-          continue to master:
+          As a DevOps enthusiast with a Bachelor of Computer Applications from Graphic Era University, 
+          I specialize in automation, cloud technologies, and CI/CD processes. My proficiency lies in 
+          Python and AWS, enabling me to build and manage scalable, high-performance systems. One of 
+          my notable projects includes developing a Dockerized Flask application for brain tumor detection
+          using EfficientNetB3, demonstrating my capability in deploying scalable solutions on cloud platforms 
+          with Kubernetes, automating infrastructure with Terraform, and establishing Jenkins CI/CD pipelines.
+          <br />
+          <br />
+          My technical skill set encompasses programming languages like Python and Rust, web development tools 
+          such as <span>VScode, GIT, and Github</span>, and <span>cloud services including AWS (EC2, S3, Lambda), MongoDB, MySQL, 
+          and RDS</span>. Additionally, I am adept at using tools like <span>Ansible, Docker, Kubernetes, Terraform, Jenkins, 
+          and Grafana</span>. My academic background has fortified my understanding of Data Structures & Algorithms, 
+          Operating Systems (Linux), Object-Oriented Programming, Database Management Systems, and Computer Networking.
+          <br />
+          <br />
+          Beyond my technical acumen, I pride myself on my soft skills, including being an <span>eager learner, problem solver, 
+          adaptable</span>, and a team player with excellent time management and attention to detail. My interests lie in <span>DevOps, Cloud Architecture, 
+            and Security,</span> reflecting my commitment to continuous learning and innovation in fast-paced technological environments.
+          
+          <br />
+          <br />
+          Outside my regular developer routine, I enjoy listening to music,
+          gaming or reading about space and technology.
+          <br />
+          <br />
+          These are a few tools and technologies I am familiar with which I have
+          also been working with as well.
         </p>
 
         <ul>
-          <li class="tool">C</li>
-          <li class="tool">C++</li>
-          <li class="tool">Java</li>
           <li class="tool">Python</li>
-          <li class="tool">HTML5</li>
-          <li class="tool">CSS3</li>
-          <li class="tool">JavaScript</li>
-          <li class="tool">React</li>
-          <li class="tool">Node.js</li>
-          <li class="tool">Git & GitHub</li>
-          <li class="tool">MySQL</li>
+          <li class="tool">Linux</li>
+          <li class="tool">Bash Scripting</li>
+          <li class="tool">AWS</li>
+          <li class="tool">Docker</li>
+          <li class="tool">Kubernetes</li>
+          <li class="tool">Terraform</li>
+          <li class="tool">Jenkins</li>
+          <li class="tool">Git/Github</li>
           <li class="tool">MongoDB</li>
+          <li class="tool">Grafana</li>
+          <li class="tool">Ansible</li>
         </ul>
       </div>
 
       <div class="img-box">
-        <img src="img/profile.jpg" class="profile-img" alt="Lavika Panwar Profile Image" />
+        <img
+          src="img/profile.jpg"
+          class="profile-img"
+          alt="Profile Image"
+        />
       </div>
     </section>
 
-    <section id="skills" class="reveal">
-      <div class="separator">
-        <h2>Technical Skills</h2>
-      </div>
-
-      <div class="skills-content">
-        <div class="skill-category">
-          <h3>Programming Languages</h3>
-          <ul class="skills-list">
-            <li class="tool">C</li>
-            <li class="tool">C++</li>
-            <li class="tool">Java</li>
-            <li class="tool">Python</li>
-            <li class="tool">JavaScript</li>
-          </ul>
-        </div>
-
-        <div class="skill-category">
-          <h3>Web Technologies</h3>
-          <ul class="skills-list">
-            <li class="tool">HTML5</li>
-            <li class="tool">CSS3</li>
-            <li class="tool">React</li>
-            <li class="tool">Node.js</li>
-            <li class="tool">Express.js</li>
-          </ul>
-        </div>
-
-        <div class="skill-category">
-          <h3>Databases & Tools</h3>
-          <ul class="skills-list">
-            <li class="tool">MySQL</li>
-            <li class="tool">MongoDB</li>
-            <li class="tool">Git & GitHub</li>
-            <li class="tool">VS Code</li>
-            <li class="tool">Postman</li>
-          </ul>
-        </div>
-
-        <div class="skill-category">
-          <h3>Core Concepts</h3>
-          <ul class="skills-list">
-            <li class="tool">Data Structures</li>
-            <li class="tool">Algorithms</li>
-            <li class="tool">OOP</li>
-            <li class="tool">DBMS</li>
-            <li class="tool">Operating Systems</li>
-          </ul>
-        </div>
-      </div>
-    </section>
-
-    <section id="projects" class="reveal">
+    <section id="projects">
       <div class="featured-projects-box">
         <div class="separator">
-          <h2>Featured Projects</h2>
+          <h2>Projects</h2>
         </div>
 
-        <div class="project">
-          <div class="project-main-info">
-            <span>Project #1</span>
-            <h3>Student Management System</h3>
-            <p>
-              A comprehensive student management system built to efficiently 
-              manage student records, grades, and attendance. Features include 
-              user authentication, CRUD operations, and detailed reporting. 
-              This project strengthened my understanding of backend development, 
-              database design, and building secure, scalable applications.
-            </p>
+        <div class="project project1">
+          <div class="project-details-box">
+            <div class="project-main-info">
+              <span>Project #1</span>
+              <h3>Brain Tumor Detection Application</h3>
+              <p>
+                Developed a Dockerized Flask application for brain tumor detection using 
+                EfficientNetB3 and deployed it on a cloud platform with Kubernetes for scalable 
+                container management. Automated infrastructure provisioning with Terraform and set 
+                up a Jenkins CI/CD pipeline for seamless deployment. 
+              </p>
 
-            <div class="project-links">
-              <a href="https://github.com/" target="_blank" aria-label="GitHub Repository">
-                <img src="img/github.svg" alt="GitHub" />
-              </a>
-              <a href="#" target="_blank" aria-label="Live Demo">
-                <img src="img/link.svg" alt="Live Demo" />
-              </a>
+              <div class="project-links">
+                <a
+                  href="https://github.com/Aryansin1234/Brain-Tumor-Detection-Application.git"
+                  target="_blank"
+                >
+                  <img src="img/github.svg" alt="github repo link icon" />
+                </a>
+                <a href="https://pokemon-pedia-v2.vercel.app/" target="_blank">
+                  <img src="img/link.svg" alt="live site demo link icon" />
+                </a>
+              </div>
             </div>
+
             <div class="project-tools">
-              <p>Java, MySQL, JDBC, Swing</p>
+              <p> Python, TensorFlow, Flask, Docker, Kubernetes, Terraform, Jenkins, 
+                AWS</p>
             </div>
           </div>
 
           <div class="project-image-box">
-            <a href="#" target="_blank" class="project-img-link">
-              <img src="img/image.png" alt="Student Management System Preview" />
+            <a
+              href="https://pokemon-pedia-v2.vercel.app/"
+              target="_blank"
+              class="project-img-link"
+            >
+              <img src="img/image.png" alt="Project Preview Image" />
             </a>
           </div>
         </div>
 
-        <div class="project">
-          <div class="project-main-info">
-            <span>Project #2</span>
-            <h3>E-Commerce Web Application</h3>
-            <p>
-              A fully functional e-commerce platform with product catalog, 
-              shopping cart, and checkout functionality. Implemented user 
-              authentication, product search and filtering, and integrated 
-              payment gateway simulation. This project enhanced my full-stack 
-              development skills and understanding of RESTful API design.
-            </p>
+        <div class="project project2">
+          <div class="project-details-box">
+            <div class="project-main-info">
+              <span>Project #2</span>
+              <h3>Brain Tumor Detection Application</h3>
+              <p>
+                Developed a Dockerized Flask application for brain tumor detection using 
+                EfficientNetB3 and deployed it on a cloud platform with Kubernetes for scalable 
+                container management. Automated infrastructure provisioning with Terraform and set 
+                up a Jenkins CI/CD pipeline for seamless deployment. 
+              </p>
 
-            <div class="project-links">
-              <a href="https://github.com/" target="_blank" aria-label="GitHub Repository">
-                <img src="img/github.svg" alt="GitHub" />
-              </a>
-              <a href="#" target="_blank" aria-label="Live Demo">
-                <img src="img/link.svg" alt="Live Demo" />
-              </a>
+              <div class="project-links">
+                <a
+                  href="https://github.com/Daniel-Ezekiel/HNG-X/tree/main/stage2-task"
+                  target="_blank"
+                  title="Github Link"
+                >
+                  <img src="img/github.svg" alt="github repo link icon" />
+                </a>
+                <a
+                  href="https://hngx-stage2.vercel.app/"
+                  target="_blank"
+                  title="Live Link"
+                >
+                  <img src="img/link.svg" alt="live site demo link icon" />
+                </a>
+              </div>
             </div>
+
             <div class="project-tools">
-              <p>React, Node.js, Express, MongoDB, CSS3</p>
+              <p>Python, TensorFlow, Flask, Docker, Kubernetes, Terraform, Jenkins, AWS</p>
             </div>
           </div>
 
           <div class="project-image-box">
-            <a href="#" target="_blank" class="project-img-link">
-              <img src="img/image.png" alt="E-Commerce Application Preview" />
+            <a
+              href="https://hngx-stage2.vercel.app/"
+              target="_blank"
+              class="project-img-link"
+            >
+              <img src="img/image.png" alt="Project Preview Image" />
             </a>
           </div>
         </div>
 
-        <div class="project">
-          <div class="project-main-info">
-            <span>Project #3</span>
-            <h3>Task Management Dashboard</h3>
-            <p>
-              An intuitive task management application with drag-and-drop 
-              functionality, priority levels, and deadline tracking. Features 
-              include user authentication, task categorization, progress 
-              visualization, and responsive design. Developed to improve 
-              productivity and learn modern frontend frameworks.
-            </p>
-
-            <div class="project-links">
-              <a href="https://github.com/" target="_blank" aria-label="GitHub Repository">
-                <img src="img/github.svg" alt="GitHub" />
-              </a>
-              <a href="#" target="_blank" aria-label="Live Demo">
-                <img src="img/link.svg" alt="Live Demo" />
-              </a>
-            </div>
-            <div class="project-tools">
-              <p>React, TailwindCSS, Firebase, DND-Kit</p>
-            </div>
-          </div>
-
-          <div class="project-image-box">
-            <a href="#" target="_blank" class="project-img-link">
-              <img src="img/image.png" alt="Task Management Dashboard Preview" />
-            </a>
-          </div>
-        </div>
-      </div>
 
       <div class="other-projects-box">
         <div class="separator">
@@ -1249,253 +369,172 @@
 
         <div class="notable-projects-box">
           <div class="side-project">
-            <div class="project-links">
-              <a href="https://github.com/" target="_blank" aria-label="GitHub Repository">
-                <img src="img/github.svg" alt="GitHub" />
+            <div>
+              <a
+                href="https://github.com/Daniel-Ezekiel/HNG-X/tree/main/stage3-task"
+                target="_blank"
+              >
+                <img src="img/github.svg" alt="github repo link icon" />
               </a>
-              <a href="#" target="_blank" aria-label="Live Demo">
-                <img src="img/link.svg" alt="Live Demo" />
+              <a href="https://hngx-stage3.vercel.app" target="_blank">
+                <img src="img/link.svg" alt="live site demo link icon" />
               </a>
             </div>
-            <h3>Weather Forecast App</h3>
+
+            <h3>Galleria D'Immagini</h3>
+
             <p>
-              A responsive weather application that provides real-time weather 
-              information for any location using OpenWeather API.
+              A fully functional image gallery page with a drag-and-drop image
+              rearrangement feature for only authenticated users.
+              <br />Test login details: 'user@example.com'; '1Password'.
             </p>
-            <span>HTML5, CSS3, JavaScript, Weather API</span>
+
+            <span>React, TailwindCSS, Firebase, DND-Kit </span>
           </div>
 
           <div class="side-project">
-            <div class="project-links">
-              <a href="https://github.com/" target="_blank" aria-label="GitHub Repository">
-                <img src="img/github.svg" alt="GitHub" />
+            <div>
+              <a
+                href="https://github.com/Daniel-Ezekiel/Checkout-Page"
+                target="_blank"
+              >
+                <img src="img/github.svg" alt="github repo link icon" />
               </a>
-              <a href="#" target="_blank" aria-label="Live Demo">
-                <img src="img/link.svg" alt="Live Demo" />
+              <a href="https://stop-n-shop.netlify.app/" target="_blank">
+                <img src="img/link.svg" alt="live site demo link icon" />
               </a>
             </div>
-            <h3>Portfolio Website</h3>
+
+            <h3>E-Commerce Checkout Cart</h3>
+
             <p>
-              A modern, responsive portfolio website showcasing projects, 
-              skills, and professional experience.
+              a fully functional checkout cart (landing page) with a form
+              integrated to collect shipping address and a working price counter
+              and product count.
             </p>
-            <span>HTML5, CSS3, JavaScript, EmailJS</span>
+
+            <span>HTML5, CSS3, Javascript</span>
           </div>
 
           <div class="side-project">
-            <div class="project-links">
-              <a href="https://github.com/" target="_blank" aria-label="GitHub Repository">
-                <img src="img/github.svg" alt="GitHub" />
+            <div>
+              <a
+                href="https://github.com/Daniel-Ezekiel/Checkout-Page"
+                target="_blank"
+              >
+                <img src="img/github.svg" alt="github repo link icon" />
               </a>
-              <a href="#" target="_blank" aria-label="Live Demo">
-                <img src="img/link.svg" alt="Live Demo" />
+              <a href="https://stop-n-shop.netlify.app/" target="_blank">
+                <img src="img/link.svg" alt="live site demo link icon" />
               </a>
             </div>
-            <h3>Recipe Finder Application</h3>
+
+            <h3>E-Commerce Checkout Cart</h3>
+
             <p>
-              An interactive recipe finder app that allows users to search for 
-              recipes by ingredients or cuisine type.
+              a fully functional checkout cart (landing page) with a form
+              integrated to collect shipping address and a working price counter
+              and product count.
             </p>
-            <span>React, CSS3, Recipe API</span>
+
+            <span>HTML5, CSS3, Javascript</span>
+          </div>
+
+          <div class="side-project">
+            <div>
+              <a
+                href="https://github.com/daniel-ezekiel/the-cocktail-bar"
+                target="_blank"
+              >
+                <img src="img/github.svg" alt="github repo link icon" />
+              </a>
+              <a href="http://thecocktailbar.netlify.app/" target="_blank">
+                <img src="img/link.svg" alt="live site demo link icon" />
+              </a>
+            </div>
+
+            <h3>Cocktail Bar App</h3>
+
+            <p>
+              a web app that provides instructions to successfully prepare a
+              tasty cocktail according to the user&apos;s preference using an
+              input to search for the specific cocktail
+            </p>
+
+            <span>HTML5, CSS3, Javascript, API</span>
+          </div>
+
+          <div class="side-project">
+            <div>
+              <a
+                href="https://github.com/Daniel-Ezekiel/Gallery-Page"
+                target="_blank"
+              >
+                <img src="img/github.svg" alt="github repo link icon" />
+              </a>
+              <a href="https://profilee-page.netlify.app/" target="_blank">
+                <img src="img/link.svg" alt="live site demo link icon" />
+              </a>
+            </div>
+
+            <h3>Social Media Profile Page</h3>
+
+            <p>
+              a profile page similar to the instagram profile page displaying
+              information about a user and different posts made by the user
+              aligned using CSS Grids
+            </p>
+
+            <span>HTML5, CSS3, Javascript</span>
           </div>
         </div>
       </div>
     </section>
 
-    <section id="contact" class="reveal">
+    <section id="contact">
       <div>
         <span>Next steps?</span>
-        <h4>Don't be a Stranger!</h4>
+
+        <h4>Don&apos;t be a Stranger!</h4>
+
         <p>
-          Shoot me an email if you think we're a great fit and would like to 
-          work together on exciting projects. Whether it's about internships, 
-          collaborations, or just a friendly chat about technology, I'd love 
-          to hear from you!
+          Shoot me an email if you think we&apos;re a great fit and would like
+          to work with me and let&apos;s have a great time while we&apos;re at
+          it.
         </p>
 
-        <a href="mailto:lavikapanwar@email.com" class="cta cta2">Get in Touch</a>
+        <a href="mailto:aryansin2468@gmail.com" class="cta cta2">Get in Touch</a>
       </div>
 
-      <div class="contact-social-links social-links">
-        <a href="https://github.com/" target="_blank" class="social github">
+      <aside class="contact-social-links social-links">
+        <a
+          href="https://github.com/Aryansin1234"
+          target="_blank"
+          class="social github"
+        >
           <img src="img/github.svg" alt="GitHub Icon" />
         </a>
-        <a href="https://www.linkedin.com/" target="_blank" class="social linkedin">
+
+        <a
+          href="https://www.linkedin.com/in/aryansingh1312/"
+          target="_blank"
+          class="social linkedin"
+        >
           <img src="img/in.svg" alt="LinkedIn Icon" />
         </a>
-        <a href="https://twitter.com/" target="_blank" class="social twitter">
-          <img src="img/twitter.svg" alt="Twitter Icon" />
+
+        <a
+          href=""
+          target="_blank"
+          class="social twitter"
+        >
+          <img src="img/twitter.svg" alt="Twitter icon" />
         </a>
-      </div>
+      </aside>
     </section>
 
     <footer>
-      <p>Designed and developed with 💜 by <span>Lavika Panwar</span></p>
+      <p>designed and developed by <span>Aryan Singh</span></p>
     </footer>
-
-    <script src="js/main.js"></script>
-    <script>
-      // Initialize particles.js
-      particlesJS('particles-js', {
-        particles: {
-          number: { 
-            value: 60, 
-            density: { 
-              enable: true, 
-              value_area: 800 
-            } 
-          },
-          color: { 
-            value: '#18b9cf' 
-          },
-          shape: { 
-            type: 'circle' 
-          },
-          opacity: { 
-            value: 0.5, 
-            random: false 
-          },
-          size: { 
-            value: 3, 
-            random: true 
-          },
-          line_linked: {
-            enable: true,
-            distance: 150,
-            color: '#18b9cf',
-            opacity: 0.4,
-            width: 1
-          },
-          move: { 
-            enable: true, 
-            speed: 2, 
-            direction: 'none', 
-            random: false, 
-            straight: false, 
-            out_mode: 'out', 
-            bounce: false 
-          }
-        },
-        interactivity: {
-          detect_on: 'canvas',
-          events: { 
-            onhover: { 
-              enable: true, 
-              mode: 'grab' 
-            }, 
-            onclick: { 
-              enable: true, 
-              mode: 'push' 
-            }, 
-            resize: true 
-          },
-          modes: { 
-            grab: { 
-              distance: 140, 
-              line_linked: { 
-                opacity: 1 
-              } 
-            }, 
-            push: { 
-              particles_nb: 4 
-            } 
-          }
-        },
-        retina_detect: true
-      });
-
-      // Theme Toggle
-      const themeToggle = document.querySelector('.theme-toggle');
-      const body = document.body;
-      const savedTheme = localStorage.getItem('theme');
-
-      if (savedTheme === 'light') {
-        body.classList.add('light-theme');
-      }
-
-      themeToggle.addEventListener('click', () => {
-        body.classList.toggle('light-theme');
-        const theme = body.classList.contains('light-theme') ? 'light' : 'dark';
-        localStorage.setItem('theme', theme);
-      });
-
-      // Mobile Navigation
-      const hamburger = document.querySelector('.hamburger');
-      const navMenu = document.querySelector('.nav-menu');
-
-      hamburger.addEventListener('click', () => {
-        hamburger.classList.toggle('active');
-        navMenu.classList.toggle('active');
-      });
-
-      // Close mobile menu when clicking a link
-      document.querySelectorAll('.nav-link a').forEach(link => {
-        link.addEventListener('click', () => {
-          hamburger.classList.remove('active');
-          navMenu.classList.remove('active');
-        });
-      });
-
-      // Scroll Progress Bar
-      window.addEventListener('scroll', () => {
-        const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
-        const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
-        const scrolled = (winScroll / height) * 100;
-        document.querySelector('.scroll-progress').style.width = scrolled + '%';
-      });
-
-      // Scroll to Top Button
-      const scrollTopBtn = document.querySelector('.scroll-top');
-      window.addEventListener('scroll', () => {
-        if (window.pageYOffset > 300) {
-          scrollTopBtn.classList.add('visible');
-        } else {
-          scrollTopBtn.classList.remove('visible');
-        }
-      });
-
-      scrollTopBtn.addEventListener('click', () => {
-        window.scrollTo({ top: 0, behavior: 'smooth' });
-      });
-
-      // Reveal Sections on Scroll
-      const revealSections = document.querySelectorAll('.reveal');
-      const revealOnScroll = () => {
-        revealSections.forEach(section => {
-          const sectionTop = section.getBoundingClientRect().top;
-          const windowHeight = window.innerHeight;
-          if (sectionTop < windowHeight * 0.75) {
-            section.classList.add('active');
-          }
-        });
-      };
-
-      window.addEventListener('scroll', revealOnScroll);
-      revealOnScroll(); // Initial check
-
-      // Loading Screen
-      window.addEventListener('load', () => {
-        setTimeout(() => {
-          document.querySelector('.loading-screen').classList.add('hidden');
-        }, 1000);
-      });
-
-      // Reposition theme toggle on mobile
-      function adjustThemeToggle() {
-        const themeToggle = document.querySelector('.theme-toggle');
-        if (window.innerWidth <= 768) {
-          themeToggle.style.top = 'auto';
-          themeToggle.style.bottom = '1.5rem';
-          themeToggle.style.transform = 'none';
-        } else {
-          themeToggle.style.top = '50%';
-          themeToggle.style.bottom = 'auto';
-          themeToggle.style.transform = 'translateY(-50%)';
-        }
-      }
-
-      window.addEventListener('resize', adjustThemeToggle);
-      adjustThemeToggle(); // Initial call
-    </script>
   </body>
 </html>
