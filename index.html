@@ -7,37 +7,76 @@
 
     <title>Lavika Panwar | BCA Student & Software Developer</title>
 
+    <!-- Meta tags for SEO -->
     <meta name="title" content="Lavika Panwar | BCA Student & Software Developer" />
     <meta name="description" content="Lavika Panwar is a Bachelor of Computer Applications (BCA) student with a growing interest in software development, web technologies, and building reliable applications." />
     <meta name="keywords" content="Lavika Panwar, BCA Student, Software Developer, Web Developer, Computer Applications, Portfolio Website" />
     <meta name="author" content="Lavika Panwar" />
 
+    <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website" />
     <meta property="og:title" content="Lavika Panwar | Developer Portfolio" />
     <meta property="og:description" content="Professional portfolio of Lavika Panwar, a BCA student focused on software development and modern web technologies." />
     <meta property="og:image" content="img/og-img.png" />
     <meta property="og:url" content="https://lavikapanwar.dev" />
 
+    <!-- Twitter -->
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="Lavika Panwar | Software Developer" />
     <meta name="twitter:description" content="BCA student portfolio showcasing projects, skills, and academic foundation." />
     <meta name="twitter:image" content="img/og-img.png" />
 
-    <meta name="google-site-verification" content="verification-code-here" />
-
+    <!-- Favicon -->
     <link rel="apple-touch-icon" sizes="180x180" href="img/favicon/apple-touch-icon.png" />
     <link rel="icon" type="image/png" sizes="32x32" href="img/favicon/favicon-32x32.png" />
     <link rel="icon" type="image/png" sizes="16x16" href="img/favicon/favicon-16x16.png" />
     <link rel="manifest" href="img/favicon/site.webmanifest" />
 
+    <!-- CSS -->
     <link rel="stylesheet" href="css/normalize.css" />
     <link rel="stylesheet" href="css/style.css" />
 
-    <!-- Particles.js for background animation -->
+    <!-- Particles.js -->
     <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
-    
+
     <style>
-      /* Particle Background */
+      /* ===== BASE STYLES ===== */
+      :root {
+        --primary-color: rgba(24, 185, 207, 0.9);
+        --secondary-color: #6688ff;
+        --dark-bg: rgb(34, 40, 49);
+        --dark-header: rgba(38, 50, 67, 0.95);
+        --light-bg: rgb(248, 250, 252);
+        --light-text: rgb(30, 41, 59);
+        --light-card: rgb(255, 255, 255);
+        --gray-text: rgb(71, 85, 105);
+        --border-light: rgb(226, 232, 240);
+        --shadow-light: 0 1rem 2rem 0 rgba(0, 0, 0, 0.08);
+        --shadow-dark: 0 5px 15px rgba(0, 0, 0, 0.3);
+        --transition: all 0.3s ease;
+        --border-radius: 12px;
+        --container-padding: 2rem;
+      }
+
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      html {
+        scroll-behavior: smooth;
+      }
+
+      body {
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
+        line-height: 1.6;
+        transition: var(--transition);
+        overflow-x: hidden;
+        min-height: 100vh;
+      }
+
+      /* ===== PARTICLE BACKGROUND ===== */
       #particles-js {
         position: fixed;
         width: 100%;
@@ -46,148 +85,17 @@
         left: 0;
         z-index: -1;
         opacity: 0.6;
+        pointer-events: none;
       }
 
-      /* Theme Toggle Button */
-      .theme-toggle {
-        position: fixed;
-        top: 50%;
-        right: 2rem;
-        transform: translateY(-50%);
-        z-index: 1000;
-        background: rgba(38, 50, 67, 0.9);
-        border: 2px solid rgba(24, 185, 207, 0.5);
-        border-radius: 50%;
-        width: 5rem;
-        height: 5rem;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        cursor: pointer;
-        transition: all 0.3s ease;
-        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
-      }
-
-      .theme-toggle:hover {
-        transform: translateY(-50%) scale(1.1);
-        border-color: rgba(24, 185, 207, 0.9);
-        box-shadow: 0 8px 20px rgba(24, 185, 207, 0.4);
-      }
-
-      .theme-toggle svg {
-        width: 2.5rem;
-        height: 2.5rem;
-        fill: rgba(24, 185, 207, 0.9);
-        transition: all 0.3s ease;
-      }
-
-      /* Light Theme Styles */
-      body.light-theme {
-        background-color: rgb(248, 250, 252);
-        color: rgb(30, 41, 59);
-      }
-
-      body.light-theme header {
-        background-color: rgba(255, 255, 255, 0.95);
-        border-bottom-color: rgb(226, 232, 240);
-      }
-
-      body.light-theme .nav-link a {
-        color: rgb(30, 41, 59);
-      }
-
-      body.light-theme .declaration,
-      body.light-theme .hero-description,
-      body.light-theme .about-text,
-      body.light-theme .project-main-info p,
-      body.light-theme .side-project p,
-      body.light-theme h4 + p {
-        color: rgb(71, 85, 105);
-      }
-
-      body.light-theme .cta2,
-      body.light-theme .nav-link:nth-child(5) {
-        background: rgb(248, 250, 252);
-      }
-
-      body.light-theme .project,
-      body.light-theme .side-project,
-      body.light-theme .tool,
-      body.light-theme .project-main-info {
-        background: rgb(255, 255, 255);
-        box-shadow: 0 1rem 2rem 0 rgba(0, 0, 0, 0.08);
-      }
-
-      body.light-theme footer {
-        border-top-color: rgb(226, 232, 240);
-        color: rgb(100, 116, 139);
-      }
-
-      body.light-theme .theme-toggle {
-        background: rgba(255, 255, 255, 0.9);
-        border-color: rgba(24, 185, 207, 0.5);
-      }
-
-      body.light-theme #particles-js {
-        opacity: 0.3;
-      }
-
-      /* Scroll Progress Bar */
-      .scroll-progress {
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 0%;
-        height: 4px;
-        background: linear-gradient(90deg, rgba(24, 185, 207, 0.9) 0%, #6688ff 100%);
-        z-index: 1001;
-        transition: width 0.1s ease;
-      }
-
-      /* Scroll to Top Button */
-      .scroll-top {
-        position: fixed;
-        bottom: 3rem;
-        right: 3rem;
-        width: 5rem;
-        height: 5rem;
-        background: linear-gradient(135deg, rgba(24, 185, 207, 0.9) 0%, #6688ff 100%);
-        border-radius: 50%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        cursor: pointer;
-        opacity: 0;
-        visibility: hidden;
-        transition: all 0.3s ease;
-        z-index: 999;
-        box-shadow: 0 5px 15px rgba(24, 185, 207, 0.3);
-      }
-
-      .scroll-top.visible {
-        opacity: 1;
-        visibility: visible;
-      }
-
-      .scroll-top:hover {
-        transform: translateY(-5px);
-        box-shadow: 0 10px 25px rgba(24, 185, 207, 0.5);
-      }
-
-      .scroll-top svg {
-        width: 2.5rem;
-        height: 2.5rem;
-        fill: white;
-      }
-
-      /* Loading Screen */
+      /* ===== LOADING SCREEN ===== */
       .loading-screen {
         position: fixed;
         top: 0;
         left: 0;
         width: 100%;
         height: 100%;
-        background: rgb(34, 40, 49);
+        background: var(--dark-bg);
         display: flex;
         align-items: center;
         justify-content: center;
@@ -213,11 +121,257 @@
         to { transform: rotate(360deg); }
       }
 
-      /* Enhanced Typing Effect */
+      /* ===== SCROLL PROGRESS ===== */
+      .scroll-progress {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 0%;
+        height: 4px;
+        background: linear-gradient(90deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+        z-index: 1001;
+        transition: width 0.1s ease;
+      }
+
+      /* ===== SCROLL TO TOP ===== */
+      .scroll-top {
+        position: fixed;
+        bottom: 3rem;
+        right: 3rem;
+        width: 5rem;
+        height: 5rem;
+        background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        opacity: 0;
+        visibility: hidden;
+        transition: var(--transition);
+        z-index: 999;
+        box-shadow: 0 5px 15px rgba(24, 185, 207, 0.3);
+        border: none;
+      }
+
+      .scroll-top.visible {
+        opacity: 1;
+        visibility: visible;
+      }
+
+      .scroll-top:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 10px 25px rgba(24, 185, 207, 0.5);
+      }
+
+      .scroll-top svg {
+        width: 2.5rem;
+        height: 2.5rem;
+        fill: white;
+      }
+
+      /* ===== THEME TOGGLE ===== */
+      .theme-toggle {
+        position: fixed;
+        top: 50%;
+        right: 2rem;
+        transform: translateY(-50%);
+        z-index: 1000;
+        background: rgba(38, 50, 67, 0.9);
+        border: 2px solid rgba(24, 185, 207, 0.5);
+        border-radius: 50%;
+        width: 5rem;
+        height: 5rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        transition: var(--transition);
+        box-shadow: var(--shadow-dark);
+        border: none;
+      }
+
+      .theme-toggle:hover {
+        transform: translateY(-50%) scale(1.1);
+        border-color: rgba(24, 185, 207, 0.9);
+        box-shadow: 0 8px 20px rgba(24, 185, 207, 0.4);
+      }
+
+      .theme-toggle svg {
+        width: 2.5rem;
+        height: 2.5rem;
+        fill: rgba(24, 185, 207, 0.9);
+        transition: var(--transition);
+      }
+
+      /* ===== HEADER & NAVIGATION ===== */
+      header {
+        background: var(--dark-header);
+        backdrop-filter: blur(10px);
+        position: sticky;
+        top: 0;
+        z-index: 100;
+        padding: 1rem var(--container-padding);
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+      }
+
+      nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        max-width: 1400px;
+        margin: 0 auto;
+      }
+
+      .brand-logo {
+        display: flex;
+        align-items: center;
+      }
+
+      .logo {
+        height: 50px;
+        width: auto;
+        transition: var(--transition);
+      }
+
+      .logo:hover {
+        transform: scale(1.05);
+      }
+
+      .nav-menu {
+        display: flex;
+        align-items: center;
+        gap: 2rem;
+        list-style: none;
+      }
+
+      .nav-link a {
+        color: white;
+        text-decoration: none;
+        font-weight: 500;
+        padding: 0.5rem 1rem;
+        border-radius: var(--border-radius);
+        transition: var(--transition);
+      }
+
+      .nav-link a:hover {
+        background: rgba(255, 255, 255, 0.1);
+      }
+
+      .nav-social-links {
+        display: flex;
+        gap: 1rem;
+        margin-left: 1rem;
+      }
+
+      .social-links {
+        display: flex;
+        gap: 1rem;
+      }
+
+      .social {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        background: rgba(255, 255, 255, 0.1);
+        transition: var(--transition);
+      }
+
+      .social:hover {
+        background: var(--primary-color);
+        transform: translateY(-2px);
+      }
+
+      .social img {
+        width: 20px;
+        height: 20px;
+        filter: brightness(0) invert(1);
+      }
+
+      .hamburger {
+        display: none;
+        background: none;
+        border: none;
+        cursor: pointer;
+        width: 30px;
+        height: 20px;
+        position: relative;
+      }
+
+      .menu-bar {
+        width: 100%;
+        height: 3px;
+        background: white;
+        border-radius: 2px;
+        transition: var(--transition);
+      }
+
+      .menu-bar::before,
+      .menu-bar::after {
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 3px;
+        background: white;
+        border-radius: 2px;
+        left: 0;
+        transition: var(--transition);
+      }
+
+      .menu-bar::before {
+        top: 0;
+      }
+
+      .menu-bar::after {
+        bottom: 0;
+      }
+
+      /* ===== MAIN CONTENT ===== */
+      main, section {
+        max-width: 1400px;
+        margin: 0 auto;
+        padding: 4rem var(--container-padding);
+        position: relative;
+      }
+
+      /* Hero Section */
+      .hero-section {
+        min-height: 80vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        color: white;
+      }
+
+      .salutation {
+        font-size: 1.2rem;
+        color: var(--primary-color);
+        margin-bottom: 1rem;
+      }
+
+      h1 {
+        font-size: 3.5rem;
+        margin-bottom: 1rem;
+        line-height: 1.2;
+      }
+
+      .name-highlight {
+        color: var(--primary-color);
+      }
+
+      .declaration {
+        font-size: 1.8rem;
+        margin: 1rem 0;
+        color: var(--primary-color);
+      }
+
       .typing-text {
         display: inline-block;
         overflow: hidden;
-        border-right: 3px solid rgba(24, 185, 207, 0.9);
+        border-right: 3px solid var(--primary-color);
         white-space: nowrap;
         animation: typing 3.5s steps(40, end), blink 0.75s step-end infinite;
       }
@@ -229,10 +383,365 @@
 
       @keyframes blink {
         from, to { border-color: transparent }
-        50% { border-color: rgba(24, 185, 207, 0.9) }
+        50% { border-color: var(--primary-color) }
       }
 
-      /* Section Reveal Animation */
+      .hero-description {
+        max-width: 600px;
+        margin: 2rem 0;
+        font-size: 1.1rem;
+        opacity: 0.9;
+      }
+
+      .cta-box {
+        display: flex;
+        gap: 1rem;
+        margin-top: 2rem;
+      }
+
+      .cta {
+        padding: 1rem 2rem;
+        border-radius: var(--border-radius);
+        text-decoration: none;
+        font-weight: 600;
+        transition: var(--transition);
+        display: inline-block;
+      }
+
+      .cta1 {
+        background: var(--primary-color);
+        color: white;
+      }
+
+      .cta2 {
+        background: rgba(255, 255, 255, 0.1);
+        color: white;
+        border: 2px solid var(--primary-color);
+      }
+
+      .cta:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+      }
+
+      /* Main Social Links */
+      .main-social-links {
+        position: fixed;
+        left: 2rem;
+        top: 50%;
+        transform: translateY(-50%);
+        flex-direction: column;
+        gap: 1rem;
+        z-index: 100;
+      }
+
+      /* Sections */
+      .separator {
+        margin-bottom: 3rem;
+        padding-bottom: 1rem;
+        border-bottom: 2px solid var(--primary-color);
+      }
+
+      h2 {
+        font-size: 2.5rem;
+        color: white;
+        margin-bottom: 1rem;
+      }
+
+      /* About Section */
+      #about {
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        gap: 4rem;
+        align-items: start;
+      }
+
+      .about-content {
+        color: white;
+      }
+
+      .about-text {
+        margin-bottom: 2rem;
+        font-size: 1.1rem;
+        line-height: 1.8;
+      }
+
+      .about-text span {
+        color: var(--primary-color);
+        font-weight: 600;
+      }
+
+      .about-content ul {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+        gap: 1rem;
+        list-style: none;
+        margin-top: 2rem;
+      }
+
+      .tool {
+        background: rgba(255, 255, 255, 0.1);
+        padding: 0.8rem 1.5rem;
+        border-radius: 25px;
+        text-align: center;
+        font-size: 0.9rem;
+        transition: var(--transition);
+        cursor: default;
+        color: white;
+      }
+
+      .tool:hover {
+        background: var(--primary-color);
+        transform: translateY(-2px);
+      }
+
+      .img-box {
+        position: relative;
+      }
+
+      .profile-img {
+        width: 100%;
+        height: auto;
+        border-radius: var(--border-radius);
+        box-shadow: var(--shadow-dark);
+        transition: var(--transition);
+      }
+
+      .profile-img:hover {
+        transform: scale(1.02);
+      }
+
+      /* Skills Section */
+      .skills-content {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 2rem;
+        margin-top: 2rem;
+      }
+
+      .skill-category h3 {
+        color: var(--primary-color);
+        margin-bottom: 1rem;
+        font-size: 1.3rem;
+      }
+
+      .skills-list {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.8rem;
+        list-style: none;
+      }
+
+      /* Projects Section */
+      .project {
+        background: rgba(255, 255, 255, 0.05);
+        border-radius: var(--border-radius);
+        padding: 2rem;
+        margin-bottom: 3rem;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 2rem;
+        align-items: center;
+        transition: var(--transition);
+      }
+
+      .project:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+      }
+
+      .project-main-info {
+        color: white;
+      }
+
+      .project-main-info h3 {
+        font-size: 1.8rem;
+        margin: 0.5rem 0 1rem;
+        color: var(--primary-color);
+      }
+
+      .project-links {
+        display: flex;
+        gap: 1rem;
+        margin-top: 1.5rem;
+      }
+
+      .project-links a {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 45px;
+        height: 45px;
+        background: rgba(255, 255, 255, 0.1);
+        border-radius: 50%;
+        transition: var(--transition);
+      }
+
+      .project-links a:hover {
+        background: var(--primary-color);
+        transform: translateY(-2px);
+      }
+
+      .project-tools p {
+        color: var(--primary-color);
+        font-size: 0.9rem;
+        margin-top: 1rem;
+        opacity: 0.8;
+      }
+
+      .project-image-box {
+        position: relative;
+        overflow: hidden;
+        border-radius: var(--border-radius);
+      }
+
+      .project-image-box img {
+        width: 100%;
+        height: auto;
+        transition: var(--transition);
+      }
+
+      .project-image-box:hover img {
+        transform: scale(1.05);
+      }
+
+      /* Other Projects */
+      .notable-projects-box {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+        gap: 2rem;
+        margin-top: 2rem;
+      }
+
+      .side-project {
+        background: rgba(255, 255, 255, 0.05);
+        border-radius: var(--border-radius);
+        padding: 1.5rem;
+        transition: var(--transition);
+      }
+
+      .side-project:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+      }
+
+      .side-project h3 {
+        color: var(--primary-color);
+        margin: 1rem 0;
+        font-size: 1.3rem;
+      }
+
+      .side-project p {
+        color: white;
+        margin-bottom: 1rem;
+        opacity: 0.9;
+      }
+
+      .side-project span {
+        color: var(--primary-color);
+        font-size: 0.9rem;
+        opacity: 0.8;
+      }
+
+      /* Contact Section */
+      #contact {
+        text-align: center;
+        color: white;
+        padding: 6rem var(--container-padding);
+      }
+
+      #contact span {
+        color: var(--primary-color);
+        font-size: 1.2rem;
+      }
+
+      #contact h4 {
+        font-size: 2.5rem;
+        margin: 1rem 0 2rem;
+      }
+
+      #contact p {
+        max-width: 600px;
+        margin: 0 auto 3rem;
+        opacity: 0.9;
+      }
+
+      .contact-social-links {
+        justify-content: center;
+        margin-top: 3rem;
+      }
+
+      /* Footer */
+      footer {
+        text-align: center;
+        padding: 2rem;
+        border-top: 1px solid rgba(255, 255, 255, 0.1);
+        color: white;
+        opacity: 0.8;
+      }
+
+      footer span {
+        color: var(--primary-color);
+        font-weight: 600;
+      }
+
+      /* ===== LIGHT THEME ===== */
+      body.light-theme {
+        background-color: var(--light-bg);
+        color: var(--light-text);
+      }
+
+      body.light-theme #particles-js {
+        opacity: 0.3;
+      }
+
+      body.light-theme header {
+        background-color: rgba(255, 255, 255, 0.95);
+        border-bottom-color: var(--border-light);
+      }
+
+      body.light-theme .nav-link a {
+        color: var(--light-text);
+      }
+
+      body.light-theme .nav-link a:hover {
+        background: rgba(0, 0, 0, 0.05);
+      }
+
+      body.light-theme .social {
+        background: rgba(0, 0, 0, 0.05);
+      }
+
+      body.light-theme .social img {
+        filter: none;
+      }
+
+      body.light-theme .hero-description,
+      body.light-theme .about-text,
+      body.light-theme .project-main-info p,
+      body.light-theme .side-project p,
+      body.light-theme #contact p,
+      body.light-theme footer {
+        color: var(--light-text);
+      }
+
+      body.light-theme .tool {
+        background: var(--light-card);
+        color: var(--light-text);
+        box-shadow: var(--shadow-light);
+      }
+
+      body.light-theme .project,
+      body.light-theme .side-project {
+        background: var(--light-card);
+        box-shadow: var(--shadow-light);
+      }
+
+      body.light-theme .theme-toggle {
+        background: rgba(255, 255, 255, 0.9);
+      }
+
+      /* ===== REVEAL ANIMATION ===== */
       .reveal {
         opacity: 0;
         transform: translateY(50px);
@@ -244,19 +753,180 @@
         transform: translateY(0);
       }
 
-      /* Mobile responsiveness for theme toggle */
-      @media screen and (max-width: 768px) {
-        .theme-toggle {
-          width: 4.5rem;
-          height: 4.5rem;
-          right: 1.5rem;
+      /* ===== MOBILE RESPONSIVENESS ===== */
+      @media screen and (max-width: 1024px) {
+        h1 {
+          font-size: 2.8rem;
         }
+        
+        h2 {
+          font-size: 2.2rem;
+        }
+        
+        #about {
+          grid-template-columns: 1fr;
+          gap: 3rem;
+        }
+        
+        .project {
+          grid-template-columns: 1fr;
+        }
+        
+        .project-image-box {
+          order: -1;
+        }
+      }
 
-        .scroll-top {
+      @media screen and (max-width: 768px) {
+        :root {
+          --container-padding: 1.5rem;
+        }
+        
+        /* Navigation */
+        .nav-menu {
+          position: fixed;
+          top: 0;
+          right: -100%;
+          width: 80%;
+          max-width: 400px;
+          height: 100vh;
+          background: var(--dark-header);
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          gap: 2rem;
+          transition: var(--transition);
+          z-index: 99;
+          padding: 2rem;
+        }
+        
+        .nav-menu.active {
+          right: 0;
+        }
+        
+        .hamburger {
+          display: block;
+          z-index: 100;
+        }
+        
+        .hamburger.active .menu-bar {
+          background: transparent;
+        }
+        
+        .hamburger.active .menu-bar::before {
+          transform: rotate(45deg);
+          top: 50%;
+        }
+        
+        .hamburger.active .menu-bar::after {
+          transform: rotate(-45deg);
+          bottom: 50%;
+        }
+        
+        .nav-social-links {
+          margin-left: 0;
+          margin-top: 1rem;
+        }
+        
+        /* Theme toggle positioning */
+        .theme-toggle {
+          right: 1.5rem;
+          bottom: 1.5rem;
+          top: auto;
+          transform: none;
           width: 4.5rem;
           height: 4.5rem;
-          bottom: 2rem;
+        }
+        
+        /* Main content */
+        .main-social-links {
+          position: static;
+          flex-direction: row;
+          justify-content: center;
+          margin: 2rem 0;
+          transform: none;
+        }
+        
+        .scroll-top {
           right: 2rem;
+          bottom: 7rem;
+          width: 4.5rem;
+          height: 4.5rem;
+        }
+        
+        h1 {
+          font-size: 2.2rem;
+        }
+        
+        h2 {
+          font-size: 1.8rem;
+        }
+        
+        .declaration {
+          font-size: 1.4rem;
+        }
+        
+        .cta-box {
+          flex-direction: column;
+          align-items: flex-start;
+        }
+        
+        .skills-content {
+          grid-template-columns: 1fr;
+        }
+        
+        .notable-projects-box {
+          grid-template-columns: 1fr;
+        }
+        
+        .project {
+          padding: 1.5rem;
+        }
+      }
+
+      @media screen and (max-width: 480px) {
+        :root {
+          --container-padding: 1rem;
+        }
+        
+        .logo {
+          height: 40px;
+        }
+        
+        .theme-toggle {
+          width: 4rem;
+          height: 4rem;
+          right: 1rem;
+          bottom: 1rem;
+        }
+        
+        .scroll-top {
+          width: 4rem;
+          height: 4rem;
+          right: 1rem;
+          bottom: 6rem;
+        }
+        
+        h1 {
+          font-size: 1.8rem;
+        }
+        
+        h2 {
+          font-size: 1.5rem;
+        }
+        
+        .declaration {
+          font-size: 1.2rem;
+        }
+        
+        .hero-description,
+        .about-text {
+          font-size: 1rem;
+        }
+        
+        .tool {
+          padding: 0.6rem 1rem;
+          font-size: 0.8rem;
         }
       }
     </style>
@@ -276,17 +946,17 @@
 
     <!-- Theme Toggle Button -->
     <button class="theme-toggle" aria-label="Toggle Theme">
-      <svg class="sun-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
         <path d="M12 18C8.68629 18 6 15.3137 6 12C6 8.68629 8.68629 6 12 6C15.3137 6 18 8.68629 18 12C18 15.3137 15.3137 18 12 18ZM12 16C14.2091 16 16 14.2091 16 12C16 9.79086 14.2091 8 12 8C9.79086 8 8 9.79086 8 12C8 14.2091 9.79086 16 12 16ZM11 1H13V4H11V1ZM11 20H13V23H11V20ZM3.51472 4.92893L4.92893 3.51472L7.05025 5.63604L5.63604 7.05025L3.51472 4.92893ZM16.9497 18.364L18.364 16.9497L20.4853 19.0711L19.0711 20.4853L16.9497 18.364ZM19.0711 3.51472L20.4853 4.92893L18.364 7.05025L16.9497 5.63604L19.0711 3.51472ZM5.63604 16.9497L7.05025 18.364L4.92893 20.4853L3.51472 19.0711L5.63604 16.9497ZM23 11V13H20V11H23ZM4 11V13H1V11H4Z"/>
       </svg>
     </button>
 
     <!-- Scroll to Top Button -->
-    <div class="scroll-top">
+    <button class="scroll-top" aria-label="Scroll to top">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
         <path d="M12 2L4 10H9V22H15V10H20L12 2Z"/>
       </svg>
-    </div>
+    </button>
 
     <header>
       <nav aria-label="Primary Navigation">
@@ -392,12 +1062,6 @@
           classroom concepts to real-world scenarios, strengthening my 
           understanding of software development lifecycles.
           <br /><br />
-          Outside my regular development routine, I enjoy exploring new 
-          technologies, contributing to open-source projects, reading tech 
-          blogs, and staying updated with the latest industry trends. I believe 
-          in the power of technology to solve real-world problems and am 
-          committed to making meaningful contributions to the field.
-          <br /><br />
           These are the tools and technologies I work with regularly and 
           continue to master:
         </p>
@@ -481,29 +1145,26 @@
           <h2>Featured Projects</h2>
         </div>
 
-        <div class="project project1">
-          <div class="project-details-box">
-            <div class="project-main-info">
-              <span>Project #1</span>
-              <h3>Student Management System</h3>
-              <p>
-                A comprehensive student management system built to efficiently 
-                manage student records, grades, and attendance. Features include 
-                user authentication, CRUD operations, and detailed reporting. 
-                This project strengthened my understanding of backend development, 
-                database design, and building secure, scalable applications.
-              </p>
+        <div class="project">
+          <div class="project-main-info">
+            <span>Project #1</span>
+            <h3>Student Management System</h3>
+            <p>
+              A comprehensive student management system built to efficiently 
+              manage student records, grades, and attendance. Features include 
+              user authentication, CRUD operations, and detailed reporting. 
+              This project strengthened my understanding of backend development, 
+              database design, and building secure, scalable applications.
+            </p>
 
-              <div class="project-links">
-                <a href="https://github.com/" target="_blank">
-                  <img src="img/github.svg" alt="GitHub Repository" />
-                </a>
-                <a href="#" target="_blank">
-                  <img src="img/link.svg" alt="Live Demo" />
-                </a>
-              </div>
+            <div class="project-links">
+              <a href="https://github.com/" target="_blank" aria-label="GitHub Repository">
+                <img src="img/github.svg" alt="GitHub" />
+              </a>
+              <a href="#" target="_blank" aria-label="Live Demo">
+                <img src="img/link.svg" alt="Live Demo" />
+              </a>
             </div>
-
             <div class="project-tools">
               <p>Java, MySQL, JDBC, Swing</p>
             </div>
@@ -516,29 +1177,26 @@
           </div>
         </div>
 
-        <div class="project project2">
-          <div class="project-details-box">
-            <div class="project-main-info">
-              <span>Project #2</span>
-              <h3>E-Commerce Web Application</h3>
-              <p>
-                A fully functional e-commerce platform with product catalog, 
-                shopping cart, and checkout functionality. Implemented user 
-                authentication, product search and filtering, and integrated 
-                payment gateway simulation. This project enhanced my full-stack 
-                development skills and understanding of RESTful API design.
-              </p>
+        <div class="project">
+          <div class="project-main-info">
+            <span>Project #2</span>
+            <h3>E-Commerce Web Application</h3>
+            <p>
+              A fully functional e-commerce platform with product catalog, 
+              shopping cart, and checkout functionality. Implemented user 
+              authentication, product search and filtering, and integrated 
+              payment gateway simulation. This project enhanced my full-stack 
+              development skills and understanding of RESTful API design.
+            </p>
 
-              <div class="project-links">
-                <a href="https://github.com/" target="_blank">
-                  <img src="img/github.svg" alt="GitHub Repository" />
-                </a>
-                <a href="#" target="_blank">
-                  <img src="img/link.svg" alt="Live Demo" />
-                </a>
-              </div>
+            <div class="project-links">
+              <a href="https://github.com/" target="_blank" aria-label="GitHub Repository">
+                <img src="img/github.svg" alt="GitHub" />
+              </a>
+              <a href="#" target="_blank" aria-label="Live Demo">
+                <img src="img/link.svg" alt="Live Demo" />
+              </a>
             </div>
-
             <div class="project-tools">
               <p>React, Node.js, Express, MongoDB, CSS3</p>
             </div>
@@ -551,29 +1209,26 @@
           </div>
         </div>
 
-        <div class="project project3">
-          <div class="project-details-box">
-            <div class="project-main-info">
-              <span>Project #3</span>
-              <h3>Task Management Dashboard</h3>
-              <p>
-                An intuitive task management application with drag-and-drop 
-                functionality, priority levels, and deadline tracking. Features 
-                include user authentication, task categorization, progress 
-                visualization, and responsive design. Developed to improve 
-                productivity and learn modern frontend frameworks.
-              </p>
+        <div class="project">
+          <div class="project-main-info">
+            <span>Project #3</span>
+            <h3>Task Management Dashboard</h3>
+            <p>
+              An intuitive task management application with drag-and-drop 
+              functionality, priority levels, and deadline tracking. Features 
+              include user authentication, task categorization, progress 
+              visualization, and responsive design. Developed to improve 
+              productivity and learn modern frontend frameworks.
+            </p>
 
-              <div class="project-links">
-                <a href="https://github.com/" target="_blank">
-                  <img src="img/github.svg" alt="GitHub Repository" />
-                </a>
-                <a href="#" target="_blank">
-                  <img src="img/link.svg" alt="Live Demo" />
-                </a>
-              </div>
+            <div class="project-links">
+              <a href="https://github.com/" target="_blank" aria-label="GitHub Repository">
+                <img src="img/github.svg" alt="GitHub" />
+              </a>
+              <a href="#" target="_blank" aria-label="Live Demo">
+                <img src="img/link.svg" alt="Live Demo" />
+              </a>
             </div>
-
             <div class="project-tools">
               <p>React, TailwindCSS, Firebase, DND-Kit</p>
             </div>
@@ -594,121 +1249,54 @@
 
         <div class="notable-projects-box">
           <div class="side-project">
-            <div>
-              <a href="https://github.com/" target="_blank">
-                <img src="img/github.svg" alt="GitHub Repository" />
+            <div class="project-links">
+              <a href="https://github.com/" target="_blank" aria-label="GitHub Repository">
+                <img src="img/github.svg" alt="GitHub" />
               </a>
-              <a href="#" target="_blank">
+              <a href="#" target="_blank" aria-label="Live Demo">
                 <img src="img/link.svg" alt="Live Demo" />
               </a>
             </div>
-
             <h3>Weather Forecast App</h3>
             <p>
               A responsive weather application that provides real-time weather 
-              information for any location using OpenWeather API. Features 
-              include 5-day forecast, temperature conversion, and location 
-              search with autocomplete functionality.
+              information for any location using OpenWeather API.
             </p>
             <span>HTML5, CSS3, JavaScript, Weather API</span>
           </div>
 
           <div class="side-project">
-            <div>
-              <a href="https://github.com/" target="_blank">
-                <img src="img/github.svg" alt="GitHub Repository" />
+            <div class="project-links">
+              <a href="https://github.com/" target="_blank" aria-label="GitHub Repository">
+                <img src="img/github.svg" alt="GitHub" />
               </a>
-              <a href="#" target="_blank">
+              <a href="#" target="_blank" aria-label="Live Demo">
                 <img src="img/link.svg" alt="Live Demo" />
               </a>
             </div>
-
             <h3>Portfolio Website</h3>
             <p>
               A modern, responsive portfolio website showcasing projects, 
-              skills, and professional experience. Built with performance 
-              optimization in mind, featuring smooth animations, dark mode 
-              toggle, and contact form integration.
+              skills, and professional experience.
             </p>
             <span>HTML5, CSS3, JavaScript, EmailJS</span>
           </div>
 
           <div class="side-project">
-            <div>
-              <a href="https://github.com/" target="_blank">
-                <img src="img/github.svg" alt="GitHub Repository" />
+            <div class="project-links">
+              <a href="https://github.com/" target="_blank" aria-label="GitHub Repository">
+                <img src="img/github.svg" alt="GitHub" />
               </a>
-              <a href="#" target="_blank">
+              <a href="#" target="_blank" aria-label="Live Demo">
                 <img src="img/link.svg" alt="Live Demo" />
               </a>
             </div>
-
             <h3>Recipe Finder Application</h3>
             <p>
               An interactive recipe finder app that allows users to search for 
-              recipes by ingredients, cuisine type, or dietary preferences. 
-              Integrated with Spoonacular API to fetch detailed recipes with 
-              nutritional information and cooking instructions.
+              recipes by ingredients or cuisine type.
             </p>
             <span>React, CSS3, Recipe API</span>
-          </div>
-
-          <div class="side-project">
-            <div>
-              <a href="https://github.com/" target="_blank">
-                <img src="img/github.svg" alt="GitHub Repository" />
-              </a>
-              <a href="#" target="_blank">
-                <img src="img/link.svg" alt="Live Demo" />
-              </a>
-            </div>
-
-            <h3>Calculator Application</h3>
-            <p>
-              A scientific calculator with standard and advanced mathematical 
-              operations. Features include history tracking, keyboard support, 
-              responsive design, and error handling for invalid operations.
-            </p>
-            <span>HTML5, CSS3, JavaScript</span>
-          </div>
-
-          <div class="side-project">
-            <div>
-              <a href="https://github.com/" target="_blank">
-                <img src="img/github.svg" alt="GitHub Repository" />
-              </a>
-              <a href="#" target="_blank">
-                <img src="img/link.svg" alt="Live Demo" />
-              </a>
-            </div>
-
-            <h3>Quiz Game Application</h3>
-            <p>
-              An interactive quiz game with multiple categories, timed 
-              questions, and score tracking. Features include difficulty 
-              levels, leaderboard functionality, and the ability to create 
-              custom quizzes.
-            </p>
-            <span>JavaScript, HTML5, CSS3</span>
-          </div>
-
-          <div class="side-project">
-            <div>
-              <a href="https://github.com/" target="_blank">
-                <img src="img/github.svg" alt="GitHub Repository" />
-              </a>
-              <a href="#" target="_blank">
-                <img src="img/link.svg" alt="Live Demo" />
-              </a>
-            </div>
-
-            <h3>Expense Tracker</h3>
-            <p>
-              A personal finance management tool to track income and expenses. 
-              Features include category-based organization, data visualization 
-              with charts, budget setting, and monthly reports generation.
-            </p>
-            <span>React, Chart.js, CSS3</span>
           </div>
         </div>
       </div>
@@ -728,7 +1316,7 @@
         <a href="mailto:lavikapanwar@email.com" class="cta cta2">Get in Touch</a>
       </div>
 
-      <aside class="contact-social-links social-links">
+      <div class="contact-social-links social-links">
         <a href="https://github.com/" target="_blank" class="social github">
           <img src="img/github.svg" alt="GitHub Icon" />
         </a>
@@ -738,7 +1326,7 @@
         <a href="https://twitter.com/" target="_blank" class="social twitter">
           <img src="img/twitter.svg" alt="Twitter Icon" />
         </a>
-      </aside>
+      </div>
     </section>
 
     <footer>
@@ -747,14 +1335,30 @@
 
     <script src="js/main.js"></script>
     <script>
-      // Particles.js Configuration
+      // Initialize particles.js
       particlesJS('particles-js', {
         particles: {
-          number: { value: 80, density: { enable: true, value_area: 800 } },
-          color: { value: '#18b9cf' },
-          shape: { type: 'circle' },
-          opacity: { value: 0.5, random: false },
-          size: { value: 3, random: true },
+          number: { 
+            value: 60, 
+            density: { 
+              enable: true, 
+              value_area: 800 
+            } 
+          },
+          color: { 
+            value: '#18b9cf' 
+          },
+          shape: { 
+            type: 'circle' 
+          },
+          opacity: { 
+            value: 0.5, 
+            random: false 
+          },
+          size: { 
+            value: 3, 
+            random: true 
+          },
           line_linked: {
             enable: true,
             distance: 150,
@@ -762,12 +1366,40 @@
             opacity: 0.4,
             width: 1
           },
-          move: { enable: true, speed: 2, direction: 'none', random: false, straight: false, out_mode: 'out', bounce: false }
+          move: { 
+            enable: true, 
+            speed: 2, 
+            direction: 'none', 
+            random: false, 
+            straight: false, 
+            out_mode: 'out', 
+            bounce: false 
+          }
         },
         interactivity: {
           detect_on: 'canvas',
-          events: { onhover: { enable: true, mode: 'grab' }, onclick: { enable: true, mode: 'push' }, resize: true },
-          modes: { grab: { distance: 140, line_linked: { opacity: 1 } }, push: { particles_nb: 4 } }
+          events: { 
+            onhover: { 
+              enable: true, 
+              mode: 'grab' 
+            }, 
+            onclick: { 
+              enable: true, 
+              mode: 'push' 
+            }, 
+            resize: true 
+          },
+          modes: { 
+            grab: { 
+              distance: 140, 
+              line_linked: { 
+                opacity: 1 
+              } 
+            }, 
+            push: { 
+              particles_nb: 4 
+            } 
+          }
         },
         retina_detect: true
       });
@@ -785,6 +1417,23 @@
         body.classList.toggle('light-theme');
         const theme = body.classList.contains('light-theme') ? 'light' : 'dark';
         localStorage.setItem('theme', theme);
+      });
+
+      // Mobile Navigation
+      const hamburger = document.querySelector('.hamburger');
+      const navMenu = document.querySelector('.nav-menu');
+
+      hamburger.addEventListener('click', () => {
+        hamburger.classList.toggle('active');
+        navMenu.classList.toggle('active');
+      });
+
+      // Close mobile menu when clicking a link
+      document.querySelectorAll('.nav-link a').forEach(link => {
+        link.addEventListener('click', () => {
+          hamburger.classList.remove('active');
+          navMenu.classList.remove('active');
+        });
       });
 
       // Scroll Progress Bar
@@ -822,7 +1471,7 @@
       };
 
       window.addEventListener('scroll', revealOnScroll);
-      revealOnScroll();
+      revealOnScroll(); // Initial check
 
       // Loading Screen
       window.addEventListener('load', () => {
@@ -830,6 +1479,23 @@
           document.querySelector('.loading-screen').classList.add('hidden');
         }, 1000);
       });
+
+      // Reposition theme toggle on mobile
+      function adjustThemeToggle() {
+        const themeToggle = document.querySelector('.theme-toggle');
+        if (window.innerWidth <= 768) {
+          themeToggle.style.top = 'auto';
+          themeToggle.style.bottom = '1.5rem';
+          themeToggle.style.transform = 'none';
+        } else {
+          themeToggle.style.top = '50%';
+          themeToggle.style.bottom = 'auto';
+          themeToggle.style.transform = 'translateY(-50%)';
+        }
+      }
+
+      window.addEventListener('resize', adjustThemeToggle);
+      adjustThemeToggle(); // Initial call
     </script>
   </body>
 </html>
