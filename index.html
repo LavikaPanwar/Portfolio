@@ -1,0 +1,716 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- ========================================================= -->
+    <!-- BASIC DOCUMENT CONFIGURATION                              -->
+    <!-- ========================================================= -->
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- ========================================================= -->
+    <!-- PRIMARY META TAGS                                         -->
+    <!-- ========================================================= -->
+    <title>Lavika Panwar | BCA Student & Software Developer</title>
+
+    <meta
+      name="title"
+      content="Lavika Panwar | BCA Student & Software Developer"
+    />
+    <meta
+      name="description"
+      content="Lavika Panwar is a Bachelor of Computer Applications (BCA) student with a growing interest in software development, web technologies, and building reliable applications."
+    />
+    <meta
+      name="keywords"
+      content="Lavika Panwar, BCA Student, Software Developer, Web Developer, Computer Applications, Portfolio Website"
+    />
+    <meta name="author" content="Lavika Panwar" />
+
+    <!-- ========================================================= -->
+    <!-- OPEN GRAPH (SOCIAL SHARING)                                -->
+    <!-- ========================================================= -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Lavika Panwar | Developer Portfolio" />
+    <meta
+      property="og:description"
+      content="Professional portfolio of Lavika Panwar, a BCA student focused on software development and modern web technologies."
+    />
+    <meta property="og:image" content="img/og-img.png" />
+    <meta property="og:url" content="https://lavikapanwar.dev" />
+
+    <!-- ========================================================= -->
+    <!-- TWITTER META                                              -->
+    <!-- ========================================================= -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Lavika Panwar | Software Developer" />
+    <meta
+      name="twitter:description"
+      content="BCA student portfolio showcasing projects, skills, and academic foundation."
+    />
+    <meta name="twitter:image" content="img/og-img.png" />
+
+    <!-- ========================================================= -->
+    <!-- GOOGLE SITE VERIFICATION (OPTIONAL)                        -->
+    <!-- ========================================================= -->
+    <meta name="google-site-verification" content="verification-code-here" />
+
+    <!-- ========================================================= -->
+    <!-- FAVICON CONFIGURATION                                     -->
+    <!-- ========================================================= -->
+    <link rel="apple-touch-icon" sizes="180x180" href="img/favicon/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="img/favicon/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="img/favicon/favicon-16x16.png" />
+    <link rel="manifest" href="img/favicon/site.webmanifest" />
+
+    <!-- ========================================================= -->
+    <!-- STYLESHEETS                                               -->
+    <!-- ========================================================= -->
+    <link rel="stylesheet" href="css/normalize.css" />
+    <link rel="stylesheet" href="css/style.css" />
+
+    <style>
+      /* Enhanced Animations and Effects */
+      @keyframes fadeInUp {
+        from {
+          opacity: 0;
+          transform: translateY(30px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+        }
+        to {
+          opacity: 1;
+        }
+      }
+
+      @keyframes pulse {
+        0%, 100% {
+          transform: scale(1);
+        }
+        50% {
+          transform: scale(1.05);
+        }
+      }
+
+      .hero-section {
+        animation: fadeInUp 0.8s ease-out;
+      }
+
+      .about-content,
+      .project,
+      .side-project {
+        animation: fadeInUp 0.8s ease-out;
+        animation-fill-mode: both;
+      }
+
+      .project:nth-child(2) {
+        animation-delay: 0.2s;
+      }
+
+      .side-project:nth-child(1) {
+        animation-delay: 0.1s;
+      }
+
+      .side-project:nth-child(2) {
+        animation-delay: 0.2s;
+      }
+
+      .side-project:nth-child(3) {
+        animation-delay: 0.3s;
+      }
+
+      .side-project:nth-child(4) {
+        animation-delay: 0.4s;
+      }
+
+      /* Hover Effects */
+      .tool {
+        transition: all 0.3s ease;
+      }
+
+      .tool:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+      }
+
+      .cta {
+        transition: all 0.3s ease;
+      }
+
+      .cta:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+      }
+
+      .project-img-link img {
+        transition: transform 0.3s ease;
+      }
+
+      .project-img-link:hover img {
+        transform: scale(1.05);
+      }
+
+      /* Gradient Text Effect */
+      .name-highlight {
+        background: linear-gradient(45deg, #667eea 0%, #764ba2 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+      }
+
+      /* Section Separators with Enhanced Design */
+      .separator h2::after {
+        content: '';
+        display: block;
+        width: 60px;
+        height: 4px;
+        background: linear-gradient(90deg, #667eea 0%, #764ba2 100%);
+        margin-top: 10px;
+        border-radius: 2px;
+      }
+    </style>
+
+    <!-- ========================================================= -->
+    <!-- SCRIPTS                                                   -->
+    <!-- ========================================================= -->
+    <script defer src="js/main.js"></script>
+    <script defer src="js/email.js"></script>
+  </head>
+
+  <body>
+    <!-- ========================================================= -->
+    <!-- HEADER & NAVIGATION                                       -->
+    <!-- ========================================================= -->
+    <header>
+      <nav aria-label="Primary Navigation">
+        <a href="/" class="brand-logo">
+          <img
+            src="img/gradient-devops-illustration.png"
+            alt="Lavika Panwar Logo"
+            class="logo"
+          />
+        </a>
+
+        <ul class="nav-menu">
+          <li class="nav-link"><a href="#about">About</a></li>
+          <li class="nav-link"><a href="#skills">Skills</a></li>
+          <li class="nav-link"><a href="#projects">Projects</a></li>
+          <li class="nav-link"><a href="#contact">Contact</a></li>
+
+          <li class="nav-link">
+            <a href="https://drive.google.com/" target="_blank">Résumé</a>
+          </li>
+
+          <li class="nav-social-links social-links">
+            <a href="https://github.com/" target="_blank" class="social github">
+              <img src="img/github.svg" alt="GitHub Profile" />
+            </a>
+
+            <a href="https://www.linkedin.com/" target="_blank" class="social linkedin">
+              <img src="img/in.svg" alt="LinkedIn Profile" />
+            </a>
+
+            <a href="https://twitter.com/" target="_blank" class="social twitter">
+              <img src="img/twitter.svg" alt="Twitter Profile" />
+            </a>
+          </li>
+        </ul>
+
+        <button class="hamburger" type="button" aria-label="Open Menu">
+          <div class="menu-bar"></div>
+        </button>
+      </nav>
+    </header>
+
+    <!-- ========================================================= -->
+    <!-- HERO SECTION                                              -->
+    <!-- ========================================================= -->
+    <main>
+      <section class="hero-section">
+        <span class="salutation">Hi there!</span>
+
+        <h1>
+          I am <span class="name-highlight">Lavika Panwar</span>.
+        </h1>
+
+        <p class="declaration">
+          Building reliable applications with clean code.
+        </p>
+
+        <p class="hero-description">
+          I am a Bachelor of Computer Applications (BCA) student with a strong 
+          academic foundation in computer science and a growing passion for 
+          software development. With expertise in modern web technologies and 
+          programming languages, I focus on creating functional, user-friendly 
+          applications while continuously expanding my technical knowledge and 
+          problem-solving abilities.
+        </p>
+
+        <div class="cta-box">
+          <a href="#contact" class="cta cta1">Reach out</a>
+          <a href="https://drive.google.com/" target="_blank" class="cta cta2">
+            Résumé
+          </a>
+        </div>
+      </section>
+
+      <!-- SOCIAL LINKS (FIXED ASIDE) -->
+      <aside class="main-social-links social-links">
+        <a href="https://github.com/" target="_blank" class="social github">
+          <img src="img/github.svg" alt="GitHub Icon" />
+        </a>
+
+        <a href="https://www.linkedin.com/" target="_blank" class="social linkedin">
+          <img src="img/in.svg" alt="LinkedIn Icon" />
+        </a>
+
+        <a href="https://twitter.com/" target="_blank" class="social twitter">
+          <img src="img/twitter.svg" alt="Twitter Icon" />
+        </a>
+
+        <a href="https://leetcode.com/" target="_blank" class="social leetcode">
+          <img src="img/leetcode.svg" alt="LeetCode Icon" />
+        </a>
+      </aside>
+    </main>
+
+    <!-- ========================================================= -->
+    <!-- ABOUT SECTION                                             -->
+    <!-- ========================================================= -->
+    <section id="about">
+      <div class="separator">
+        <h2>About</h2>
+      </div>
+
+      <div class="about-content">
+        <p class="about-text">
+          As a Bachelor of Computer Applications (BCA) student, I am building 
+          a solid foundation in computer science fundamentals including 
+          <span>Data Structures & Algorithms, Operating Systems, Database 
+          Management Systems, and Computer Networks</span>. My academic journey 
+          has equipped me with both theoretical knowledge and practical skills 
+          in software development.
+          <br /><br />
+          I specialize in full-stack web development using technologies like 
+          <span>HTML5, CSS3, JavaScript, and modern frameworks</span>. My 
+          programming experience spans multiple languages including 
+          <span>C, C++, Java, and Python</span>, allowing me to approach 
+          problems from different perspectives and choose the best tool for 
+          each task.
+          <br /><br />
+          My technical toolkit includes proficiency with <span>Git and GitHub 
+          for version control, MySQL for database management</span>, and various 
+          development tools that enable me to create efficient, scalable 
+          solutions. I am particularly interested in <span>web development, 
+          software engineering best practices, and creating intuitive user 
+          experiences</span>.
+          <br /><br />
+          Beyond coding, I am an <span>eager learner, problem solver, and team 
+          player</span> who values clean code, attention to detail, and 
+          continuous improvement. I actively work on personal projects to apply 
+          classroom concepts to real-world scenarios, strengthening my 
+          understanding of software development lifecycles.
+          <br /><br />
+          Outside my regular development routine, I enjoy exploring new 
+          technologies, contributing to open-source projects, reading tech 
+          blogs, and staying updated with the latest industry trends. I believe 
+          in the power of technology to solve real-world problems and am 
+          committed to making meaningful contributions to the field.
+          <br /><br />
+          These are the tools and technologies I work with regularly and 
+          continue to master:
+        </p>
+
+        <ul>
+          <li class="tool">C</li>
+          <li class="tool">C++</li>
+          <li class="tool">Java</li>
+          <li class="tool">Python</li>
+          <li class="tool">HTML5</li>
+          <li class="tool">CSS3</li>
+          <li class="tool">JavaScript</li>
+          <li class="tool">React</li>
+          <li class="tool">Node.js</li>
+          <li class="tool">Git & GitHub</li>
+          <li class="tool">MySQL</li>
+          <li class="tool">MongoDB</li>
+        </ul>
+      </div>
+
+      <div class="img-box">
+        <img
+          src="img/profile.jpg"
+          class="profile-img"
+          alt="Lavika Panwar Profile Image"
+        />
+      </div>
+    </section>
+
+    <!-- ========================================================= -->
+    <!-- SKILLS SECTION                                            -->
+    <!-- ========================================================= -->
+    <section id="skills">
+      <div class="separator">
+        <h2>Technical Skills</h2>
+      </div>
+
+      <div class="skills-content">
+        <div class="skill-category">
+          <h3>Programming Languages</h3>
+          <ul class="skills-list">
+            <li class="tool">C</li>
+            <li class="tool">C++</li>
+            <li class="tool">Java</li>
+            <li class="tool">Python</li>
+            <li class="tool">JavaScript</li>
+          </ul>
+        </div>
+
+        <div class="skill-category">
+          <h3>Web Technologies</h3>
+          <ul class="skills-list">
+            <li class="tool">HTML5</li>
+            <li class="tool">CSS3</li>
+            <li class="tool">React</li>
+            <li class="tool">Node.js</li>
+            <li class="tool">Express.js</li>
+          </ul>
+        </div>
+
+        <div class="skill-category">
+          <h3>Databases & Tools</h3>
+          <ul class="skills-list">
+            <li class="tool">MySQL</li>
+            <li class="tool">MongoDB</li>
+            <li class="tool">Git & GitHub</li>
+            <li class="tool">VS Code</li>
+            <li class="tool">Postman</li>
+          </ul>
+        </div>
+
+        <div class="skill-category">
+          <h3>Core Concepts</h3>
+          <ul class="skills-list">
+            <li class="tool">Data Structures</li>
+            <li class="tool">Algorithms</li>
+            <li class="tool">OOP</li>
+            <li class="tool">DBMS</li>
+            <li class="tool">Operating Systems</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================================= -->
+    <!-- PROJECTS SECTION                                          -->
+    <!-- ========================================================= -->
+    <section id="projects">
+      <div class="featured-projects-box">
+        <div class="separator">
+          <h2>Featured Projects</h2>
+        </div>
+
+        <div class="project project1">
+          <div class="project-details-box">
+            <div class="project-main-info">
+              <span>Project #1</span>
+              <h3>Student Management System</h3>
+
+              <p>
+                A comprehensive student management system built to efficiently 
+                manage student records, grades, and attendance. Features include 
+                user authentication, CRUD operations, and detailed reporting. 
+                This project strengthened my understanding of backend development, 
+                database design, and building secure, scalable applications.
+              </p>
+
+              <div class="project-links">
+                <a href="https://github.com/" target="_blank">
+                  <img src="img/github.svg" alt="GitHub Repository" />
+                </a>
+                <a href="#" target="_blank">
+                  <img src="img/link.svg" alt="Live Demo" />
+                </a>
+              </div>
+            </div>
+
+            <div class="project-tools">
+              <p>Java, MySQL, JDBC, Swing</p>
+            </div>
+          </div>
+
+          <div class="project-image-box">
+            <a href="#" target="_blank" class="project-img-link">
+              <img src="img/image.png" alt="Student Management System Preview" />
+            </a>
+          </div>
+        </div>
+
+        <div class="project project2">
+          <div class="project-details-box">
+            <div class="project-main-info">
+              <span>Project #2</span>
+              <h3>E-Commerce Web Application</h3>
+
+              <p>
+                A fully functional e-commerce platform with product catalog, 
+                shopping cart, and checkout functionality. Implemented user 
+                authentication, product search and filtering, and integrated 
+                payment gateway simulation. This project enhanced my full-stack 
+                development skills and understanding of RESTful API design.
+              </p>
+
+              <div class="project-links">
+                <a href="https://github.com/" target="_blank">
+                  <img src="img/github.svg" alt="GitHub Repository" />
+                </a>
+                <a href="#" target="_blank">
+                  <img src="img/link.svg" alt="Live Demo" />
+                </a>
+              </div>
+            </div>
+
+            <div class="project-tools">
+              <p>React, Node.js, Express, MongoDB, CSS3</p>
+            </div>
+          </div>
+
+          <div class="project-image-box">
+            <a href="#" target="_blank" class="project-img-link">
+              <img src="img/image.png" alt="E-Commerce Application Preview" />
+            </a>
+          </div>
+        </div>
+
+        <div class="project project3">
+          <div class="project-details-box">
+            <div class="project-main-info">
+              <span>Project #3</span>
+              <h3>Task Management Dashboard</h3>
+
+              <p>
+                An intuitive task management application with drag-and-drop 
+                functionality, priority levels, and deadline tracking. Features 
+                include user authentication, task categorization, progress 
+                visualization, and responsive design. Developed to improve 
+                productivity and learn modern frontend frameworks.
+              </p>
+
+              <div class="project-links">
+                <a href="https://github.com/" target="_blank">
+                  <img src="img/github.svg" alt="GitHub Repository" />
+                </a>
+                <a href="#" target="_blank">
+                  <img src="img/link.svg" alt="Live Demo" />
+                </a>
+              </div>
+            </div>
+
+            <div class="project-tools">
+              <p>React, TailwindCSS, Firebase, DND-Kit</p>
+            </div>
+          </div>
+
+          <div class="project-image-box">
+            <a href="#" target="_blank" class="project-img-link">
+              <img src="img/image.png" alt="Task Management Dashboard Preview" />
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- ========================================================= -->
+      <!-- OTHER NOTABLE PROJECTS SECTION                            -->
+      <!-- ========================================================= -->
+      <div class="other-projects-box">
+        <div class="separator">
+          <h2>Other Notable Projects</h2>
+        </div>
+
+        <div class="notable-projects-box">
+          <div class="side-project">
+            <div>
+              <a href="https://github.com/" target="_blank">
+                <img src="img/github.svg" alt="GitHub Repository" />
+              </a>
+              <a href="#" target="_blank">
+                <img src="img/link.svg" alt="Live Demo" />
+              </a>
+            </div>
+
+            <h3>Weather Forecast App</h3>
+
+            <p>
+              A responsive weather application that provides real-time weather 
+              information for any location using OpenWeather API. Features 
+              include 5-day forecast, temperature conversion, and location 
+              search with autocomplete functionality.
+            </p>
+
+            <span>HTML5, CSS3, JavaScript, Weather API</span>
+          </div>
+
+          <div class="side-project">
+            <div>
+              <a href="https://github.com/" target="_blank">
+                <img src="img/github.svg" alt="GitHub Repository" />
+              </a>
+              <a href="#" target="_blank">
+                <img src="img/link.svg" alt="Live Demo" />
+              </a>
+            </div>
+
+            <h3>Portfolio Website</h3>
+
+            <p>
+              A modern, responsive portfolio website showcasing projects, 
+              skills, and professional experience. Built with performance 
+              optimization in mind, featuring smooth animations, dark mode 
+              toggle, and contact form integration.
+            </p>
+
+            <span>HTML5, CSS3, JavaScript, EmailJS</span>
+          </div>
+
+          <div class="side-project">
+            <div>
+              <a href="https://github.com/" target="_blank">
+                <img src="img/github.svg" alt="GitHub Repository" />
+              </a>
+              <a href="#" target="_blank">
+                <img src="img/link.svg" alt="Live Demo" />
+              </a>
+            </div>
+
+            <h3>Recipe Finder Application</h3>
+
+            <p>
+              An interactive recipe finder app that allows users to search for 
+              recipes by ingredients, cuisine type, or dietary preferences. 
+              Integrated with Spoonacular API to fetch detailed recipes with 
+              nutritional information and cooking instructions.
+            </p>
+
+            <span>React, CSS3, Recipe API</span>
+          </div>
+
+          <div class="side-project">
+            <div>
+              <a href="https://github.com/" target="_blank">
+                <img src="img/github.svg" alt="GitHub Repository" />
+              </a>
+              <a href="#" target="_blank">
+                <img src="img/link.svg" alt="Live Demo" />
+              </a>
+            </div>
+
+            <h3>Calculator Application</h3>
+
+            <p>
+              A scientific calculator with standard and advanced mathematical 
+              operations. Features include history tracking, keyboard support, 
+              responsive design, and error handling for invalid operations.
+            </p>
+
+            <span>HTML5, CSS3, JavaScript</span>
+          </div>
+
+          <div class="side-project">
+            <div>
+              <a href="https://github.com/" target="_blank">
+                <img src="img/github.svg" alt="GitHub Repository" />
+              </a>
+              <a href="#" target="_blank">
+                <img src="img/link.svg" alt="Live Demo" />
+              </a>
+            </div>
+
+            <h3>Quiz Game Application</h3>
+
+            <p>
+              An interactive quiz game with multiple categories, timed 
+              questions, and score tracking. Features include difficulty 
+              levels, leaderboard functionality, and the ability to create 
+              custom quizzes.
+            </p>
+
+            <span>JavaScript, HTML5, CSS3, Local Storage</span>
+          </div>
+
+          <div class="side-project">
+            <div>
+              <a href="https://github.com/" target="_blank">
+                <img src="img/github.svg" alt="GitHub Repository" />
+              </a>
+              <a href="#" target="_blank">
+                <img src="img/link.svg" alt="Live Demo" />
+              </a>
+            </div>
+
+            <h3>Expense Tracker</h3>
+
+            <p>
+              A personal finance management tool to track income and expenses. 
+              Features include category-based organization, data visualization 
+              with charts, budget setting, and monthly reports generation.
+            </p>
+
+            <span>React, Chart.js, CSS3</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================================= -->
+    <!-- CONTACT SECTION                                           -->
+    <!-- ========================================================= -->
+    <section id="contact">
+      <div>
+        <span>Next steps?</span>
+        <h4>Don't be a Stranger!</h4>
+
+        <p>
+          Shoot me an email if you think we're a great fit and would like to 
+          work together on exciting projects. Whether it's about internships, 
+          collaborations, or just a friendly chat about technology, I'd love 
+          to hear from you!
+        </p>
+
+        <a href="mailto:lavikapanwar@email.com" class="cta cta2">
+          Get in Touch
+        </a>
+      </div>
+
+      <aside class="contact-social-links social-links">
+        <a href="https://github.com/" target="_blank" class="social github">
+          <img src="img/github.svg" alt="GitHub Icon" />
+        </a>
+
+        <a href="https://www.linkedin.com/" target="_blank" class="social linkedin">
+          <img src="img/in.svg" alt="LinkedIn Icon" />
+        </a>
+
+        <a href="https://twitter.com/" target="_blank" class="social twitter">
+          <img src="img/twitter.svg" alt="Twitter Icon" />
+        </a>
+      </aside>
+    </section>
+
+    <!-- ========================================================= -->
+    <!-- FOOTER                                                    -->
+    <!-- ========================================================= -->
+    <footer>
+      <p>
+        Designed and developed with 💜 by <span>Lavika Panwar</span>
+      </p>
+    </footer>
+  </body>
+</html>
