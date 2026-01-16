@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="utf-8" />
@@ -88,6 +89,24 @@
         --shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
         --shadow-lg: 0 20px 40px rgba(0, 0, 0, 0.15);
         --gradient: linear-gradient(135deg, #6366f1 0%, #ec4899 100%);
+        --bg-color: #f8fafc;
+        --text-color: #0f172a;
+        --card-bg: #ffffff;
+        --header-bg: rgba(255, 255, 255, 0.95);
+      }
+
+      /* Dark Theme Variables */
+      .dark-theme {
+        --dark: #f8fafc;
+        --light: #0f172a;
+        --gray: #94a3b8;
+        --gray-light: #334155;
+        --bg-color: #0f172a;
+        --text-color: #f8fafc;
+        --card-bg: #1e293b;
+        --header-bg: rgba(30, 41, 59, 0.95);
+        --shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+        --shadow-lg: 0 20px 40px rgba(0, 0, 0, 0.4);
       }
 
       /* ===== Base Styles ===== */
@@ -104,15 +123,17 @@
       body {
         font-family: 'Inter', sans-serif;
         line-height: 1.7;
-        color: var(--dark);
-        background: var(--light);
+        color: var(--text-color);
+        background: var(--bg-color);
         overflow-x: hidden;
+        transition: var(--transition);
       }
 
       h1, h2, h3, h4 {
         font-family: 'Poppins', sans-serif;
         font-weight: 700;
         line-height: 1.2;
+        color: var(--text-color);
       }
 
       a {
@@ -148,7 +169,7 @@
         left: 0;
         width: 100%;
         z-index: 1000;
-        background: rgba(255, 255, 255, 0.95);
+        background: var(--header-bg);
         backdrop-filter: blur(10px);
         box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
         padding: 20px 0;
@@ -200,6 +221,7 @@
         font-weight: 500;
         position: relative;
         padding: 5px 0;
+        color: var(--text-color);
       }
 
       .nav-link a::after {
@@ -228,17 +250,42 @@
         width: 40px;
         height: 40px;
         border-radius: 50%;
-        background: var(--light);
+        background: var(--card-bg);
         display: flex;
         align-items: center;
         justify-content: center;
-        color: var(--dark);
+        color: var(--text-color);
         font-size: 18px;
         transition: var(--transition);
         box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
       }
 
       .social:hover {
+        transform: translateY(-3px);
+        background: var(--gradient);
+        color: white;
+        box-shadow: 0 10px 20px rgba(99, 102, 241, 0.3);
+      }
+
+      /* Theme Toggle Button */
+      .theme-toggle {
+        background: var(--card-bg);
+        border: none;
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        color: var(--text-color);
+        font-size: 18px;
+        transition: var(--transition);
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+        margin-left: 15px;
+      }
+
+      .theme-toggle:hover {
         transform: translateY(-3px);
         background: var(--gradient);
         color: white;
@@ -258,7 +305,7 @@
       .menu-bar {
         width: 100%;
         height: 3px;
-        background: var(--dark);
+        background: var(--text-color);
         border-radius: 2px;
         transition: var(--transition);
       }
@@ -269,7 +316,7 @@
         position: absolute;
         width: 100%;
         height: 3px;
-        background: var(--dark);
+        background: var(--text-color);
         border-radius: 2px;
         left: 0;
         transition: var(--transition);
@@ -378,8 +425,8 @@
       }
 
       .cta2 {
-        background: white;
-        color: var(--dark);
+        background: var(--card-bg);
+        color: var(--text-color);
         border: 2px solid var(--gray-light);
       }
 
@@ -418,7 +465,7 @@
         flex-direction: column;
         gap: 15px;
         z-index: 100;
-        background: white;
+        background: var(--card-bg);
         padding: 20px 15px;
         border-radius: 50px;
         box-shadow: var(--shadow);
@@ -474,7 +521,7 @@
       }
 
       .tool {
-        background: white;
+        background: var(--card-bg);
         padding: 15px;
         border-radius: var(--border-radius-sm);
         text-align: center;
@@ -482,6 +529,7 @@
         box-shadow: var(--shadow);
         transition: var(--transition);
         border: 2px solid transparent;
+        color: var(--text-color);
       }
 
       .tool:hover {
@@ -491,7 +539,7 @@
       }
 
       .profile-card {
-        background: white;
+        background: var(--card-bg);
         border-radius: var(--border-radius);
         overflow: hidden;
         box-shadow: var(--shadow-lg);
@@ -555,7 +603,7 @@
       }
 
       .skill-category {
-        background: white;
+        background: var(--card-bg);
         padding: 30px;
         border-radius: var(--border-radius);
         box-shadow: var(--shadow);
@@ -603,7 +651,7 @@
 
       /* ===== Projects Section ===== */
       .project {
-        background: white;
+        background: var(--card-bg);
         border-radius: var(--border-radius);
         overflow: hidden;
         box-shadow: var(--shadow);
@@ -634,7 +682,7 @@
       .project-content h3 {
         font-size: 28px;
         margin-bottom: 20px;
-        color: var(--dark);
+        color: var(--text-color);
       }
 
       .project-content p {
@@ -669,11 +717,11 @@
         width: 50px;
         height: 50px;
         border-radius: 50%;
-        background: var(--light);
+        background: var(--bg-color);
         display: flex;
         align-items: center;
         justify-content: center;
-        color: var(--dark);
+        color: var(--text-color);
         font-size: 20px;
         transition: var(--transition);
         box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
@@ -728,7 +776,7 @@
       }
 
       .side-project {
-        background: white;
+        background: var(--card-bg);
         border-radius: var(--border-radius);
         padding: 30px;
         box-shadow: var(--shadow);
@@ -758,7 +806,7 @@
       .side-project h4 {
         font-size: 20px;
         margin-bottom: 15px;
-        color: var(--dark);
+        color: var(--text-color);
       }
 
       .side-project p {
@@ -815,6 +863,7 @@
       .contact-section h4 {
         font-size: 42px;
         margin-bottom: 20px;
+        color: var(--text-color);
       }
 
       .contact-section p {
@@ -937,7 +986,7 @@
           left: -100%;
           width: 100%;
           height: calc(100vh - 80px);
-          background: white;
+          background: var(--card-bg);
           flex-direction: column;
           justify-content: flex-start;
           padding: 60px 20px;
@@ -994,6 +1043,11 @@
         
         .separator h2 {
           font-size: 30px;
+        }
+        
+        .theme-toggle {
+          margin-left: 0;
+          margin-top: 20px;
         }
       }
 
@@ -1057,6 +1111,9 @@
             <a href="https://twitter.com/" target="_blank" class="social">
               <i class="fab fa-twitter"></i>
             </a>
+            <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">
+              <i class="fas fa-moon"></i>
+            </button>
           </li>
         </ul>
 
@@ -1515,6 +1572,34 @@
             link.classList.add('active');
           }
         });
+      });
+
+      // Dark Theme Toggle Functionality
+      const themeToggle = document.getElementById('themeToggle');
+      const themeIcon = themeToggle.querySelector('i');
+      
+      // Check for saved theme or prefer-color-scheme
+      const prefersDarkScheme = window.matchMedia('(prefers-color-scheme: dark)');
+      const currentTheme = localStorage.getItem('theme');
+      
+      if (currentTheme === 'dark' || (!currentTheme && prefersDarkScheme.matches)) {
+        document.body.classList.add('dark-theme');
+        themeIcon.classList.remove('fa-moon');
+        themeIcon.classList.add('fa-sun');
+      }
+      
+      themeToggle.addEventListener('click', () => {
+        document.body.classList.toggle('dark-theme');
+        
+        if (document.body.classList.contains('dark-theme')) {
+          localStorage.setItem('theme', 'dark');
+          themeIcon.classList.remove('fa-moon');
+          themeIcon.classList.add('fa-sun');
+        } else {
+          localStorage.setItem('theme', 'light');
+          themeIcon.classList.remove('fa-sun');
+          themeIcon.classList.add('fa-moon');
+        }
       });
     </script>
   </body>
